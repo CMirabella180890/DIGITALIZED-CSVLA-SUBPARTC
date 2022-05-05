@@ -831,23 +831,23 @@ class balancing_loads:
                        V_fe_fromDto0, V_fe_from0toSinv, V_fe_fromSinvtoG,\
                        V_fe_fromGtoGust1, V_fe_fromGust1toF, V_fe_fromFtoE,\
                        V_fe_fromEto0, V_fe_fromGtoF, V_fe_fromAtoC,\
-                       V_fe_fromCtoD, L_wb_from0toS, L_fv_from0toS, L_wb_fromStoA,\
-                       L_fv_fromStoA, L_fv_fromAtoGust1, L_wb_fromAtoGust1,\
-                       L_fv_fromGust1toC, L_wb_fromGust1toC, L_fv_fromCtoGust2,\
-                       L_wb_fromCtoGust2, L_fv_fromGust2toD, L_wb_fromGust2toD,\
-                       L_fv_fromDto0, L_wb_fromDto0, L_fv_from0toSinv,\
-                       L_wb_from0toSinv, L_fv_fromSinvtoG, L_wb_fromSinvtoG,\
-                       L_fv_fromGtoGust1, L_wb_fromGtoGust1, L_fv_fromGust1toF,\
-                       L_wb_fromGust1toF, L_fv_fromFtoE, L_wb_fromFtoE,\
-                       L_fv_fromEto0, L_wb_fromEto0, L_fv_fromGtoF,\
-                       L_wb_fromGtoF, L_fv_fromAtoC, L_wb_fromAtoC,\
-                       L_fv_fromCtoD, L_wb_fromCtoD, L_ht_from0toS,\
+                       V_fe_fromCtoD, L_wb_from0toS, L_new_from0toS, L_wb_fromStoA,\
+                       L_new_fromStoA, L_new_fromAtoGust1, L_wb_fromAtoGust1,\
+                       L_new_fromGust1toC, L_wb_fromGust1toC, L_new_fromCtoGust2,\
+                       L_wb_fromCtoGust2, L_new_fromGust2toD, L_wb_fromGust2toD,\
+                       L_new_fromDto0, L_wb_fromDto0, L_new_from0toSinv,\
+                       L_wb_from0toSinv, L_new_fromSinvtoG, L_wb_fromSinvtoG,\
+                       L_new_fromGtoGust1, L_wb_fromGtoGust1, L_new_fromGust1toF,\
+                       L_wb_fromGust1toF, L_new_fromFtoE, L_wb_fromFtoE,\
+                       L_new_fromEto0, L_wb_fromEto0, L_new_fromGtoF,\
+                       L_wb_fromGtoF, L_new_fromAtoC, L_wb_fromAtoC,\
+                       L_new_fromCtoD, L_wb_fromCtoD, L_ht_from0toS,\
                        L_ht_fromStoA, L_ht_fromAtoGust1, L_ht_fromGust1toC,\
                        L_ht_fromCtoGust2, L_ht_fromGust2toD, L_ht_fromDto0,\
                        L_ht_from0toSinv, L_ht_fromSinvtoG, L_ht_fromGtoGust1,\
                        L_ht_fromGust1toF, L_ht_fromFtoE,  L_ht_fromEto0,\
-                       L_ht_fromGtoF, L_ht_fromAtoC, L_ht_fromCtoD,\
-                       Aircraft_name, n, pos_case_flag, neg_case_flag):
+                       L_ht_fromGtoF, L_ht_fromAtoC, L_ht_fromCtoD, L_ht_unit_load_factor,\
+                       V_unit_load_factor, Aircraft_name, n, pos_case_flag, neg_case_flag):
         """
         Function that plots main wing lift diagrams, both wing-body and full-
         vehicle. 
@@ -858,65 +858,65 @@ class balancing_loads:
         ----------
         L_wb_from0toS : TYPE
             DESCRIPTION.
-        L_fv_from0toS : TYPE
+        L_new_from0toS : TYPE
             DESCRIPTION.
         L_wb_fromStoA : TYPE
             DESCRIPTION.
-        L_fv_fromStoA : TYPE
+        L_new_fromStoA : TYPE
             DESCRIPTION.
-        L_fv_fromAtoGust1 : TYPE
+        L_new_fromAtoGust1 : TYPE
             DESCRIPTION.
         L_wb_fromAtoGust1 : TYPE
             DESCRIPTION.
-        L_fv_fromGust1toC : TYPE
+        L_new_fromGust1toC : TYPE
             DESCRIPTION.
         L_wb_fromGust1toC : TYPE
             DESCRIPTION.
-        L_fv_fromCtoGust2 : TYPE
+        L_new_fromCtoGust2 : TYPE
             DESCRIPTION.
         L_wb_fromCtoGust2 : TYPE
             DESCRIPTION.
-        L_fv_fromGust2toD : TYPE
+        L_new_fromGust2toD : TYPE
             DESCRIPTION.
         L_wb_fromGust2toD : TYPE
             DESCRIPTION.
-        L_fv_fromDto0 : TYPE
+        L_new_fromDto0 : TYPE
             DESCRIPTION.
         L_wb_fromDto0 : TYPE
             DESCRIPTION.
-        L_fv_from0toSinv : TYPE
+        L_new_from0toSinv : TYPE
             DESCRIPTION.
         L_wb_from0toSinv : TYPE
             DESCRIPTION.
-        L_fv_fromSinvtoG : TYPE
+        L_new_fromSinvtoG : TYPE
             DESCRIPTION.
         L_wb_fromSinvtoG : TYPE
             DESCRIPTION.
-        L_fv_fromGtoGust1 : TYPE
+        L_new_fromGtoGust1 : TYPE
             DESCRIPTION.
         L_wb_fromGtoGust1 : TYPE
             DESCRIPTION.
-        L_fv_fromGust1toF : TYPE
+        L_new_fromGust1toF : TYPE
             DESCRIPTION.
         L_wb_fromGust1toF : TYPE
             DESCRIPTION.
-        L_fv_fromFtoE : TYPE
+        L_new_fromFtoE : TYPE
             DESCRIPTION.
         L_wb_fromFtoE : TYPE
             DESCRIPTION.
-        L_fv_fromEto0 : TYPE
+        L_new_fromEto0 : TYPE
             DESCRIPTION.
         L_wb_fromEto0 : TYPE
             DESCRIPTION.
-        L_fv_fromGtoF : TYPE
+        L_new_fromGtoF : TYPE
             DESCRIPTION.
         L_wb_fromGtoF : TYPE
             DESCRIPTION.
-        L_fv_fromAtoC : TYPE
+        L_new_fromAtoC : TYPE
             DESCRIPTION.
         V_fe_fromAtoC : TYPE
             DESCRIPTION.
-        L_fv_fromCtoD : TYPE
+        L_new_fromCtoD : TYPE
             DESCRIPTION.
         V_fe_fromCtoD : TYPE
             DESCRIPTION.
@@ -946,24 +946,24 @@ class balancing_loads:
         if   (pos_case_flag == "Case1") and (neg_case_flag == "Case1_inverted"):
             
             fig1  = plt.figure()
-            plt.plot(V_fe_from0toS,     L_fv_from0toS,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromStoA,     L_fv_fromStoA,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromAtoGust1, L_fv_fromAtoGust1, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromGust1toC, L_fv_fromGust1toC, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromCtoGust2, L_fv_fromCtoGust2, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromGust2toD, L_fv_fromGust2toD, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromDto0,     L_fv_fromDto0,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_from0toS,     L_new_from0toS,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromStoA,     L_new_fromStoA,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromAtoGust1, L_new_fromAtoGust1, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromGust1toC, L_new_fromGust1toC, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromCtoGust2, L_new_fromCtoGust2, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromGust2toD, L_new_fromGust2toD, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromDto0,     L_new_fromDto0,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
             
-            plt.plot(V_fe_from0toSinv,  L_fv_from0toSinv,  color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromSinvtoG,  L_fv_fromSinvtoG,  color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromGtoGust1, L_fv_fromGtoGust1, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromGust1toF, L_fv_fromGust1toF, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromFtoE,     L_fv_fromFtoE,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromEto0,     L_fv_fromEto0,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_from0toSinv,  L_new_from0toSinv,  color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromSinvtoG,  L_new_fromSinvtoG,  color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromGtoGust1, L_new_fromGtoGust1, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromGust1toF, L_new_fromGust1toF, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromFtoE,     L_new_fromFtoE,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromEto0,     L_new_fromEto0,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
 
             label=r"Point S"    
-            plt.text(V_fe_from0toS[-1], L_fv_from0toS[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')          
-            plt.scatter(V_fe_from0toS[-1], L_fv_from0toS[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_from0toS[-1], L_new_from0toS[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')          
+            plt.scatter(V_fe_from0toS[-1], L_new_from0toS[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point S", zorder=2)
             # fontsize or size
@@ -973,38 +973,38 @@ class balancing_loads:
             # 'light', 'normal', 'regular', 'book', 'medium', 'roman', 'semibold',
             # 'demibold', 'demi', 'bold', 'heavy', 'extra bold', 'black'}
             label=r"Point A"
-            plt.text(V_fe_fromStoA[-1], L_fv_fromStoA[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
-            plt.scatter(V_fe_fromStoA[-1], L_fv_fromStoA[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_fromStoA[-1], L_new_fromStoA[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
+            plt.scatter(V_fe_fromStoA[-1], L_new_fromStoA[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point A", zorder=2)
             label=r"Point C"
-            plt.text(V_fe_fromGust1toC[-1], L_fv_fromGust1toC[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
-            plt.scatter(V_fe_fromGust1toC[-1], L_fv_fromGust1toC[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_fromGust1toC[-1], L_new_fromGust1toC[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
+            plt.scatter(V_fe_fromGust1toC[-1], L_new_fromGust1toC[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point C", zorder=2)
             label=r"Point D"
-            plt.text(V_fe_fromGust2toD[-1]-2.0, L_fv_fromGust2toD[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
-            plt.scatter(V_fe_fromGust2toD[-1], L_fv_fromGust2toD[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_fromGust2toD[-1]-2.0, L_new_fromGust2toD[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
+            plt.scatter(V_fe_fromGust2toD[-1], L_new_fromGust2toD[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point D", zorder=2)
             label=r"Point S inverted"
-            plt.text(V_fe_from0toSinv[-1], L_fv_from0toSinv[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
-            plt.scatter(V_fe_from0toSinv[-1], L_fv_from0toSinv[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_from0toSinv[-1], L_new_from0toSinv[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
+            plt.scatter(V_fe_from0toSinv[-1], L_new_from0toSinv[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point G", zorder=2)
             label=r"Point G"
-            plt.text(V_fe_fromSinvtoG[-1], L_fv_fromSinvtoG[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
-            plt.scatter(V_fe_fromSinvtoG[-1], L_fv_fromSinvtoG[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_fromSinvtoG[-1], L_new_fromSinvtoG[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
+            plt.scatter(V_fe_fromSinvtoG[-1], L_new_fromSinvtoG[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point F", zorder=2)
             label=r"Point F"
-            plt.text(V_fe_fromGust1toF[-1], L_fv_fromGust1toF[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
-            plt.scatter(V_fe_fromGust1toF[-1], L_fv_fromGust1toF[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_fromGust1toF[-1], L_new_fromGust1toF[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
+            plt.scatter(V_fe_fromGust1toF[-1], L_new_fromGust1toF[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point F", zorder=2)
             label=r"Point E"
-            plt.text(V_fe_fromFtoE[-1]-2.0, L_fv_fromFtoE[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
-            plt.scatter(V_fe_fromFtoE[-1], L_fv_fromFtoE[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_fromFtoE[-1]-2.0, L_new_fromFtoE[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
+            plt.scatter(V_fe_fromFtoE[-1], L_new_fromFtoE[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point F", zorder=2)
             
@@ -1103,6 +1103,8 @@ class balancing_loads:
             plt.plot(V_fe_fromCtoGust2, L_ht_fromCtoGust2, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
             plt.plot(V_fe_fromGust2toD, L_ht_fromGust2toD, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
             plt.plot(V_fe_fromDto0,     L_ht_fromDto0,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+
+            plt.plot(V_unit_load_factor,L_ht_unit_load_factor, color="black", linewidth=1.8, linestyle = "dashed", zorder=1)
             
             plt.plot(V_fe_from0toSinv,  L_ht_from0toSinv,  color="red", linewidth=0.2, linestyle = "dashed", zorder=1)
             plt.plot(V_fe_fromSinvtoG,  L_ht_fromSinvtoG,  color="red", linewidth=1.0, linestyle = "solid", zorder=1)
@@ -1173,23 +1175,23 @@ class balancing_loads:
         elif (pos_case_flag == "Case1") and (neg_case_flag == "Case2_inverted"):
             
             fig1  = plt.figure()
-            plt.plot(V_fe_from0toS,     L_fv_from0toS,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromStoA,     L_fv_fromStoA,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromAtoGust1, L_fv_fromAtoGust1, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromGust1toC, L_fv_fromGust1toC, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromCtoGust2, L_fv_fromCtoGust2, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromGust2toD, L_fv_fromGust2toD, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromDto0,     L_fv_fromDto0,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_from0toS,     L_new_from0toS,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromStoA,     L_new_fromStoA,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromAtoGust1, L_new_fromAtoGust1, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromGust1toC, L_new_fromGust1toC, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromCtoGust2, L_new_fromCtoGust2, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromGust2toD, L_new_fromGust2toD, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromDto0,     L_new_fromDto0,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
             
-            plt.plot(V_fe_from0toSinv,  L_fv_from0toSinv,  color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromSinvtoG,  L_fv_fromSinvtoG,  color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromGtoF,     L_fv_fromGtoF,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromFtoE,     L_fv_fromFtoE,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromEto0,     L_fv_fromEto0,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_from0toSinv,  L_new_from0toSinv,  color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromSinvtoG,  L_new_fromSinvtoG,  color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromGtoF,     L_new_fromGtoF,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromFtoE,     L_new_fromFtoE,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromEto0,     L_new_fromEto0,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
 
             label=r"Point S"    
-            plt.text(V_fe_from0toS[-1], L_fv_from0toS[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')          
-            plt.scatter(V_fe_from0toS[-1], L_fv_from0toS[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_from0toS[-1], L_new_from0toS[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')          
+            plt.scatter(V_fe_from0toS[-1], L_new_from0toS[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point S", zorder=2)
             # fontsize or size
@@ -1199,38 +1201,38 @@ class balancing_loads:
             # 'light', 'normal', 'regular', 'book', 'medium', 'roman', 'semibold',
             # 'demibold', 'demi', 'bold', 'heavy', 'extra bold', 'black'}
             label=r"Point A"
-            plt.text(V_fe_fromStoA[-1], L_fv_fromStoA[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
-            plt.scatter(V_fe_fromStoA[-1], L_fv_fromStoA[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_fromStoA[-1], L_new_fromStoA[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
+            plt.scatter(V_fe_fromStoA[-1], L_new_fromStoA[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point A", zorder=2)
             label=r"Point C"
-            plt.text(V_fe_fromGust1toC[-1], L_fv_fromGust1toC[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
-            plt.scatter(V_fe_fromGust1toC[-1], L_fv_fromGust1toC[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_fromGust1toC[-1], L_new_fromGust1toC[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
+            plt.scatter(V_fe_fromGust1toC[-1], L_new_fromGust1toC[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point C", zorder=2)
             label=r"Point D"
-            plt.text(V_fe_fromGust2toD[-1]-2.0, L_fv_fromGust2toD[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
-            plt.scatter(V_fe_fromGust2toD[-1], L_fv_fromGust2toD[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_fromGust2toD[-1]-2.0, L_new_fromGust2toD[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
+            plt.scatter(V_fe_fromGust2toD[-1], L_new_fromGust2toD[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point D", zorder=2)
             label=r"Point S inverted"
-            plt.text(V_fe_from0toSinv[-1], L_fv_from0toSinv[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
-            plt.scatter(V_fe_from0toSinv[-1], L_fv_from0toSinv[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_from0toSinv[-1], L_new_from0toSinv[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
+            plt.scatter(V_fe_from0toSinv[-1], L_new_from0toSinv[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point G", zorder=2)
             label=r"Point G"
-            plt.text(V_fe_fromSinvtoG[-1], L_fv_fromSinvtoG[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
-            plt.scatter(V_fe_fromSinvtoG[-1], L_fv_fromSinvtoG[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_fromSinvtoG[-1], L_new_fromSinvtoG[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
+            plt.scatter(V_fe_fromSinvtoG[-1], L_new_fromSinvtoG[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point F", zorder=2)
             label=r"Point F"
-            plt.text(V_fe_fromGtoF[-1], L_fv_fromGtoF[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
-            plt.scatter(V_fe_fromGtoF[-1], L_fv_fromGtoF[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_fromGtoF[-1], L_new_fromGtoF[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
+            plt.scatter(V_fe_fromGtoF[-1], L_new_fromGtoF[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point F", zorder=2)
             label=r"Point E"
-            plt.text(V_fe_fromFtoE[-1]-2.0, L_fv_fromFtoE[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
-            plt.scatter(V_fe_fromFtoE[-1], L_fv_fromFtoE[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_fromFtoE[-1]-2.0, L_new_fromFtoE[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
+            plt.scatter(V_fe_fromFtoE[-1], L_new_fromFtoE[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point F", zorder=2)
             
@@ -1328,6 +1330,8 @@ class balancing_loads:
             plt.plot(V_fe_fromCtoGust2, L_ht_fromCtoGust2, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
             plt.plot(V_fe_fromGust2toD, L_ht_fromGust2toD, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
             plt.plot(V_fe_fromDto0,     L_ht_fromDto0,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+
+            plt.plot(V_unit_load_factor,L_ht_unit_load_factor, color="black", linewidth=1.8, linestyle = "dashed", zorder=1)
             
             plt.plot(V_fe_from0toSinv,  L_ht_from0toSinv,  color="red", linewidth=0.2, linestyle = "dashed", zorder=1)
             plt.plot(V_fe_fromSinvtoG,  L_ht_fromSinvtoG,  color="red", linewidth=1.0, linestyle = "solid", zorder=1)
@@ -1397,23 +1401,23 @@ class balancing_loads:
         elif (pos_case_flag == "Case1") and (neg_case_flag == "Case3_inverted"):
             
             fig1  = plt.figure()
-            plt.plot(V_fe_from0toS,     L_fv_from0toS,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromStoA,     L_fv_fromStoA,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromAtoGust1, L_fv_fromAtoGust1, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromGust1toC, L_fv_fromGust1toC, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromCtoGust2, L_fv_fromCtoGust2, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromGust2toD, L_fv_fromGust2toD, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromDto0,     L_fv_fromDto0,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_from0toS,     L_new_from0toS,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromStoA,     L_new_fromStoA,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromAtoGust1, L_new_fromAtoGust1, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromGust1toC, L_new_fromGust1toC, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromCtoGust2, L_new_fromCtoGust2, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromGust2toD, L_new_fromGust2toD, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromDto0,     L_new_fromDto0,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
             
-            plt.plot(V_fe_from0toSinv,  L_fv_from0toSinv,  color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromSinvtoG,  L_fv_fromSinvtoG,  color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromGtoF,     L_fv_fromGtoF,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromFtoE,     L_fv_fromFtoE,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromEto0,     L_fv_fromEto0,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_from0toSinv,  L_new_from0toSinv,  color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromSinvtoG,  L_new_fromSinvtoG,  color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromGtoF,     L_new_fromGtoF,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromFtoE,     L_new_fromFtoE,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromEto0,     L_new_fromEto0,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
 
             label=r"Point S"    
-            plt.text(V_fe_from0toS[-1], L_fv_from0toS[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')          
-            plt.scatter(V_fe_from0toS[-1], L_fv_from0toS[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_from0toS[-1], L_new_from0toS[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')          
+            plt.scatter(V_fe_from0toS[-1], L_new_from0toS[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point S", zorder=2)
             # fontsize or size
@@ -1423,38 +1427,38 @@ class balancing_loads:
             # 'light', 'normal', 'regular', 'book', 'medium', 'roman', 'semibold',
             # 'demibold', 'demi', 'bold', 'heavy', 'extra bold', 'black'}
             label=r"Point A"
-            plt.text(V_fe_fromStoA[-1], L_fv_fromStoA[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
-            plt.scatter(V_fe_fromStoA[-1], L_fv_fromStoA[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_fromStoA[-1], L_new_fromStoA[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
+            plt.scatter(V_fe_fromStoA[-1], L_new_fromStoA[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point A", zorder=2)
             label=r"Point C"
-            plt.text(V_fe_fromGust1toC[-1], L_fv_fromGust1toC[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
-            plt.scatter(V_fe_fromGust1toC[-1], L_fv_fromGust1toC[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_fromGust1toC[-1], L_new_fromGust1toC[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
+            plt.scatter(V_fe_fromGust1toC[-1], L_new_fromGust1toC[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point C", zorder=2)
             label=r"Point D"
-            plt.text(V_fe_fromGust2toD[-1]-2.0, L_fv_fromGust2toD[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
-            plt.scatter(V_fe_fromGust2toD[-1], L_fv_fromGust2toD[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_fromGust2toD[-1]-2.0, L_new_fromGust2toD[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
+            plt.scatter(V_fe_fromGust2toD[-1], L_new_fromGust2toD[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point D", zorder=2)
             label=r"Point S inverted"
-            plt.text(V_fe_from0toSinv[-1], L_fv_from0toSinv[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
-            plt.scatter(V_fe_from0toSinv[-1], L_fv_from0toSinv[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_from0toSinv[-1], L_new_from0toSinv[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
+            plt.scatter(V_fe_from0toSinv[-1], L_new_from0toSinv[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point G", zorder=2)
             label=r"Point G"
-            plt.text(V_fe_fromSinvtoG[-1], L_fv_fromSinvtoG[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
-            plt.scatter(V_fe_fromSinvtoG[-1], L_fv_fromSinvtoG[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_fromSinvtoG[-1], L_new_fromSinvtoG[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
+            plt.scatter(V_fe_fromSinvtoG[-1], L_new_fromSinvtoG[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point F", zorder=2)
             label=r"Point F"
-            plt.text(V_fe_fromGtoF[-1], L_fv_fromGtoF[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
-            plt.scatter(V_fe_fromGtoF[-1], L_fv_fromGtoF[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_fromGtoF[-1], L_new_fromGtoF[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
+            plt.scatter(V_fe_fromGtoF[-1], L_new_fromGtoF[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point F", zorder=2)
             label=r"Point E"
-            plt.text(V_fe_fromFtoE[-1]-2.0, L_fv_fromFtoE[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
-            plt.scatter(V_fe_fromFtoE[-1], L_fv_fromFtoE[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_fromFtoE[-1]-2.0, L_new_fromFtoE[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
+            plt.scatter(V_fe_fromFtoE[-1], L_new_fromFtoE[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point F", zorder=2)
             
@@ -1552,6 +1556,8 @@ class balancing_loads:
             plt.plot(V_fe_fromCtoGust2, L_ht_fromCtoGust2, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
             plt.plot(V_fe_fromGust2toD, L_ht_fromGust2toD, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
             plt.plot(V_fe_fromDto0,     L_ht_fromDto0,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+
+            plt.plot(V_unit_load_factor,L_ht_unit_load_factor, color="black", linewidth=1.8, linestyle = "dashed", zorder=1)
             
             plt.plot(V_fe_from0toSinv,  L_ht_from0toSinv,  color="red", linewidth=0.2, linestyle = "dashed", zorder=1)
             plt.plot(V_fe_fromSinvtoG,  L_ht_fromSinvtoG,  color="red", linewidth=1.0, linestyle = "solid", zorder=1)
@@ -1621,22 +1627,22 @@ class balancing_loads:
         elif (pos_case_flag == "Case2") and (neg_case_flag == "Case1_inverted"):
             
             fig1  = plt.figure()
-            plt.plot(V_fe_from0toS,     L_fv_from0toS,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromStoA,     L_fv_fromStoA,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromAtoC,     L_fv_fromAtoC,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromCtoD,     L_fv_fromCtoD,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromDto0,     L_fv_fromDto0,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_from0toS,     L_new_from0toS,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromStoA,     L_new_fromStoA,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromAtoC,     L_new_fromAtoC,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromCtoD,     L_new_fromCtoD,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromDto0,     L_new_fromDto0,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
             
-            plt.plot(V_fe_from0toSinv,  L_fv_from0toSinv,  color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromSinvtoG,  L_fv_fromSinvtoG,  color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromGtoGust1, L_fv_fromGtoGust1, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromGust1toF, L_fv_fromGust1toF, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromFtoE,     L_fv_fromFtoE,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromEto0,     L_fv_fromEto0,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_from0toSinv,  L_new_from0toSinv,  color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromSinvtoG,  L_new_fromSinvtoG,  color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromGtoGust1, L_new_fromGtoGust1, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromGust1toF, L_new_fromGust1toF, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromFtoE,     L_new_fromFtoE,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromEto0,     L_new_fromEto0,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
 
             label=r"Point S"    
-            plt.text(V_fe_from0toS[-1], L_fv_from0toS[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')          
-            plt.scatter(V_fe_from0toS[-1], L_fv_from0toS[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_from0toS[-1], L_new_from0toS[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')          
+            plt.scatter(V_fe_from0toS[-1], L_new_from0toS[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point S", zorder=2)
             # fontsize or size
@@ -1646,38 +1652,38 @@ class balancing_loads:
             # 'light', 'normal', 'regular', 'book', 'medium', 'roman', 'semibold',
             # 'demibold', 'demi', 'bold', 'heavy', 'extra bold', 'black'}
             label=r"Point A"
-            plt.text(V_fe_fromStoA[-1], L_fv_fromStoA[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
-            plt.scatter(V_fe_fromStoA[-1], L_fv_fromStoA[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_fromStoA[-1], L_new_fromStoA[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
+            plt.scatter(V_fe_fromStoA[-1], L_new_fromStoA[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point A", zorder=2)
             label=r"Point C"
-            plt.text(V_fe_fromAtoC[-1], L_fv_fromAtoC[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
-            plt.scatter(V_fe_fromAtoC[-1], L_fv_fromAtoC[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_fromAtoC[-1], L_new_fromAtoC[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
+            plt.scatter(V_fe_fromAtoC[-1], L_new_fromAtoC[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point C", zorder=2)
             label=r"Point D"
-            plt.text(V_fe_fromCtoD[-1]-2.0, L_fv_fromCtoD[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
-            plt.scatter(V_fe_fromCtoD[-1], L_fv_fromCtoD[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_fromCtoD[-1]-2.0, L_new_fromCtoD[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
+            plt.scatter(V_fe_fromCtoD[-1], L_new_fromCtoD[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point D", zorder=2)
             label=r"Point S inverted"
-            plt.text(V_fe_from0toSinv[-1], L_fv_from0toSinv[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
-            plt.scatter(V_fe_from0toSinv[-1], L_fv_from0toSinv[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_from0toSinv[-1], L_new_from0toSinv[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
+            plt.scatter(V_fe_from0toSinv[-1], L_new_from0toSinv[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point G", zorder=2)
             label=r"Point G"
-            plt.text(V_fe_fromSinvtoG[-1], L_fv_fromSinvtoG[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
-            plt.scatter(V_fe_fromSinvtoG[-1], L_fv_fromSinvtoG[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_fromSinvtoG[-1], L_new_fromSinvtoG[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
+            plt.scatter(V_fe_fromSinvtoG[-1], L_new_fromSinvtoG[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point F", zorder=2)
             label=r"Point F"
-            plt.text(V_fe_fromGust1toF[-1], L_fv_fromGust1toF[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
-            plt.scatter(V_fe_fromGust1toF[-1], L_fv_fromGust1toF[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_fromGust1toF[-1], L_new_fromGust1toF[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
+            plt.scatter(V_fe_fromGust1toF[-1], L_new_fromGust1toF[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point F", zorder=2)
             label=r"Point E"
-            plt.text(V_fe_fromFtoE[-1]-2.0, L_fv_fromFtoE[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
-            plt.scatter(V_fe_fromFtoE[-1], L_fv_fromFtoE[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_fromFtoE[-1]-2.0, L_new_fromFtoE[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
+            plt.scatter(V_fe_fromFtoE[-1], L_new_fromFtoE[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point F", zorder=2)
             
@@ -1772,6 +1778,8 @@ class balancing_loads:
             plt.plot(V_fe_fromAtoC,     L_ht_fromAtoC,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
             plt.plot(V_fe_fromCtoD,     L_ht_fromCtoD,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
             plt.plot(V_fe_fromDto0,     L_ht_fromDto0,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+
+            plt.plot(V_unit_load_factor,L_ht_unit_load_factor, color="black", linewidth=1.8, linestyle = "dashed", zorder=1)
             
             plt.plot(V_fe_from0toSinv,  L_ht_from0toSinv,  color="red", linewidth=0.2, linestyle = "dashed", zorder=1)
             plt.plot(V_fe_fromSinvtoG,  L_ht_fromSinvtoG,  color="red", linewidth=1.0, linestyle = "solid", zorder=1)
@@ -1842,21 +1850,21 @@ class balancing_loads:
         elif (pos_case_flag == "Case2") and (neg_case_flag == "Case2_inverted"):
             
             fig1  = plt.figure()
-            plt.plot(V_fe_from0toS,     L_fv_from0toS,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromStoA,     L_fv_fromStoA,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromAtoC,     L_fv_fromAtoC,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromCtoD,     L_fv_fromCtoD,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromDto0,     L_fv_fromDto0,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_from0toS,     L_new_from0toS,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromStoA,     L_new_fromStoA,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromAtoC,     L_new_fromAtoC,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromCtoD,     L_new_fromCtoD,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromDto0,     L_new_fromDto0,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
             
-            plt.plot(V_fe_from0toSinv,  L_fv_from0toSinv,  color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromSinvtoG,  L_fv_fromSinvtoG,  color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromGtoF,     L_fv_fromGtoF,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromFtoE,     L_fv_fromFtoE,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromEto0,     L_fv_fromEto0,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_from0toSinv,  L_new_from0toSinv,  color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromSinvtoG,  L_new_fromSinvtoG,  color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromGtoF,     L_new_fromGtoF,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromFtoE,     L_new_fromFtoE,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromEto0,     L_new_fromEto0,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
 
             label=r"Point S"    
-            plt.text(V_fe_from0toS[-1], L_fv_from0toS[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')          
-            plt.scatter(V_fe_from0toS[-1], L_fv_from0toS[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_from0toS[-1], L_new_from0toS[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')          
+            plt.scatter(V_fe_from0toS[-1], L_new_from0toS[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point S", zorder=2)
             # fontsize or size
@@ -1866,38 +1874,38 @@ class balancing_loads:
             # 'light', 'normal', 'regular', 'book', 'medium', 'roman', 'semibold',
             # 'demibold', 'demi', 'bold', 'heavy', 'extra bold', 'black'}
             label=r"Point A"
-            plt.text(V_fe_fromStoA[-1], L_fv_fromStoA[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
-            plt.scatter(V_fe_fromStoA[-1], L_fv_fromStoA[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_fromStoA[-1], L_new_fromStoA[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
+            plt.scatter(V_fe_fromStoA[-1], L_new_fromStoA[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point A", zorder=2)
             label=r"Point C"
-            plt.text(V_fe_fromAtoC[-1], L_fv_fromAtoC[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
-            plt.scatter(V_fe_fromAtoC[-1], L_fv_fromAtoC[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_fromAtoC[-1], L_new_fromAtoC[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
+            plt.scatter(V_fe_fromAtoC[-1], L_new_fromAtoC[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point C", zorder=2)
             label=r"Point D"
-            plt.text(V_fe_fromCtoD[-1]-2.0, L_fv_fromCtoD[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
-            plt.scatter(V_fe_fromCtoD[-1], L_fv_fromCtoD[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_fromCtoD[-1]-2.0, L_new_fromCtoD[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
+            plt.scatter(V_fe_fromCtoD[-1], L_new_fromCtoD[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point D", zorder=2)
             label=r"Point S inverted"
-            plt.text(V_fe_from0toSinv[-1], L_fv_from0toSinv[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
-            plt.scatter(V_fe_from0toSinv[-1], L_fv_from0toSinv[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_from0toSinv[-1], L_new_from0toSinv[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
+            plt.scatter(V_fe_from0toSinv[-1], L_new_from0toSinv[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point G", zorder=2)
             label=r"Point G"
-            plt.text(V_fe_fromSinvtoG[-1], L_fv_fromSinvtoG[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
-            plt.scatter(V_fe_fromSinvtoG[-1], L_fv_fromSinvtoG[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_fromSinvtoG[-1], L_new_fromSinvtoG[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
+            plt.scatter(V_fe_fromSinvtoG[-1], L_new_fromSinvtoG[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point F", zorder=2)
             label=r"Point F"
-            plt.text(V_fe_fromGtoF[-1], L_fv_fromGtoF[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
-            plt.scatter(V_fe_fromGtoF[-1], L_fv_fromGtoF[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_fromGtoF[-1], L_new_fromGtoF[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
+            plt.scatter(V_fe_fromGtoF[-1], L_new_fromGtoF[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point F", zorder=2)
             label=r"Point E"
-            plt.text(V_fe_fromFtoE[-1]-2.0, L_fv_fromFtoE[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
-            plt.scatter(V_fe_fromFtoE[-1], L_fv_fromFtoE[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_fromFtoE[-1]-2.0, L_new_fromFtoE[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
+            plt.scatter(V_fe_fromFtoE[-1], L_new_fromFtoE[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point F", zorder=2)
             
@@ -1991,6 +1999,8 @@ class balancing_loads:
             plt.plot(V_fe_fromAtoC,     L_ht_fromAtoC,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
             plt.plot(V_fe_fromCtoD,     L_ht_fromCtoD,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
             plt.plot(V_fe_fromDto0,     L_ht_fromDto0,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+
+            plt.plot(V_unit_load_factor,L_ht_unit_load_factor, color="black", linewidth=1.8, linestyle = "dashed", zorder=1)
             
             plt.plot(V_fe_from0toSinv,  L_ht_from0toSinv,  color="red", linewidth=0.2, linestyle = "dashed", zorder=1)
             plt.plot(V_fe_fromSinvtoG,  L_ht_fromSinvtoG,  color="red", linewidth=1.0, linestyle = "solid", zorder=1)
@@ -2060,21 +2070,21 @@ class balancing_loads:
         elif (pos_case_flag == "Case2") and (neg_case_flag == "Case3_inverted"):
             
             fig1  = plt.figure()
-            plt.plot(V_fe_from0toS,     L_fv_from0toS,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromStoA,     L_fv_fromStoA,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromAtoC,     L_fv_fromAtoC,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromCtoD,     L_fv_fromCtoD,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromDto0,     L_fv_fromDto0,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_from0toS,     L_new_from0toS,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromStoA,     L_new_fromStoA,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromAtoC,     L_new_fromAtoC,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromCtoD,     L_new_fromCtoD,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromDto0,     L_new_fromDto0,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
             
-            plt.plot(V_fe_from0toSinv,  L_fv_from0toSinv,  color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromSinvtoG,  L_fv_fromSinvtoG,  color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromGtoF,     L_fv_fromGtoF,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromFtoE,     L_fv_fromFtoE,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromEto0,     L_fv_fromEto0,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_from0toSinv,  L_new_from0toSinv,  color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromSinvtoG,  L_new_fromSinvtoG,  color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromGtoF,     L_new_fromGtoF,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromFtoE,     L_new_fromFtoE,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromEto0,     L_new_fromEto0,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
 
             label=r"Point S"    
-            plt.text(V_fe_from0toS[-1], L_fv_from0toS[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')          
-            plt.scatter(V_fe_from0toS[-1], L_fv_from0toS[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_from0toS[-1], L_new_from0toS[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')          
+            plt.scatter(V_fe_from0toS[-1], L_new_from0toS[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point S", zorder=2)
             # fontsize or size
@@ -2084,38 +2094,38 @@ class balancing_loads:
             # 'light', 'normal', 'regular', 'book', 'medium', 'roman', 'semibold',
             # 'demibold', 'demi', 'bold', 'heavy', 'extra bold', 'black'}
             label=r"Point A"
-            plt.text(V_fe_fromStoA[-1], L_fv_fromStoA[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
-            plt.scatter(V_fe_fromStoA[-1], L_fv_fromStoA[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_fromStoA[-1], L_new_fromStoA[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
+            plt.scatter(V_fe_fromStoA[-1], L_new_fromStoA[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point A", zorder=2)
             label=r"Point C"
-            plt.text(V_fe_fromAtoC[-1], L_fv_fromAtoC[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
-            plt.scatter(V_fe_fromAtoC[-1], L_fv_fromAtoC[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_fromAtoC[-1], L_new_fromAtoC[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
+            plt.scatter(V_fe_fromAtoC[-1], L_new_fromAtoC[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point C", zorder=2)
             label=r"Point D"
-            plt.text(V_fe_fromCtoD[-1]-2.0, L_fv_fromCtoD[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
-            plt.scatter(V_fe_fromCtoD[-1], L_fv_fromCtoD[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_fromCtoD[-1]-2.0, L_new_fromCtoD[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
+            plt.scatter(V_fe_fromCtoD[-1], L_new_fromCtoD[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point D", zorder=2)
             label=r"Point S inverted"
-            plt.text(V_fe_from0toSinv[-1], L_fv_from0toSinv[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
-            plt.scatter(V_fe_from0toSinv[-1], L_fv_from0toSinv[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_from0toSinv[-1], L_new_from0toSinv[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
+            plt.scatter(V_fe_from0toSinv[-1], L_new_from0toSinv[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point G", zorder=2)
             label=r"Point G"
-            plt.text(V_fe_fromSinvtoG[-1], L_fv_fromSinvtoG[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
-            plt.scatter(V_fe_fromSinvtoG[-1], L_fv_fromSinvtoG[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_fromSinvtoG[-1], L_new_fromSinvtoG[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
+            plt.scatter(V_fe_fromSinvtoG[-1], L_new_fromSinvtoG[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point F", zorder=2)
             label=r"Point F"
-            plt.text(V_fe_fromGtoF[-1], L_fv_fromGtoF[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
-            plt.scatter(V_fe_fromGtoF[-1], L_fv_fromGtoF[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_fromGtoF[-1], L_new_fromGtoF[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
+            plt.scatter(V_fe_fromGtoF[-1], L_new_fromGtoF[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point F", zorder=2)
             label=r"Point E"
-            plt.text(V_fe_fromFtoE[-1]-2.0, L_fv_fromFtoE[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
-            plt.scatter(V_fe_fromFtoE[-1], L_fv_fromFtoE[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_fromFtoE[-1]-2.0, L_new_fromFtoE[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
+            plt.scatter(V_fe_fromFtoE[-1], L_new_fromFtoE[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point F", zorder=2)
             
@@ -2209,6 +2219,8 @@ class balancing_loads:
             plt.plot(V_fe_fromAtoC,     L_ht_fromAtoC,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
             plt.plot(V_fe_fromCtoD,     L_ht_fromCtoD,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
             plt.plot(V_fe_fromDto0,     L_ht_fromDto0,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+
+            plt.plot(V_unit_load_factor,L_ht_unit_load_factor, color="black", linewidth=1.8, linestyle = "dashed", zorder=1)
             
             plt.plot(V_fe_from0toSinv,  L_ht_from0toSinv,  color="red", linewidth=0.2, linestyle = "dashed", zorder=1)
             plt.plot(V_fe_fromSinvtoG,  L_ht_fromSinvtoG,  color="red", linewidth=1.0, linestyle = "solid", zorder=1)
@@ -2278,24 +2290,24 @@ class balancing_loads:
         elif (pos_case_flag == "Case3") and (neg_case_flag == "Case1_inverted"):
             
             fig1  = plt.figure()
-            plt.plot(V_fe_from0toS,     L_fv_from0toS,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromStoA,     L_fv_fromStoA,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromAtoGust1, L_fv_fromAtoGust1, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromGust1toC, L_fv_fromGust1toC, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromCtoGust2, L_fv_fromCtoGust2, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromGust2toD, L_fv_fromGust2toD, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromDto0,     L_fv_fromDto0,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_from0toS,     L_new_from0toS,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromStoA,     L_new_fromStoA,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromAtoGust1, L_new_fromAtoGust1, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromGust1toC, L_new_fromGust1toC, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromCtoGust2, L_new_fromCtoGust2, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromGust2toD, L_new_fromGust2toD, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromDto0,     L_new_fromDto0,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
             
-            plt.plot(V_fe_from0toSinv,  L_fv_from0toSinv,  color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromSinvtoG,  L_fv_fromSinvtoG,  color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromGtoGust1, L_fv_fromGtoGust1, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromGust1toF, L_fv_fromGust1toF, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromFtoE,     L_fv_fromFtoE,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromEto0,     L_fv_fromEto0,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_from0toSinv,  L_new_from0toSinv,  color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromSinvtoG,  L_new_fromSinvtoG,  color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromGtoGust1, L_new_fromGtoGust1, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromGust1toF, L_new_fromGust1toF, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromFtoE,     L_new_fromFtoE,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromEto0,     L_new_fromEto0,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
 
             label=r"Point S"    
-            plt.text(V_fe_from0toS[-1], L_fv_from0toS[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')          
-            plt.scatter(V_fe_from0toS[-1], L_fv_from0toS[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_from0toS[-1], L_new_from0toS[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')          
+            plt.scatter(V_fe_from0toS[-1], L_new_from0toS[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point S", zorder=2)
             # fontsize or size
@@ -2305,38 +2317,38 @@ class balancing_loads:
             # 'light', 'normal', 'regular', 'book', 'medium', 'roman', 'semibold',
             # 'demibold', 'demi', 'bold', 'heavy', 'extra bold', 'black'}
             label=r"Point A"
-            plt.text(V_fe_fromStoA[-1], L_fv_fromStoA[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
-            plt.scatter(V_fe_fromStoA[-1], L_fv_fromStoA[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_fromStoA[-1], L_new_fromStoA[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
+            plt.scatter(V_fe_fromStoA[-1], L_new_fromStoA[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point A", zorder=2)
             label=r"Point C"
-            plt.text(V_fe_fromGust1toC[-1], L_fv_fromGust1toC[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
-            plt.scatter(V_fe_fromGust1toC[-1], L_fv_fromGust1toC[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_fromGust1toC[-1], L_new_fromGust1toC[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
+            plt.scatter(V_fe_fromGust1toC[-1], L_new_fromGust1toC[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point C", zorder=2)
             label=r"Point D"
-            plt.text(V_fe_fromGust2toD[-1]-2.0, L_fv_fromGust2toD[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
-            plt.scatter(V_fe_fromGust2toD[-1], L_fv_fromGust2toD[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_fromGust2toD[-1]-2.0, L_new_fromGust2toD[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
+            plt.scatter(V_fe_fromGust2toD[-1], L_new_fromGust2toD[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point D", zorder=2)
             label=r"Point S inverted"
-            plt.text(V_fe_from0toSinv[-1], L_fv_from0toSinv[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
-            plt.scatter(V_fe_from0toSinv[-1], L_fv_from0toSinv[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_from0toSinv[-1], L_new_from0toSinv[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
+            plt.scatter(V_fe_from0toSinv[-1], L_new_from0toSinv[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point G", zorder=2)
             label=r"Point G"
-            plt.text(V_fe_fromSinvtoG[-1], L_fv_fromSinvtoG[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
-            plt.scatter(V_fe_fromSinvtoG[-1], L_fv_fromSinvtoG[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_fromSinvtoG[-1], L_new_fromSinvtoG[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
+            plt.scatter(V_fe_fromSinvtoG[-1], L_new_fromSinvtoG[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point F", zorder=2)
             label=r"Point F"
-            plt.text(V_fe_fromGust1toF[-1], L_fv_fromGust1toF[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
-            plt.scatter(V_fe_fromGust1toF[-1], L_fv_fromGust1toF[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_fromGust1toF[-1], L_new_fromGust1toF[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
+            plt.scatter(V_fe_fromGust1toF[-1], L_new_fromGust1toF[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point F", zorder=2)
             label=r"Point E"
-            plt.text(V_fe_fromFtoE[-1]-2.0, L_fv_fromFtoE[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
-            plt.scatter(V_fe_fromFtoE[-1], L_fv_fromFtoE[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_fromFtoE[-1]-2.0, L_new_fromFtoE[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
+            plt.scatter(V_fe_fromFtoE[-1], L_new_fromFtoE[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point F", zorder=2)
             
@@ -2435,6 +2447,8 @@ class balancing_loads:
             plt.plot(V_fe_fromCtoGust2, L_ht_fromCtoGust2, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
             plt.plot(V_fe_fromGust2toD, L_ht_fromGust2toD, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
             plt.plot(V_fe_fromDto0,     L_ht_fromDto0,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+
+            plt.plot(V_unit_load_factor,L_ht_unit_load_factor, color="black", linewidth=1.8, linestyle = "dashed", zorder=1)
             
             plt.plot(V_fe_from0toSinv,  L_ht_from0toSinv,  color="red", linewidth=0.2, linestyle = "dashed", zorder=1)
             plt.plot(V_fe_fromSinvtoG,  L_ht_fromSinvtoG,  color="red", linewidth=1.0, linestyle = "solid", zorder=1)
@@ -2505,23 +2519,23 @@ class balancing_loads:
         elif (pos_case_flag == "Case3") and (neg_case_flag == "Case2_inverted"):
             
             fig1  = plt.figure()
-            plt.plot(V_fe_from0toS,     L_fv_from0toS,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromStoA,     L_fv_fromStoA,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromAtoGust1, L_fv_fromAtoGust1, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromGust1toC, L_fv_fromGust1toC, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromCtoGust2, L_fv_fromCtoGust2, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromGust2toD, L_fv_fromGust2toD, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromDto0,     L_fv_fromDto0,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_from0toS,     L_new_from0toS,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromStoA,     L_new_fromStoA,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromAtoGust1, L_new_fromAtoGust1, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromGust1toC, L_new_fromGust1toC, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromCtoGust2, L_new_fromCtoGust2, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromGust2toD, L_new_fromGust2toD, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromDto0,     L_new_fromDto0,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
             
-            plt.plot(V_fe_from0toSinv,  L_fv_from0toSinv,  color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromSinvtoG,  L_fv_fromSinvtoG,  color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromGtoF,     L_fv_fromGtoF,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromFtoE,     L_fv_fromFtoE,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromEto0,     L_fv_fromEto0,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_from0toSinv,  L_new_from0toSinv,  color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromSinvtoG,  L_new_fromSinvtoG,  color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromGtoF,     L_new_fromGtoF,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromFtoE,     L_new_fromFtoE,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromEto0,     L_new_fromEto0,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
 
             label=r"Point S"    
-            plt.text(V_fe_from0toS[-1], L_fv_from0toS[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')          
-            plt.scatter(V_fe_from0toS[-1], L_fv_from0toS[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_from0toS[-1], L_new_from0toS[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')          
+            plt.scatter(V_fe_from0toS[-1], L_new_from0toS[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point S", zorder=2)
             # fontsize or size
@@ -2531,38 +2545,38 @@ class balancing_loads:
             # 'light', 'normal', 'regular', 'book', 'medium', 'roman', 'semibold',
             # 'demibold', 'demi', 'bold', 'heavy', 'extra bold', 'black'}
             label=r"Point A"
-            plt.text(V_fe_fromStoA[-1], L_fv_fromStoA[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
-            plt.scatter(V_fe_fromStoA[-1], L_fv_fromStoA[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_fromStoA[-1], L_new_fromStoA[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
+            plt.scatter(V_fe_fromStoA[-1], L_new_fromStoA[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point A", zorder=2)
             label=r"Point C"
-            plt.text(V_fe_fromGust1toC[-1], L_fv_fromGust1toC[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
-            plt.scatter(V_fe_fromGust1toC[-1], L_fv_fromGust1toC[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_fromGust1toC[-1], L_new_fromGust1toC[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
+            plt.scatter(V_fe_fromGust1toC[-1], L_new_fromGust1toC[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point C", zorder=2)
             label=r"Point D"
-            plt.text(V_fe_fromGust2toD[-1]-2.0, L_fv_fromGust2toD[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
-            plt.scatter(V_fe_fromGust2toD[-1], L_fv_fromGust2toD[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_fromGust2toD[-1]-2.0, L_new_fromGust2toD[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
+            plt.scatter(V_fe_fromGust2toD[-1], L_new_fromGust2toD[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point D", zorder=2)
             label=r"Point S inverted"
-            plt.text(V_fe_from0toSinv[-1], L_fv_from0toSinv[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
-            plt.scatter(V_fe_from0toSinv[-1], L_fv_from0toSinv[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_from0toSinv[-1], L_new_from0toSinv[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
+            plt.scatter(V_fe_from0toSinv[-1], L_new_from0toSinv[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point G", zorder=2)
             label=r"Point G"
-            plt.text(V_fe_fromSinvtoG[-1], L_fv_fromSinvtoG[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
-            plt.scatter(V_fe_fromSinvtoG[-1], L_fv_fromSinvtoG[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_fromSinvtoG[-1], L_new_fromSinvtoG[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
+            plt.scatter(V_fe_fromSinvtoG[-1], L_new_fromSinvtoG[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point F", zorder=2)
             label=r"Point F"
-            plt.text(V_fe_fromGtoF[-1], L_fv_fromGtoF[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
-            plt.scatter(V_fe_fromGtoF[-1], L_fv_fromGtoF[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_fromGtoF[-1], L_new_fromGtoF[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
+            plt.scatter(V_fe_fromGtoF[-1], L_new_fromGtoF[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point F", zorder=2)
             label=r"Point E"
-            plt.text(V_fe_fromFtoE[-1]-2.0, L_fv_fromFtoE[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
-            plt.scatter(V_fe_fromFtoE[-1], L_fv_fromFtoE[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_fromFtoE[-1]-2.0, L_new_fromFtoE[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
+            plt.scatter(V_fe_fromFtoE[-1], L_new_fromFtoE[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point F", zorder=2)
             
@@ -2660,6 +2674,8 @@ class balancing_loads:
             plt.plot(V_fe_fromCtoGust2, L_ht_fromCtoGust2, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
             plt.plot(V_fe_fromGust2toD, L_ht_fromGust2toD, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
             plt.plot(V_fe_fromDto0,     L_ht_fromDto0,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+
+            plt.plot(V_unit_load_factor,L_ht_unit_load_factor, color="black", linewidth=1.8, linestyle = "dashed", zorder=1)
             
             plt.plot(V_fe_from0toSinv,  L_ht_from0toSinv,  color="red", linewidth=0.2, linestyle = "dashed", zorder=1)
             plt.plot(V_fe_fromSinvtoG,  L_ht_fromSinvtoG,  color="red", linewidth=1.0, linestyle = "solid", zorder=1)
@@ -2729,23 +2745,23 @@ class balancing_loads:
         elif (pos_case_flag == "Case3") and (neg_case_flag == "Case3_inverted"):
             
             fig1  = plt.figure()
-            plt.plot(V_fe_from0toS,     L_fv_from0toS,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromStoA,     L_fv_fromStoA,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromAtoGust1, L_fv_fromAtoGust1, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromGust1toC, L_fv_fromGust1toC, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromCtoGust2, L_fv_fromCtoGust2, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromGust2toD, L_fv_fromGust2toD, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromDto0,     L_fv_fromDto0,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_from0toS,     L_new_from0toS,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromStoA,     L_new_fromStoA,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromAtoGust1, L_new_fromAtoGust1, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromGust1toC, L_new_fromGust1toC, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromCtoGust2, L_new_fromCtoGust2, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromGust2toD, L_new_fromGust2toD, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromDto0,     L_new_fromDto0,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
             
-            plt.plot(V_fe_from0toSinv,  L_fv_from0toSinv,  color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromSinvtoG,  L_fv_fromSinvtoG,  color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromGtoF,     L_fv_fromGtoF,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromFtoE,     L_fv_fromFtoE,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
-            plt.plot(V_fe_fromEto0,     L_fv_fromEto0,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_from0toSinv,  L_new_from0toSinv,  color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromSinvtoG,  L_new_fromSinvtoG,  color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromGtoF,     L_new_fromGtoF,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromFtoE,     L_new_fromFtoE,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+            plt.plot(V_fe_fromEto0,     L_new_fromEto0,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
 
             label=r"Point S"    
-            plt.text(V_fe_from0toS[-1], L_fv_from0toS[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')          
-            plt.scatter(V_fe_from0toS[-1], L_fv_from0toS[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_from0toS[-1], L_new_from0toS[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')          
+            plt.scatter(V_fe_from0toS[-1], L_new_from0toS[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point S", zorder=2)
             # fontsize or size
@@ -2755,38 +2771,38 @@ class balancing_loads:
             # 'light', 'normal', 'regular', 'book', 'medium', 'roman', 'semibold',
             # 'demibold', 'demi', 'bold', 'heavy', 'extra bold', 'black'}
             label=r"Point A"
-            plt.text(V_fe_fromStoA[-1], L_fv_fromStoA[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
-            plt.scatter(V_fe_fromStoA[-1], L_fv_fromStoA[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_fromStoA[-1], L_new_fromStoA[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
+            plt.scatter(V_fe_fromStoA[-1], L_new_fromStoA[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point A", zorder=2)
             label=r"Point C"
-            plt.text(V_fe_fromGust1toC[-1], L_fv_fromGust1toC[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
-            plt.scatter(V_fe_fromGust1toC[-1], L_fv_fromGust1toC[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_fromGust1toC[-1], L_new_fromGust1toC[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
+            plt.scatter(V_fe_fromGust1toC[-1], L_new_fromGust1toC[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point C", zorder=2)
             label=r"Point D"
-            plt.text(V_fe_fromGust2toD[-1]-2.0, L_fv_fromGust2toD[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
-            plt.scatter(V_fe_fromGust2toD[-1], L_fv_fromGust2toD[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_fromGust2toD[-1]-2.0, L_new_fromGust2toD[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
+            plt.scatter(V_fe_fromGust2toD[-1], L_new_fromGust2toD[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point D", zorder=2)
             label=r"Point S inverted"
-            plt.text(V_fe_from0toSinv[-1], L_fv_from0toSinv[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
-            plt.scatter(V_fe_from0toSinv[-1], L_fv_from0toSinv[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_from0toSinv[-1], L_new_from0toSinv[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
+            plt.scatter(V_fe_from0toSinv[-1], L_new_from0toSinv[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point G", zorder=2)
             label=r"Point G"
-            plt.text(V_fe_fromSinvtoG[-1], L_fv_fromSinvtoG[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
-            plt.scatter(V_fe_fromSinvtoG[-1], L_fv_fromSinvtoG[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_fromSinvtoG[-1], L_new_fromSinvtoG[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
+            plt.scatter(V_fe_fromSinvtoG[-1], L_new_fromSinvtoG[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point F", zorder=2)
             label=r"Point F"
-            plt.text(V_fe_fromGtoF[-1], L_fv_fromGtoF[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
-            plt.scatter(V_fe_fromGtoF[-1], L_fv_fromGtoF[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_fromGtoF[-1], L_new_fromGtoF[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
+            plt.scatter(V_fe_fromGtoF[-1], L_new_fromGtoF[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point F", zorder=2)
             label=r"Point E"
-            plt.text(V_fe_fromFtoE[-1]-2.0, L_fv_fromFtoE[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
-            plt.scatter(V_fe_fromFtoE[-1], L_fv_fromFtoE[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
+            plt.text(V_fe_fromFtoE[-1]-2.0, L_new_fromFtoE[-1], label, fontdict=None, fontsize='x-small', fontweight='bold')
+            plt.scatter(V_fe_fromFtoE[-1], L_new_fromFtoE[-1], s=None, c='black', marker='.', cmap=None, norm=None,\
                         vmin=None, vmax=None, alpha=1, linewidths=None,\
                         edgecolors=None, plotnonfinite=False, data=None, label="Point F", zorder=2)
             
@@ -2884,6 +2900,8 @@ class balancing_loads:
             plt.plot(V_fe_fromCtoGust2, L_ht_fromCtoGust2, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
             plt.plot(V_fe_fromGust2toD, L_ht_fromGust2toD, color="red", linewidth=1.0, linestyle = "solid", zorder=1)
             plt.plot(V_fe_fromDto0,     L_ht_fromDto0,     color="red", linewidth=1.0, linestyle = "solid", zorder=1)
+
+            plt.plot(V_unit_load_factor,L_ht_unit_load_factor, color="black", linewidth=1.8, linestyle = "dashed", zorder=1)
             
             plt.plot(V_fe_from0toSinv,  L_ht_from0toSinv,  color="red", linewidth=0.2, linestyle = "dashed", zorder=1)
             plt.plot(V_fe_fromSinvtoG,  L_ht_fromSinvtoG,  color="red", linewidth=1.0, linestyle = "solid", zorder=1)
@@ -2950,4 +2968,1757 @@ class balancing_loads:
             plt.savefig(name_figure, bbox_inches='tight')
             plt.show()             
         
-        return fig1, fig2, fig3                                                                               
+        return fig1, fig2, fig3      
+
+    # +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    # BALANCING VALUES STORED INSIDE THE SIMPLE NAMESPACE OBJECT
+    # +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    def balancing_values_storage(          
+                       Balancing_loads,\
+                       CM_CG_from0toS, CM_CG_fromStoA, CM_CG_fromAtoGust1,\
+                       CM_CG_fromGust1toC, CM_CG_fromCtoGust2, CM_CG_fromGust2toD,\
+                       CM_CG_fromDto0, CM_CG_from0toSinv, CM_CG_fromSinvtoG,\
+                       CM_CG_fromGtoGust1, CM_CG_fromGust1toF, CM_CG_fromFtoE,\
+                       CM_CG_fromEto0, CM_CG_fromGtoF, CM_CG_fromAtoC, CM_CG_fromCtoD,\
+                           
+                       CM_due_to_CD_from0toS, CM_due_to_CD_fromStoA, CM_due_to_CD_fromAtoGust1,\
+                       CM_due_to_CD_fromGust1toC, CM_due_to_CD_fromCtoGust2, CM_due_to_CD_fromGust2toD,\
+                       CM_due_to_CD_fromDto0, CM_due_to_CD_from0toSinv, CM_due_to_CD_fromSinvtoG,\
+                       CM_due_to_CD_fromGtoGust1, CM_due_to_CD_fromGust1toF, CM_due_to_CD_fromFtoE,\
+                       CM_due_to_CD_fromEto0, CM_due_to_CD_fromGtoF, CM_due_to_CD_fromAtoC, CM_due_to_CD_fromCtoD,\
+                           
+                       CM_due_to_CL_from0toS, CM_due_to_CL_fromStoA, CM_due_to_CL_fromAtoGust1,\
+                       CM_due_to_CL_fromGust1toC, CM_due_to_CL_fromCtoGust2, CM_due_to_CL_fromGust2toD,\
+                       CM_due_to_CL_fromDto0, CM_due_to_CL_from0toSinv, CM_due_to_CL_fromSinvtoG,\
+                       CM_due_to_CL_fromGtoGust1, CM_due_to_CL_fromGust1toF, CM_due_to_CL_fromFtoE,\
+                       CM_due_to_CL_fromEto0, CM_due_to_CL_fromGtoF, CM_due_to_CL_fromAtoC, CM_due_to_CL_fromCtoD,\
+                           
+                       q_from0toS, q_fromStoA, q_fromAtoGust1,\
+                       q_fromGust1toC, q_fromCtoGust2, q_fromGust2toD,\
+                       q_fromDto0, q_from0toSinv, q_fromSinvtoG,\
+                       q_fromGtoGust1, q_fromGust1toF, q_fromFtoE,\
+                       q_fromEto0, q_fromGtoF, q_fromAtoC, q_fromCtoD,\
+                           
+                       CD_from0toS, CD_fromStoA, CD_fromAtoGust1,\
+                       CD_fromGust1toC, CD_fromCtoGust2, CD_fromGust2toD,\
+                       CD_fromDto0, CD_from0toSinv, CD_fromSinvtoG,\
+                       CD_fromGtoGust1, CD_fromGust1toF, CD_fromFtoE,\
+                       CD_fromEto0, CD_fromGtoF, CD_fromAtoC, CD_fromCtoD,\
+                           
+                       alfa_new_from0toS, alfa_new_fromStoA, alfa_new_fromAtoGust1,\
+                       alfa_new_fromGust1toC, alfa_new_fromCtoGust2, alfa_new_fromGust2toD,\
+                       alfa_new_fromDto0, alfa_new_from0toSinv, alfa_new_fromSinvtoG,\
+                       alfa_new_fromGtoGust1, alfa_new_fromGust1toF, alfa_new_fromFtoE,\
+                       alfa_new_fromEto0, alfa_new_fromGtoF, alfa_new_fromAtoC, alfa_new_fromCtoD,\
+                           
+                       alfa_from0toS, alfa_fromStoA, alfa_fromAtoGust1,\
+                       alfa_fromGust1toC, alfa_fromCtoGust2, alfa_fromGust2toD,\
+                       alfa_fromDto0, alfa_from0toSinv, alfa_fromSinvtoG,\
+                       alfa_fromGtoGust1, alfa_fromGust1toF, alfa_fromFtoE,\
+                       alfa_fromEto0, alfa_fromGtoF, alfa_fromAtoC, alfa_fromCtoD,\
+                      
+                       CL_wb_from0toS, CL_wb_fromStoA, CL_wb_fromAtoGust1,\
+                       CL_wb_fromGust1toC, CL_wb_fromCtoGust2, CL_wb_fromGust2toD,\
+                       CL_wb_fromDto0, CL_wb_from0toSinv, CL_wb_fromSinvtoG,\
+                       CL_wb_fromGtoGust1, CL_wb_fromGust1toF, CL_wb_fromFtoE,\
+                       CL_wb_fromEto0, CL_wb_fromGtoF, CL_wb_fromAtoC, CL_wb_fromCtoD,\
+                      
+                       CL_ht_from0toS, CL_ht_fromStoA, CL_ht_fromAtoGust1,\
+                       CL_ht_fromGust1toC, CL_ht_fromCtoGust2, CL_ht_fromGust2toD,\
+                       CL_ht_fromDto0, CL_ht_from0toSinv, CL_ht_fromSinvtoG,\
+                       CL_ht_fromGtoGust1, CL_ht_fromGust1toF, CL_ht_fromFtoE,\
+                       CL_ht_fromEto0, CL_ht_fromGtoF, CL_ht_fromAtoC, CL_ht_fromCtoD,\
+                      
+                       CL_new_from0toS, CL_new_fromStoA, CL_new_fromAtoGust1,\
+                       CL_new_fromGust1toC, CL_new_fromCtoGust2, CL_new_fromGust2toD,\
+                       CL_new_fromDto0, CL_new_from0toSinv, CL_new_fromSinvtoG,\
+                       CL_new_fromGtoGust1, CL_new_fromGust1toF, CL_new_fromFtoE,\
+                       CL_new_fromEto0, CL_new_fromGtoF, CL_new_fromAtoC, CL_new_fromCtoD,\
+                           
+                       n_fe_from0toS, n_fe_fromStoA, n_fe_fromAtoGust1,\
+                       n_fe_fromGust1toC, n_fe_fromCtoGust2, n_fe_fromGust2toD,\
+                       n_fe_fromDto0, n_fe_from0toSinv, n_fe_fromSinvtoG,\
+                       n_fe_fromGtoGust1, n_fe_fromGust1toF, n_fe_fromFtoE,\
+                       n_fe_fromEto0, n_fe_fromGtoF, n_fe_fromAtoC, n_fe_fromCtoD,\
+                           
+                       V_fe_from0toS, V_fe_fromStoA, V_fe_fromAtoGust1,\
+                       V_fe_fromGust1toC, V_fe_fromCtoGust2, V_fe_fromGust2toD,\
+                       V_fe_fromDto0, V_fe_from0toSinv, V_fe_fromSinvtoG,\
+                       V_fe_fromGtoGust1, V_fe_fromGust1toF, V_fe_fromFtoE,\
+                       V_fe_fromEto0, V_fe_fromGtoF, V_fe_fromAtoC, V_fe_fromCtoD,\
+                           
+                       L_wb_from0toS, L_new_from0toS, L_wb_fromStoA,\
+                       L_new_fromStoA, L_new_fromAtoGust1, L_wb_fromAtoGust1,\
+                       L_new_fromGust1toC, L_wb_fromGust1toC, L_new_fromCtoGust2,\
+                       L_wb_fromCtoGust2, L_new_fromGust2toD, L_wb_fromGust2toD,\
+                       L_new_fromDto0, L_wb_fromDto0, L_new_from0toSinv,\
+                       L_wb_from0toSinv, L_new_fromSinvtoG, L_wb_fromSinvtoG,\
+                       L_new_fromGtoGust1, L_wb_fromGtoGust1, L_new_fromGust1toF,\
+                       L_wb_fromGust1toF, L_new_fromFtoE, L_wb_fromFtoE,\
+                       L_new_fromEto0, L_wb_fromEto0, L_new_fromGtoF,\
+                       L_wb_fromGtoF, L_new_fromAtoC, L_wb_fromAtoC,\
+                       L_new_fromCtoD, L_wb_fromCtoD, L_ht_from0toS,\
+                       L_ht_fromStoA, L_ht_fromAtoGust1, L_ht_fromGust1toC,\
+                       L_ht_fromCtoGust2, L_ht_fromGust2toD, L_ht_fromDto0,\
+                       L_ht_from0toSinv, L_ht_fromSinvtoG, L_ht_fromGtoGust1,\
+                       L_ht_fromGust1toF, L_ht_fromFtoE,  L_ht_fromEto0,\
+                       L_ht_fromGtoF, L_ht_fromAtoC, L_ht_fromCtoD,\
+                       pos_case_flag, neg_case_flag):   
+        
+        if   (pos_case_flag == "Case1") and (neg_case_flag == "Case1_inverted"):
+            
+            Balancing_loads = {
+                "Balancing_loads": {
+                    "V_fe_from0toS"    : {"Value": V_fe_from0toS,     "Unit": "m/s"},
+                    "n_fe_from0toS"    : {"Value": n_fe_from0toS,     "Unit": "g"},
+                    "V_fe_fromStoA"    : {"Value": V_fe_fromStoA,     "Unit": "m/s"},
+                    "n_fe_fromStoA"    : {"Value": n_fe_fromStoA,     "Unit": "g"},
+                    "V_fe_fromAtoGust1": {"Value": V_fe_fromAtoGust1, "Unit": "m/s"},
+                    "n_fe_fromAtoGust1": {"Value": n_fe_fromAtoGust1, "Unit": "g"},
+                    "V_fe_fromGust1toC": {"Value": V_fe_fromGust1toC, "Unit": "m/s"},
+                    "n_fe_fromGust1toC": {"Value": n_fe_fromGust1toC, "Unit": "g"},
+                    "V_fe_fromCtoGust2": {"Value": V_fe_fromCtoGust2, "Unit": "m/s"},
+                    "n_fe_fromCtoGust2": {"Value": n_fe_fromCtoGust2, "Unit": "g"},
+                    "V_fe_fromGust2toD": {"Value": V_fe_fromGust2toD, "Unit": "m/s"},
+                    "n_fe_fromGust2toD": {"Value": n_fe_fromGust2toD, "Unit": "g"},
+                    "V_fe_fromDto0"    : {"Value": V_fe_fromDto0,     "Unit": "m/s"},
+                    "n_fe_fromDto0"    : {"Value": n_fe_fromDto0,     "Unit": "g"},
+                    "V_fe_from0toSinv" : {"Value": V_fe_from0toSinv,  "Unit": "m/s"},
+                    "n_fe_from0toSinv" : {"Value": n_fe_from0toSinv,  "Unit": "g"},
+                    "V_fe_fromSinvtoG" : {"Value": V_fe_fromSinvtoG,  "Unit": "m/s"},
+                    "n_fe_fromSinvtoG" : {"Value": n_fe_fromSinvtoG,  "Unit": "g"},
+                    "V_fe_fromGtoGust1": {"Value": V_fe_fromGtoGust1, "Unit": "m/s"},
+                    "n_fe_fromGtoGust1": {"Value": n_fe_fromGtoGust1, "Unit": "g"},
+                    "V_fe_fromGust1toF": {"Value": V_fe_fromGust1toF, "Unit": "m/s"},
+                    "n_fe_fromGust1toF": {"Value": n_fe_fromGust1toF, "Unit": "g"},
+                    "V_fe_fromFtoE"    : {"Value": V_fe_fromFtoE,     "Unit": "m/s"},
+                    "n_fe_fromFtoE"    : {"Value": n_fe_fromFtoE,     "Unit": "g"},
+                    "V_fe_fromEto0"    : {"Value": V_fe_fromEto0,     "Unit": "m/s"},
+                    "n_fe_fromEto0"    : {"Value": n_fe_fromEto0,     "Unit": "g"},
+                      
+                    "q_from0toS"     : {"Value": q_from0toS,      "Unit": "Pa"},
+                    "CD_from0toS"    : {"Value": CD_from0toS,     "Unit": "Non dimensional"},
+                    "q_fromStoA"     : {"Value": q_fromStoA,      "Unit": "Pa"},
+                    "CD_fromStoA"    : {"Value": CD_fromStoA,     "Unit": "Non dimensional"},
+                    "q_fromAtoGust1" : {"Value": q_fromAtoGust1,  "Unit": "Pa"},
+                    "CD_fromAtoGust1": {"Value": CD_fromAtoGust1, "Unit": "Non dimensional"},
+                    "q_fromGust1toC" : {"Value": q_fromGust1toC,  "Unit": "Pa"},
+                    "CD_fromGust1toC": {"Value": CD_fromGust1toC, "Unit": "Non dimensional"},
+                    "q_fromCtoGust2" : {"Value": q_fromCtoGust2,  "Unit": "Pa"},
+                    "CD_fromCtoGust2": {"Value": CD_fromCtoGust2, "Unit": "Non dimensional"},
+                    "q_fromGust2toD" : {"Value": q_fromGust2toD,  "Unit": "Pa"},
+                    "CD_fromGust2toD": {"Value": CD_fromGust2toD, "Unit": "Non dimensional"},
+                    "q_fromDto0"     : {"Value": q_fromDto0,      "Unit": "Pa"},
+                    "CD_fromDto0"    : {"Value": CD_fromDto0,     "Unit": "Non dimensional"},
+                    "q_from0toSinv"  : {"Value": q_from0toSinv,   "Unit": "Pa"},
+                    "CD_from0toSinv" : {"Value": CD_from0toSinv,  "Unit": "Non dimensional"},
+                    "q_fromSinvtoG"  : {"Value": q_fromSinvtoG,   "Unit": "Pa"},
+                    "CD_fromSinvtoG" : {"Value": CD_fromSinvtoG,  "Unit": "Non dimensional"},
+                    "q_fromGtoGust1" : {"Value": q_fromGtoGust1,  "Unit": "Pa"},
+                    "CD_fromGtoGust1": {"Value": CD_fromGtoGust1, "Unit": "Non dimensional"},
+                    "q_fromGust1toF" : {"Value": q_fromGust1toF,  "Unit": "Pa"},
+                    "CD_fromGust1toF": {"Value": CD_fromGust1toF, "Unit": "Non dimensional"},
+                    "q_fromFtoE"     : {"Value": q_fromFtoE,      "Unit": "Pa"},
+                    "CD_fromFtoE"    : {"Value": CD_fromFtoE,     "Unit": "Non dimensional"},
+                    "q_fromEto0"     : {"Value": q_fromEto0,      "Unit": "Pa"},
+                    "CD_fromEto0"    : {"Value": CD_fromEto0,     "Unit": "Non dimensional"},
+                      
+                    "CL_wb_from0toS"     : {"Value": CL_wb_from0toS,      "Unit": "Non dimensional"},
+                    "CL_ht_from0toS"     : {"Value": CL_ht_from0toS,      "Unit": "Non dimensional"},
+                    "CL_new_from0toS"    : {"Value": CL_new_from0toS,     "Unit": "Non dimensional"},
+                    "CL_wb_fromStoA"     : {"Value": CL_wb_fromStoA,      "Unit": "Non dimensional"},
+                    "CL_ht_fromStoA"     : {"Value": CL_ht_fromStoA,      "Unit": "Non dimensional"},
+                    "CL_new_fromStoA"    : {"Value": CL_new_fromStoA,     "Unit": "Non dimensional"},
+                    "CL_wb_fromAtoGust1" : {"Value": CL_wb_fromAtoGust1,  "Unit": "Non dimensional"},
+                    "CL_ht_fromAtoGust1" : {"Value": CL_ht_fromAtoGust1,  "Unit": "Non dimensional"},
+                    "CL_new_fromAtoGust1": {"Value": CL_new_fromAtoGust1, "Unit": "Non dimensional"},
+                    "CL_wb_fromGust1toC" : {"Value": CL_wb_fromGust1toC,  "Unit": "Non dimensional"},
+                    "CL_ht_fromGust1toC" : {"Value": CL_ht_fromGust1toC,  "Unit": "Non dimensional"},
+                    "CL_new_fromGust1toC": {"Value": CL_new_fromGust1toC, "Unit": "Non dimensional"},
+                    "CL_wb_fromCtoGust2" : {"Value": CL_wb_fromCtoGust2,  "Unit": "Non dimensional"},
+                    "CL_ht_fromCtoGust2" : {"Value": CL_ht_fromCtoGust2,  "Unit": "Non dimensional"},
+                    "CL_new_fromCtoGust2": {"Value": CL_new_fromCtoGust2, "Unit": "Non dimensional"},
+                    "CL_wb_fromGust2toD" : {"Value": CL_wb_fromGust2toD,  "Unit": "Non dimensional"},
+                    "CL_ht_fromGust2toD" : {"Value": CL_ht_fromGust2toD,  "Unit": "Non dimensional"},
+                    "CL_new_fromGust2toD": {"Value": CL_new_fromGust2toD, "Unit": "Non dimensional"},
+                    "CL_wb_fromDto0"     : {"Value": CL_wb_fromDto0,      "Unit": "Non dimensional"},
+                    "CL_ht_fromDto0"     : {"Value": CL_ht_fromDto0,      "Unit": "Non dimensional"},
+                    "CL_new_fromDto0"    : {"Value": CL_new_fromDto0,     "Unit": "Non dimensional"},
+                    "CL_wb_from0toSinv"  : {"Value": CL_wb_from0toSinv,   "Unit": "Non dimensional"},
+                    "CL_ht_from0toSinv"  : {"Value": CL_ht_from0toSinv,   "Unit": "Non dimensional"},
+                    "CL_new_from0toSinv" : {"Value": CL_new_from0toSinv,  "Unit": "Non dimensional"},
+                    "CL_wb_fromSinvtoG"  : {"Value": CL_wb_fromSinvtoG,   "Unit": "Non dimensional"},
+                    "CL_ht_fromSinvtoG"  : {"Value": CL_ht_fromSinvtoG,   "Unit": "Non dimensional"},
+                    "CL_new_fromSinvtoG" : {"Value": CL_new_fromSinvtoG,  "Unit": "Non dimensional"},
+                    "CL_wb_fromGtoGust1" : {"Value": CL_wb_fromGtoGust1,  "Unit": "Non dimensional"},
+                    "CL_ht_fromGtoGust1" : {"Value": CL_ht_fromGtoGust1,  "Unit": "Non dimensional"},
+                    "CL_new_fromGtoGust1": {"Value": CL_new_fromGtoGust1, "Unit": "Non dimensional"},
+                    "CL_wb_fromGust1toF" : {"Value": CL_wb_fromGust1toF,  "Unit": "Non dimensional"},
+                    "CL_ht_fromGust1toF" : {"Value": CL_ht_fromGust1toF,  "Unit": "Non dimensional"},
+                    "CL_new_fromGust1toF": {"Value": CL_new_fromGust1toF, "Unit": "Non dimensional"},
+                    "CL_wb_fromFtoE"     : {"Value": CL_wb_fromFtoE,      "Unit": "Non dimensional"},
+                    "CL_ht_fromFtoE"     : {"Value": CL_ht_fromFtoE,      "Unit": "Non dimensional"},
+                    "CL_new_fromFtoE"    : {"Value": CL_new_fromFtoE,     "Unit": "Non dimensional"},
+                    "CL_wb_fromEto0"     : {"Value": CL_wb_fromEto0,      "Unit": "Non dimensional"},
+                    "CL_ht_fromEto0"     : {"Value": CL_ht_fromEto0,      "Unit": "Non dimensional"},
+                    "CL_new_fromEto0"    : {"Value": CL_new_fromEto0,     "Unit": "Non dimensional"},
+
+                    "alfa_from0toS"        : {"Value": alfa_from0toS,         "Unit": "deg"},
+                    "alfa_new_from0toS"    : {"Value": alfa_new_from0toS,     "Unit": "deg"},
+                    "alfa_fromStoA"        : {"Value": alfa_fromStoA,         "Unit": "deg"},
+                    "alfa_new_fromStoA"    : {"Value": alfa_new_fromStoA,     "Unit": "deg"},
+                    "alfa_fromAtoGust1"    : {"Value": alfa_fromAtoGust1,     "Unit": "deg"},
+                    "alfa_new_fromAtoGust1": {"Value": alfa_new_fromAtoGust1, "Unit": "deg"},
+                    "alfa_fromGust1toC"    : {"Value": alfa_fromGust1toC,     "Unit": "deg"},
+                    "alfa_new_fromGust1toC": {"Value": alfa_new_fromGust1toC, "Unit": "deg"},
+                    "alfa_fromCtoGust2"    : {"Value": alfa_fromCtoGust2,     "Unit": "deg"},
+                    "alfa_new_fromCtoGust2": {"Value": alfa_new_fromCtoGust2, "Unit": "deg"},
+                    "alfa_fromGust2toD"    : {"Value": alfa_fromGust2toD,     "Unit": "deg"},
+                    "alfa_new_fromGust2toD": {"Value": alfa_new_fromGust2toD, "Unit": "deg"},
+                    "alfa_fromDto0"        : {"Value": alfa_fromDto0,         "Unit": "deg"},
+                    "alfa_new_fromDto0"    : {"Value": alfa_new_fromDto0,     "Unit": "deg"},
+                    "alfa_from0toSinv"     : {"Value": alfa_from0toSinv,      "Unit": "deg"},
+                    "alfa_new_from0toSinv" : {"Value": alfa_new_from0toSinv,  "Unit": "deg"},
+                    "alfa_fromSinvtoG"     : {"Value": alfa_fromSinvtoG,      "Unit": "deg"},
+                    "alfa_new_fromSinvtoG" : {"Value": alfa_new_fromSinvtoG,  "Unit": "deg"},
+                    "alfa_fromGtoGust1"    : {"Value": alfa_fromGtoGust1,     "Unit": "deg"},
+                    "alfa_new_fromGtoGust1": {"Value": alfa_new_fromGtoGust1, "Unit": "deg"},
+                    "alfa_fromGust1toF"    : {"Value": alfa_fromGust1toF,     "Unit": "deg"},
+                    "alfa_new_fromGust1toF": {"Value": alfa_new_fromGust1toF, "Unit": "deg"},
+                    "alfa_fromFtoE"        : {"Value": alfa_fromFtoE,         "Unit": "deg"},
+                    "alfa_new_fromFtoE"    : {"Value": alfa_new_fromFtoE,     "Unit": "deg"},
+                    "alfa_fromEto0"        : {"Value": alfa_fromEto0,         "Unit": "deg"},
+                    "alfa_new_fromEto0"    : {"Value": alfa_new_fromEto0,     "Unit": "deg"},
+                      
+                    "L_wb_from0toS"     : {"Value": L_wb_from0toS,      "Unit": "daN"},
+                    "L_ht_from0toS"     : {"Value": L_ht_from0toS,      "Unit": "daN"},
+                    "L_new_from0toS"    : {"Value": L_new_from0toS,     "Unit": "daN"},
+                    "L_wb_fromStoA"     : {"Value": L_wb_fromStoA,      "Unit": "daN"},
+                    "L_ht_fromStoA"     : {"Value": L_ht_fromStoA,      "Unit": "daN"},
+                    "L_new_fromStoA"    : {"Value": L_new_fromStoA,     "Unit": "daN"},
+                    "L_wb_fromAtoGust1" : {"Value": L_wb_fromAtoGust1,  "Unit": "daN"},
+                    "L_ht_fromAtoGust1" : {"Value": L_ht_fromAtoGust1,  "Unit": "daN"},
+                    "L_new_fromAtoGust1": {"Value": L_new_fromAtoGust1, "Unit": "daN"},
+                    "L_wb_fromGust1toC" : {"Value": L_wb_fromGust1toC,  "Unit": "daN"},
+                    "L_ht_fromGust1toC" : {"Value": L_ht_fromGust1toC,  "Unit": "daN"},
+                    "L_new_fromGust1toC": {"Value": L_new_fromGust1toC, "Unit": "daN"},
+                    "L_wb_fromCtoGust2" : {"Value": L_wb_fromCtoGust2,  "Unit": "daN"},
+                    "L_ht_fromCtoGust2" : {"Value": L_ht_fromCtoGust2,  "Unit": "daN"},
+                    "L_new_fromCtoGust2": {"Value": L_new_fromCtoGust2, "Unit": "daN"},
+                    "L_wb_fromGust2toD" : {"Value": L_wb_fromGust2toD,  "Unit": "daN"},
+                    "L_ht_fromGust2toD" : {"Value": L_ht_fromGust2toD,  "Unit": "daN"},
+                    "L_new_fromGust2toD": {"Value": L_new_fromGust2toD, "Unit": "daN"},
+                    "L_wb_fromDto0"     : {"Value": L_wb_fromDto0,      "Unit": "daN"},
+                    "L_ht_fromDto0"     : {"Value": L_ht_fromDto0,      "Unit": "daN"},
+                    "L_new_fromDto0"    : {"Value": L_new_fromDto0,     "Unit": "daN"},
+                    "L_wb_from0toSinv"  : {"Value": L_wb_from0toSinv,   "Unit": "daN"},
+                    "L_ht_from0toSinv"  : {"Value": L_ht_from0toSinv,   "Unit": "daN"},
+                    "L_new_from0toSinv" : {"Value": L_new_from0toSinv,  "Unit": "daN"},
+                    "L_wb_fromSinvtoG"  : {"Value": L_wb_fromSinvtoG,   "Unit": "daN"},
+                    "L_ht_fromSinvtoG"  : {"Value": L_ht_fromSinvtoG,   "Unit": "daN"},
+                    "L_new_fromSinvtoG" : {"Value": L_new_fromSinvtoG,  "Unit": "daN"},
+                    "L_wb_fromGtoGust1" : {"Value": L_wb_fromGtoGust1,  "Unit": "daN"},
+                    "L_ht_fromGtoGust1" : {"Value": L_ht_fromGtoGust1,  "Unit": "daN"},
+                    "L_new_fromGtoGust1": {"Value": L_new_fromGtoGust1, "Unit": "daN"},
+                    "L_wb_fromGust1toF" : {"Value": L_wb_fromGust1toF,  "Unit": "daN"},
+                    "L_ht_fromGust1toF" : {"Value": L_ht_fromGust1toF,  "Unit": "daN"},
+                    "L_new_fromGust1toF": {"Value": L_new_fromGust1toF, "Unit": "daN"},
+                    "L_wb_fromFtoE"     : {"Value": L_wb_fromFtoE,      "Unit": "daN"},
+                    "L_ht_fromFtoE"     : {"Value": L_ht_fromFtoE,      "Unit": "daN"},
+                    "L_new_fromFtoE"    : {"Value": L_new_fromFtoE,     "Unit": "daN"},
+                    "L_wb_fromEto0"     : {"Value": L_wb_fromEto0,      "Unit": "daN"},
+                    "L_ht_fromEto0"     : {"Value": L_ht_fromEto0,      "Unit": "daN"},
+                    "L_new_fromEto0"    : {"Value": L_new_fromEto0,     "Unit": "daN"},
+                      
+                    "CM_due_to_CL_from0toS"     : {"Value": CM_due_to_CL_from0toS,      "Unit": "Non dimensional"},
+                    "CM_due_to_CD_from0toS"     : {"Value": CM_due_to_CD_from0toS,      "Unit": "Non dimensional"},
+                    "CM_CG_from0toS"            : {"Value": CM_CG_from0toS,             "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromStoA"     : {"Value": CM_due_to_CL_fromStoA,      "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromStoA"     : {"Value": CM_due_to_CD_fromStoA,      "Unit": "Non dimensional"},
+                    "CM_CG_fromStoA"            : {"Value": CM_CG_fromStoA,             "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromAtoGust1" : {"Value": CM_due_to_CL_fromAtoGust1,  "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromAtoGust1" : {"Value": CM_due_to_CD_fromAtoGust1,  "Unit": "Non dimensional"},
+                    "CM_CG_fromAtoGust1"        : {"Value": CM_CG_fromAtoGust1,         "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromGust1toC" : {"Value": CM_due_to_CL_fromGust1toC,  "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromGust1toC" : {"Value": CM_due_to_CD_fromGust1toC,  "Unit": "Non dimensional"},
+                    "CM_CG_fromGust1toC"        : {"Value": CM_CG_fromGust1toC,         "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromCtoGust2" : {"Value": CM_due_to_CL_fromCtoGust2,  "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromCtoGust2" : {"Value": CM_due_to_CD_fromCtoGust2,  "Unit": "Non dimensional"},
+                    "CM_CG_fromCtoGust2"        : {"Value": CM_CG_fromCtoGust2,         "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromGust2toD" : {"Value": CM_due_to_CL_fromGust2toD,  "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromGust2toD" : {"Value": CM_due_to_CD_fromGust2toD,  "Unit": "Non dimensional"},
+                    "CM_CG_fromGust2toD"        : {"Value": CM_CG_fromGust2toD,         "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromDto0"     : {"Value": CM_due_to_CL_fromDto0,      "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromDto0"     : {"Value": CM_due_to_CD_fromDto0,      "Unit": "Non dimensional"},
+                    "CM_CG_fromDto0"            : {"Value": CM_CG_fromDto0,             "Unit": "Non dimensional"},
+                    "CM_due_to_CL_from0toSinv"  : {"Value": CM_due_to_CL_from0toSinv,   "Unit": "Non dimensional"},
+                    "CM_due_to_CD_from0toSinv"  : {"Value": CM_due_to_CD_from0toSinv,   "Unit": "Non dimensional"},
+                    "CM_CG_from0toSinv"         : {"Value": CM_CG_from0toSinv,          "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromSinvtoG"  : {"Value": CM_due_to_CL_fromSinvtoG,   "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromSinvtoG"  : {"Value": CM_due_to_CD_fromSinvtoG,   "Unit": "Non dimensional"},
+                    "CM_CG_fromSinvtoG"         : {"Value": CM_CG_fromSinvtoG,          "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromGtoGust1" : {"Value": CM_due_to_CL_fromGtoGust1,  "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromGtoGust1" : {"Value": CM_due_to_CD_fromGtoGust1,  "Unit": "Non dimensional"},
+                    "CM_CG_fromGtoGust1"        : {"Value": CM_CG_fromGtoGust1,         "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromGust1toF" : {"Value": CM_due_to_CL_fromGust1toF,  "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromGust1toF" : {"Value": CM_due_to_CD_fromGust1toF,  "Unit": "Non dimensional"},
+                    "CM_CG_fromGust1toF"        : {"Value": CM_CG_fromGust1toF,         "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromFtoE"     : {"Value": CM_due_to_CL_fromFtoE,      "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromFtoE"     : {"Value": CM_due_to_CD_fromFtoE,      "Unit": "Non dimensional"},
+                    "CM_CG_fromFtoE"            : {"Value": CM_CG_fromFtoE,             "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromEto0"     : {"Value": CM_due_to_CL_fromEto0,      "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromEto0"     : {"Value": CM_due_to_CD_fromEto0,      "Unit": "Non dimensional"},
+                    "CM_CG_fromEto0"            : {"Value": CM_CG_fromEto0,             "Unit": "Non dimensional"}
+                    }
+                }
+
+        elif (pos_case_flag == "Case1") and (neg_case_flag == "Case2_inverted"):
+            
+            
+            Balancing_loads = {
+                "Balancing_loads": {
+                    "V_fe_from0toS"    : {"Value": V_fe_from0toS,     "Unit": "m/s"},
+                    "n_fe_from0toS"    : {"Value": n_fe_from0toS,     "Unit": "g"},
+                    "V_fe_fromStoA"    : {"Value": V_fe_fromStoA,     "Unit": "m/s"},
+                    "n_fe_fromStoA"    : {"Value": n_fe_fromStoA,     "Unit": "g"},
+                    "V_fe_fromAtoGust1": {"Value": V_fe_fromAtoGust1, "Unit": "m/s"},
+                    "n_fe_fromAtoGust1": {"Value": n_fe_fromAtoGust1, "Unit": "g"},
+                    "V_fe_fromGust1toC": {"Value": V_fe_fromGust1toC, "Unit": "m/s"},
+                    "n_fe_fromGust1toC": {"Value": n_fe_fromGust1toC, "Unit": "g"},
+                    "V_fe_fromCtoGust2": {"Value": V_fe_fromCtoGust2, "Unit": "m/s"},
+                    "n_fe_fromCtoGust2": {"Value": n_fe_fromCtoGust2, "Unit": "g"},
+                    "V_fe_fromGust2toD": {"Value": V_fe_fromGust2toD, "Unit": "m/s"},
+                    "n_fe_fromGust2toD": {"Value": n_fe_fromGust2toD, "Unit": "g"},
+                    "V_fe_fromDto0"    : {"Value": V_fe_fromDto0,     "Unit": "m/s"},
+                    "n_fe_fromDto0"    : {"Value": n_fe_fromDto0,     "Unit": "g"},
+                    "V_fe_from0toSinv" : {"Value": V_fe_from0toSinv,  "Unit": "m/s"},
+                    "n_fe_from0toSinv" : {"Value": n_fe_from0toSinv,  "Unit": "g"},
+                    "V_fe_fromSinvtoG" : {"Value": V_fe_fromSinvtoG,  "Unit": "m/s"},
+                    "n_fe_fromSinvtoG" : {"Value": n_fe_fromSinvtoG,  "Unit": "g"},
+                    "V_fe_fromGtoF"    : {"Value": V_fe_fromGtoF,     "Unit": "m/s"},
+                    "n_fe_fromGtoF"    : {"Value": n_fe_fromGtoF,     "Unit": "g"},
+                    "V_fe_fromFtoE"    : {"Value": V_fe_fromFtoE,     "Unit": "m/s"},
+                    "n_fe_fromFtoE"    : {"Value": n_fe_fromFtoE,     "Unit": "g"},
+                    "V_fe_fromEto0"    : {"Value": V_fe_fromEto0,     "Unit": "m/s"},
+                    "n_fe_fromEto0"    : {"Value": n_fe_fromEto0,     "Unit": "g"},
+
+                    "q_from0toS"     : {"Value": q_from0toS,      "Unit": "Pa"},
+                    "CD_from0toS"    : {"Value": CD_from0toS,     "Unit": "Non dimensional"},
+                    "q_fromStoA"     : {"Value": q_fromStoA,      "Unit": "Pa"},
+                    "CD_fromStoA"    : {"Value": CD_fromStoA,     "Unit": "Non dimensional"},
+                    "q_fromAtoGust1" : {"Value": q_fromAtoGust1,  "Unit": "Pa"},
+                    "CD_fromAtoGust1": {"Value": CD_fromAtoGust1, "Unit": "Non dimensional"},
+                    "q_fromGust1toC" : {"Value": q_fromGust1toC,  "Unit": "Pa"},
+                    "CD_fromGust1toC": {"Value": CD_fromGust1toC, "Unit": "Non dimensional"},
+                    "q_fromCtoGust2" : {"Value": q_fromCtoGust2,  "Unit": "Pa"},
+                    "CD_fromCtoGust2": {"Value": CD_fromCtoGust2, "Unit": "Non dimensional"},
+                    "q_fromGust2toD" : {"Value": q_fromGust2toD,  "Unit": "Pa"},
+                    "CD_fromGust2toD": {"Value": CD_fromGust2toD, "Unit": "Non dimensional"},
+                    "q_fromDto0"     : {"Value": q_fromDto0,      "Unit": "Pa"},
+                    "CD_fromDto0"    : {"Value": CD_fromDto0,     "Unit": "Non dimensional"},
+                    "q_from0toSinv"  : {"Value": q_from0toSinv,   "Unit": "Pa"},
+                    "CD_from0toSinv" : {"Value": CD_from0toSinv,  "Unit": "Non dimensional"},
+                    "q_fromSinvtoG"  : {"Value": q_fromSinvtoG,   "Unit": "Pa"},
+                    "CD_fromSinvtoG" : {"Value": CD_fromSinvtoG,  "Unit": "Non dimensional"},
+                    "q_fromGtoF"     : {"Value": q_fromGtoF,      "Unit": "Pa"},
+                    "CD_fromGtoF"    : {"Value": CD_fromGtoF,     "Unit": "Non dimensional"},
+                    "q_fromFtoE"     : {"Value": q_fromFtoE,      "Unit": "Pa"},
+                    "CD_fromFtoE"    : {"Value": CD_fromFtoE,     "Unit": "Non dimensional"},
+                    "q_fromEto0"     : {"Value": q_fromEto0,      "Unit": "Pa"},
+                    "CD_fromEto0"    : {"Value": CD_fromEto0,     "Unit": "Non dimensional"},
+
+                    "CL_wb_from0toS"     : {"Value": CL_wb_from0toS,      "Unit": "Non dimensional"},
+                    "CL_ht_from0toS"     : {"Value": CL_ht_from0toS,      "Unit": "Non dimensional"},
+                    "CL_new_from0toS"    : {"Value": CL_new_from0toS,     "Unit": "Non dimensional"},
+                    "CL_wb_fromStoA"     : {"Value": CL_wb_fromStoA,      "Unit": "Non dimensional"},
+                    "CL_ht_fromStoA"     : {"Value": CL_ht_fromStoA,      "Unit": "Non dimensional"},
+                    "CL_new_fromStoA"    : {"Value": CL_new_fromStoA,     "Unit": "Non dimensional"},
+                    "CL_wb_fromAtoGust1" : {"Value": CL_wb_fromAtoGust1,  "Unit": "Non dimensional"},
+                    "CL_ht_fromAtoGust1" : {"Value": CL_ht_fromAtoGust1,  "Unit": "Non dimensional"},
+                    "CL_new_fromAtoGust1": {"Value": CL_new_fromAtoGust1, "Unit": "Non dimensional"},
+                    "CL_wb_fromGust1toC" : {"Value": CL_wb_fromGust1toC,  "Unit": "Non dimensional"},
+                    "CL_ht_fromGust1toC" : {"Value": CL_ht_fromGust1toC,  "Unit": "Non dimensional"},
+                    "CL_new_fromGust1toC": {"Value": CL_new_fromGust1toC, "Unit": "Non dimensional"},
+                    "CL_wb_fromCtoGust2" : {"Value": CL_wb_fromCtoGust2,  "Unit": "Non dimensional"},
+                    "CL_ht_fromCtoGust2" : {"Value": CL_ht_fromCtoGust2,  "Unit": "Non dimensional"},
+                    "CL_new_fromCtoGust2": {"Value": CL_new_fromCtoGust2, "Unit": "Non dimensional"},
+                    "CL_wb_fromGust2toD" : {"Value": CL_wb_fromGust2toD,  "Unit": "Non dimensional"},
+                    "CL_ht_fromGust2toD" : {"Value": CL_ht_fromGust2toD,  "Unit": "Non dimensional"},
+                    "CL_new_fromGust2toD": {"Value": CL_new_fromGust2toD, "Unit": "Non dimensional"},
+                    "CL_wb_fromDto0"     : {"Value": CL_wb_fromDto0,      "Unit": "Non dimensional"},
+                    "CL_ht_fromDto0"     : {"Value": CL_ht_fromDto0,      "Unit": "Non dimensional"},
+                    "CL_new_fromDto0"    : {"Value": CL_new_fromDto0,     "Unit": "Non dimensional"},
+                    "CL_wb_from0toSinv"  : {"Value": CL_wb_from0toSinv,   "Unit": "Non dimensional"},
+                    "CL_ht_from0toSinv"  : {"Value": CL_ht_from0toSinv,   "Unit": "Non dimensional"},
+                    "CL_new_from0toSinv" : {"Value": CL_new_from0toSinv,  "Unit": "Non dimensional"},
+                    "CL_wb_fromSinvtoG"  : {"Value": CL_wb_fromSinvtoG,   "Unit": "Non dimensional"},
+                    "CL_ht_fromSinvtoG"  : {"Value": CL_ht_fromSinvtoG,   "Unit": "Non dimensional"},
+                    "CL_new_fromSinvtoG" : {"Value": CL_ht_fromSinvtoG,   "Unit": "Non dimensional"},
+                    "CL_wb_fromGtoF"     : {"Value": CL_wb_fromGtoF,      "Unit": "Non dimensional"},
+                    "CL_ht_fromGtoF"     : {"Value": CL_ht_fromGtoF,      "Unit": "Non dimensional"},
+                    "CL_new_fromGtoF"    : {"Value": CL_new_fromGtoF,     "Unit": "Non dimensional"},
+                    "CL_wb_fromFtoE"     : {"Value": CL_wb_fromFtoE,      "Unit": "Non dimensional"},
+                    "CL_ht_fromFtoE"     : {"Value": CL_ht_fromFtoE,      "Unit": "Non dimensional"},
+                    "CL_new_fromFtoE"    : {"Value": CL_new_fromFtoE,     "Unit": "Non dimensional"},
+                    "CL_wb_fromEto0"     : {"Value": CL_wb_fromEto0,      "Unit": "Non dimensional"},
+                    "CL_ht_fromEto0"     : {"Value": CL_ht_fromEto0,      "Unit": "Non dimensional"},
+                    "CL_new_fromEto0"    : {"Value": CL_new_fromEto0,     "Unit": "Non dimensional"},
+
+                    "CM_due_to_CL_from0toS"        : {"Value": CM_due_to_CL_from0toS,      "Unit": "Non dimensional"},
+                    "CM_due_to_CD_from0toS"        : {"Value": CM_due_to_CD_from0toS,      "Unit": "Non dimensional"},
+                    "CM_CG_from0toS"               : {"Value": CM_CG_from0toS,             "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromStoA"        : {"Value": CM_due_to_CL_fromStoA,      "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromStoA"        : {"Value": CM_due_to_CD_fromStoA,      "Unit": "Non dimensional"},
+                    "CM_CG_fromStoA"               : {"Value" : CM_CG_fromStoA,            "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromAtoGust1"    : {"Value": CM_due_to_CL_fromAtoGust1,  "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromAtoGust1"    : {"Value": CM_due_to_CD_fromAtoGust1,  "Unit": "Non dimensional"},
+                    "CM_CG_fromAtoGust1"           : {"Value" : CM_CG_fromAtoGust1,        "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromGust1toC"    : {"Value": CM_due_to_CL_fromGust1toC,  "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromGust1toC"    : {"Value": CM_due_to_CD_fromGust1toC,  "Unit": "Non dimensional"},
+                    "CM_CG_fromGust1toC"           : {"Value" : CM_CG_fromGust1toC,        "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromCtoGust2"    : {"Value": CM_due_to_CL_fromCtoGust2,  "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromCtoGust2"    : {"Value": CM_due_to_CD_fromCtoGust2,  "Unit": "Non dimensional"},
+                    "CM_CG_fromCtoGust2"           : {"Value" : CM_CG_fromCtoGust2,        "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromGust2toD"    : {"Value": CM_due_to_CL_fromGust2toD,  "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromGust2toD"    : {"Value": CM_due_to_CD_fromGust2toD,  "Unit": "Non dimensional"},
+                    "CM_CG_fromGust2toD"           : {"Value" : CM_CG_fromGust2toD,        "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromDto0"        : {"Value": CM_due_to_CL_fromDto0,      "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromDto0"        : {"Value": CM_due_to_CD_fromDto0,      "Unit": "Non dimensional"},
+                    "CM_CG_fromDto0"               : {"Value" : CM_CG_fromDto0,            "Unit": "Non dimensional"},
+                    "CM_due_to_CL_from0toSinv"     : {"Value": CM_due_to_CL_from0toSinv,   "Unit": "Non dimensional"},
+                    "CM_due_to_CD_from0toSinv"     : {"Value": CM_due_to_CD_from0toSinv,   "Unit": "Non dimensional"},
+                    "CM_CG_from0toSinv"            : {"Value" : CM_CG_from0toSinv,         "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromSinvtoG"     : {"Value": CM_due_to_CL_fromSinvtoG,   "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromSinvtoG"     : {"Value": CM_due_to_CD_fromSinvtoG,   "Unit": "Non dimensional"},
+                    "CM_CG_fromSinvtoG"            : {"Value" : CM_due_to_CD_fromSinvtoG,  "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromGtoF"        : {"Value": CM_due_to_CL_fromGtoF,      "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromGtoF"        : {"Value": CM_due_to_CD_fromGtoF,      "Unit": "Non dimensional"},
+                    "CM_CG_fromGtoF"               : {"Value": CM_CG_fromGtoF,             "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromFtoE"        : {"Value": CM_due_to_CL_fromFtoE,      "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromFtoE"        : {"Value": CM_due_to_CD_fromFtoE,      "Unit": "Non dimensional"},
+                    "CM_CG_fromFtoE"               : {"Value": CM_CG_fromFtoE,             "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromEto0"        : {"Value": CM_due_to_CL_fromEto0,      "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromEto0"        : {"Value": CM_due_to_CD_fromEto0,      "Unit": "Non dimensional"},
+                    "CM_CG_fromEto0"               : {"Value": CM_CG_fromEto0,             "Unit": "Non dimensional"},
+
+                    "L_wb_from0toS"     : {"Value": L_wb_from0toS,      "Unit": "Non dimensional"},
+                    "L_ht_from0toS"     : {"Value": L_ht_from0toS,      "Unit": "Non dimensional"},
+                    "L_new_from0toS"    : {"Value": L_new_from0toS,     "Unit": "Non dimensional"},
+                    "L_wb_fromStoA"     : {"Value": L_wb_fromStoA,      "Unit": "Non dimensional"},
+                    "L_ht_fromStoA"     : {"Value": L_ht_fromStoA,      "Unit": "Non dimensional"},
+                    "L_new_fromStoA"    : {"Value": L_new_fromStoA,     "Unit": "Non dimensional"},
+                    "L_wb_fromAtoGust1" : {"Value": L_wb_fromAtoGust1,  "Unit": "Non dimensional"},
+                    "L_ht_fromAtoGust1" : {"Value": L_ht_fromAtoGust1,  "Unit": "Non dimensional"},
+                    "L_new_fromAtoGust1": {"Value": L_new_fromAtoGust1, "Unit": "Non dimensional"},
+                    "L_wb_fromGust1toC" : {"Value": L_wb_fromGust1toC,  "Unit": "Non dimensional"},
+                    "L_ht_fromGust1toC" : {"Value": L_ht_fromGust1toC,  "Unit": "Non dimensional"},
+                    "L_new_fromGust1toC": {"Value": L_new_fromGust1toC, "Unit": "Non dimensional"},
+                    "L_wb_fromCtoGust2" : {"Value": L_wb_fromCtoGust2,  "Unit": "Non dimensional"},
+                    "L_ht_fromCtoGust2" : {"Value": L_ht_fromCtoGust2,  "Unit": "Non dimensional"},
+                    "L_new_fromCtoGust2": {"Value": L_new_fromCtoGust2, "Unit": "Non dimensional"},
+                    "L_wb_fromGust2toD" : {"Value": L_wb_fromGust2toD,  "Unit": "Non dimensional"},
+                    "L_ht_fromGust2toD" : {"Value": L_ht_fromGust2toD,  "Unit": "Non dimensional"},
+                    "L_new_fromGust2toD": {"Value": L_new_fromGust2toD, "Unit": "Non dimensional"},
+                    "L_wb_fromDto0"     : {"Value": L_wb_fromDto0,      "Unit": "Non dimensional"},
+                    "L_ht_fromDto0"     : {"Value": L_ht_fromDto0,      "Unit": "Non dimensional"},
+                    "L_new_fromDto0"    : {"Value": L_new_fromDto0,     "Unit": "Non dimensional"},
+                    "L_wb_from0toSinv"  : {"Value": L_wb_from0toSinv,   "Unit": "Non dimensional"},
+                    "L_ht_from0toSinv"  : {"Value": L_ht_from0toSinv,   "Unit": "Non dimensional"},
+                    "L_new_from0toSinv" : {"Value": L_new_from0toSinv,  "Unit": "Non dimensional"},
+                    "L_wb_fromSinvtoG"  : {"Value": L_wb_fromSinvtoG,   "Unit": "Non dimensional"},
+                    "L_ht_fromSinvtoG"  : {"Value": L_ht_fromSinvtoG,   "Unit": "Non dimensional"},
+                    "L_new_fromSinvtoG" : {"Value": L_ht_fromSinvtoG,   "Unit": "Non dimensional"},
+                    "L_wb_fromGtoF"     : {"Value": L_wb_fromGtoF,      "Unit": "Non dimensional"},
+                    "L_ht_fromGtoF"     : {"Value": L_ht_fromGtoF,      "Unit": "Non dimensional"},
+                    "L_new_fromGtoF"    : {"Value": L_new_fromGtoF,     "Unit": "Non dimensional"},
+                    "L_wb_fromFtoE"     : {"Value": L_wb_fromFtoE,      "Unit": "Non dimensional"},
+                    "L_ht_fromFtoE"     : {"Value": L_ht_fromFtoE,      "Unit": "Non dimensional"},
+                    "L_new_fromFtoE"    : {"Value": L_new_fromFtoE,     "Unit": "Non dimensional"},
+                    "L_wb_fromEto0"     : {"Value": L_wb_fromEto0,      "Unit": "Non dimensional"},
+                    "L_ht_fromEto0"     : {"Value": L_ht_fromEto0,      "Unit": "Non dimensional"},
+                    "L_new_fromEto0"    : {"Value": L_new_fromEto0,     "Unit": "Non dimensional"},
+ 
+                    "alfa_from0toS"        : {"Value": alfa_from0toS,         "Unit": "deg"},
+                    "alfa_new_from0toS"    : {"Value": alfa_new_from0toS,     "Unit": "deg"},
+                    "alfa_fromStoA"        : {"Value": alfa_fromStoA,         "Unit": "deg"},
+                    "alfa_new_fromStoA"    : {"Value": alfa_new_fromStoA,     "Unit": "deg"},
+                    "alfa_fromAtoGust1"    : {"Value": alfa_fromAtoGust1,     "Unit": "deg"},
+                    "alfa_new_fromAtoGust1": {"Value": alfa_new_fromAtoGust1, "Unit": "deg"},
+                    "alfa_fromGust1toC"    : {"Value": alfa_fromGust1toC,     "Unit": "deg"},
+                    "alfa_new_fromGust1toC": {"Value": alfa_new_fromGust1toC, "Unit": "deg"},
+                    "alfa_fromCtoGust2"    : {"Value": alfa_fromCtoGust2,     "Unit": "deg"},
+                    "alfa_new_fromCtoGust2": {"Value": alfa_new_fromCtoGust2, "Unit": "deg"},
+                    "alfa_fromGust2toD"    : {"Value": alfa_fromGust2toD,     "Unit": "deg"},
+                    "alfa_new_fromGust2toD": {"Value": alfa_new_fromGust2toD, "Unit": "deg"},
+                    "alfa_fromDto0"        : {"Value": alfa_fromDto0,         "Unit": "deg"},
+                    "alfa_new_fromDto0"    : {"Value": alfa_new_fromDto0,     "Unit": "deg"},
+                    "alfa_from0toSinv"     : {"Value": alfa_from0toSinv,      "Unit": "deg"},
+                    "alfa_new_from0toSinv" : {"Value": alfa_new_from0toSinv,  "Unit": "deg"},
+                    "alfa_fromSinvtoG"     : {"Value": alfa_fromSinvtoG,      "Unit": "deg"},
+                    "alfa_new_fromSinvtoG" : {"Value": alfa_new_fromSinvtoG,  "Unit": "deg"},
+                    "alfa_fromGtoF"        : {"Value": alfa_fromGtoF,         "Unit": "deg"},
+                    "alfa_new_fromGtoF"    : {"Value": alfa_new_fromGtoF,     "Unit": "deg"},
+                    "alfa_fromFtoE"        : {"Value": alfa_fromFtoE,         "Unit": "deg"},
+                    "alfa_new_fromFtoE"    : {"Value": alfa_new_fromFtoE,     "Unit": "deg"},
+                    "alfa_fromEto0"        : {"Value": alfa_fromEto0,         "Unit": "deg"},
+                    "alfa_new_fromEto0"    : {"Value": alfa_new_fromEto0,     "Unit": "deg"}
+                    }
+                }
+
+        elif (pos_case_flag == "Case1") and (neg_case_flag == "Case3_inverted"):
+            
+            
+            Balancing_loads = {
+                "Balancing_loads": {
+                    "V_fe_from0toS": {"Value": V_fe_from0toS, "Unit": "m/s"},
+                    "n_fe_from0toS": {"Value": n_fe_from0toS, "Unit": "g"},
+                    "V_fe_fromStoA": {"Value": V_fe_fromStoA, "Unit": "m/s"},
+                    "n_fe_fromStoA": {"Value": n_fe_fromStoA, "Unit": "g"},
+                    "V_fe_fromAtoGust1": {"Value": V_fe_fromAtoGust1, "Unit": "m/s"},
+                    "n_fe_fromAtoGust1": {"Value": n_fe_fromAtoGust1, "Unit": "g"},
+                    "V_fe_fromGust1toC": {"Value": V_fe_fromGust1toC, "Unit": "m/s"},
+                    "n_fe_fromGust1toC": {"Value": n_fe_fromGust1toC, "Unit": "g"},
+                    "V_fe_fromCtoGust2": {"Value": V_fe_fromCtoGust2, "Unit": "m/s"},
+                    "n_fe_fromCtoGust2": {"Value": n_fe_fromCtoGust2, "Unit": "g"},
+                    "V_fe_fromGust2toD": {"Value": V_fe_fromGust2toD, "Unit": "m/s"},
+                    "n_fe_fromGust2toD": {"Value": n_fe_fromGust2toD, "Unit": "g"},
+                    "V_fe_fromDto0":     {"Value": V_fe_fromDto0, "Unit": "m/s"},
+                    "n_fe_fromDto0":     {"Value": n_fe_fromDto0, "Unit": "g"},
+                    "V_fe_from0toSinv":  {"Value": V_fe_from0toSinv, "Unit": "m/s"},
+                    "n_fe_from0toSinv":  {"Value": n_fe_from0toSinv, "Unit": "g"},
+                    "V_fe_fromSinvtoG":  {"Value": V_fe_fromSinvtoG, "Unit": "m/s"},
+                    "n_fe_fromSinvtoG":  {"Value": n_fe_fromSinvtoG, "Unit": "g"},
+                    "V_fe_fromGtoF":     {"Value": V_fe_fromGtoF, "Unit": "m/s"},
+                    "n_fe_fromGtoF":     {"Value": n_fe_fromGtoF, "Unit": "g"},
+                    "V_fe_fromFtoE"    : {"Value": V_fe_fromFtoE, "Unit": "m/s"},
+                    "n_fe_fromFtoE"    : {"Value": n_fe_fromFtoE, "Unit": "g"},
+                    "V_fe_fromEto0"    : {"Value": V_fe_fromEto0, "Unit": "m/s"},
+                    "n_fe_fromEto0"    : {"Value": n_fe_fromEto0, "Unit": "g"},
+
+                    "q_from0toS"     : {"Value": q_from0toS,      "Unit": "Pa"},
+                    "CD_from0toS"    : {"Value": CD_from0toS,     "Unit": "Non dimensional"},
+                    "q_fromStoA"     : {"Value": q_fromStoA,      "Unit": "Pa"},
+                    "CD_fromStoA"    : {"Value": CD_fromStoA,     "Unit": "Non dimensional"},
+                    "q_fromAtoGust1" : {"Value": q_fromAtoGust1,  "Unit": "Pa"},
+                    "CD_fromAtoGust1": {"Value": CD_fromAtoGust1, "Unit": "Non dimensional"},
+                    "q_fromGust1toC" : {"Value": q_fromGust1toC,  "Unit": "Pa"},
+                    "CD_fromGust1toC": {"Value": CD_fromGust1toC, "Unit": "Non dimensional"},
+                    "q_fromCtoGust2" : {"Value": q_fromCtoGust2,  "Unit": "Pa"},
+                    "CD_fromCtoGust2": {"Value": CD_fromCtoGust2, "Unit": "Non dimensional"},
+                    "q_fromGust2toD" : {"Value": q_fromGust2toD,  "Unit": "Pa"},
+                    "CD_fromGust2toD": {"Value": CD_fromGust2toD, "Unit": "Non dimensional"},
+                    "q_fromDto0"     : {"Value": q_fromDto0,      "Unit": "Pa"},
+                    "CD_fromDto0"    : {"Value": CD_fromDto0,     "Unit": "Non dimensional"},
+                    "q_from0toSinv"  : {"Value": q_from0toSinv,   "Unit": "Pa"},
+                    "CD_from0toSinv" : {"Value": CD_from0toSinv,  "Unit": "Non dimensional"},
+                    "q_fromSinvtoG"  : {"Value": q_fromSinvtoG,   "Unit": "Pa"},
+                    "CD_fromSinvtoG" : {"Value": CD_fromSinvtoG,  "Unit": "Non dimensional"},
+                    "q_fromGtoF"     : {"Value": q_fromGtoF,      "Unit": "Pa"},
+                    "CD_fromGtoF"    : {"Value": CD_fromGtoF,     "Unit": "Non dimensional"},
+                    "q_fromFtoE"     : {"Value": q_fromFtoE,      "Unit": "Pa"},
+                    "CD_fromFtoE"    : {"Value": CD_fromFtoE,     "Unit": "Non dimensional"},
+                    "q_fromEto0"     : {"Value": q_fromEto0,      "Unit": "Pa"},
+                    "CD_fromEto0"    : {"Value": CD_fromEto0,     "Unit": "Non dimensional"},                  
+
+                    "alfa_from0toS"        : {"Value": alfa_from0toS,         "Unit": "deg"},
+                    "alfa_new_from0toS"    : {"Value": alfa_new_from0toS,     "Unit": "deg"},
+                    "alfa_fromStoA"        : {"Value": alfa_fromStoA,         "Unit": "deg"},
+                    "alfa_new_fromStoA"    : {"Value": alfa_new_fromStoA,     "Unit": "deg"},
+                    "alfa_fromAtoGust1"    : {"Value": alfa_fromAtoGust1,     "Unit": "deg"},
+                    "alfa_new_fromAtoGust1": {"Value": alfa_new_fromAtoGust1, "Unit": "deg"},
+                    "alfa_fromGust1toC"    : {"Value": alfa_fromGust1toC,     "Unit": "deg"},
+                    "alfa_new_fromGust1toC": {"Value": alfa_new_fromGust1toC, "Unit": "deg"},
+                    "alfa_fromCtoGust2"    : {"Value": alfa_fromCtoGust2,     "Unit": "deg"},
+                    "alfa_new_fromCtoGust2": {"Value": alfa_new_fromCtoGust2, "Unit": "deg"},
+                    "alfa_fromGust2toD"    : {"Value": alfa_fromGust2toD,     "Unit": "deg"},
+                    "alfa_new_fromGust2toD": {"Value": alfa_new_fromGust2toD, "Unit": "deg"},
+                    "alfa_fromDto0"        : {"Value": alfa_fromDto0,         "Unit": "deg"},
+                    "alfa_new_fromDto0"    : {"Value": alfa_new_fromDto0,     "Unit": "deg"},
+                    "alfa_from0toSinv"     : {"Value": alfa_from0toSinv,      "Unit": "deg"},
+                    "alfa_new_from0toSinv" : {"Value": alfa_new_from0toSinv,  "Unit": "deg"},
+                    "alfa_fromSinvtoG"     : {"Value": alfa_fromSinvtoG,      "Unit": "deg"},
+                    "alfa_new_fromSinvtoG" : {"Value": alfa_new_fromSinvtoG,  "Unit": "deg"},
+                    "alfa_fromGtoF"        : {"Value": alfa_fromGtoF,         "Unit": "deg"},
+                    "alfa_new_fromGtoF"    : {"Value": alfa_new_fromGtoF,     "Unit": "deg"},
+                    "alfa_fromFtoE"        : {"Value": alfa_fromFtoE,         "Unit": "deg"},
+                    "alfa_new_fromFtoE"    : {"Value": alfa_new_fromFtoE,     "Unit": "deg"},
+                    "alfa_fromEto0"        : {"Value": alfa_fromEto0,         "Unit": "deg"},
+                    "alfa_new_fromEto0"    : {"Value": alfa_new_fromEto0,     "Unit": "deg"},      
+    
+                    "CL_wb_from0toS"      : {"Value": CL_wb_from0toS,     "Unit": "Non dimensional"},
+                    "CL_ht_from0toS"      : {"Value": CL_ht_from0toS,     "Unit": "Non dimensional"},
+                    "CL_new_from0toS"     : {"Value": CL_new_from0toS,    "Unit": "Non dimensional"},
+                    "CL_wb_fromStoA"      : {"Value": CL_wb_fromStoA,     "Unit": "Non dimensional"},
+                    "CL_ht_fromStoA"      : {"Value": CL_ht_fromStoA,     "Unit": "Non dimensional"},
+                    "CL_new_fromStoA"     : {"Value": CL_new_fromStoA,    "Unit": "Non dimensional"},
+                    "CL_wb_fromAtoGust1"  : {"Value": CL_wb_fromAtoGust1, "Unit": "Non dimensional"},
+                    "CL_ht_fromAtoGust1"  : {"Value": CL_ht_fromAtoGust1, "Unit": "Non dimensional"},
+                    "CL_new_fromAtoGust1" : {"Value": CL_new_fromAtoGust1,"Unit": "Non dimensional"},
+                    "CL_wb_fromGust1toC"  : {"Value": CL_wb_fromGust1toC, "Unit": "Non dimensional"},
+                    "CL_ht_fromGust1toC"  : {"Value": CL_ht_fromGust1toC, "Unit": "Non dimensional"},
+                    "CL_new_fromGust1toC" : {"Value": CL_new_fromGust1toC,"Unit": "Non dimensional"},
+                    "CL_wb_fromCtoGust2"  : {"Value": CL_wb_fromCtoGust2, "Unit": "Non dimensional"},
+                    "CL_ht_fromCtoGust2"  : {"Value": CL_ht_fromCtoGust2, "Unit": "Non dimensional"},
+                    "CL_new_fromCtoGust2" : {"Value": CL_new_fromCtoGust2,"Unit": "Non dimensional"},
+                    "CL_wb_fromGust2toD"  : {"Value": CL_wb_fromGust2toD, "Unit": "Non dimensional"},
+                    "CL_ht_fromGust2toD"  : {"Value": CL_ht_fromGust2toD, "Unit": "Non dimensional"},
+                    "CL_new_fromGust2toD" : {"Value": CL_new_fromGust2toD,"Unit": "Non dimensional"},
+                    "CL_wb_fromDto0"      : {"Value": CL_wb_fromDto0,     "Unit": "Non dimensional"},
+                    "CL_ht_fromDto0"      : {"Value": CL_ht_fromDto0,     "Unit": "Non dimensional"},
+                    "CL_new_fromDto0"     : {"Value": CL_new_fromDto0,    "Unit": "Non dimensional"},
+                    "CL_wb_from0toSinv"   : {"Value": CL_wb_from0toSinv,  "Unit": "Non dimensional"},
+                    "CL_ht_from0toSinv"   : {"Value": CL_ht_from0toSinv,  "Unit": "Non dimensional"},
+                    "CL_new_from0toSinv"  : {"Value": CL_new_from0toSinv, "Unit": "Non dimensional"},
+                    "CL_wb_fromSinvtoG"   : {"Value": CL_wb_fromSinvtoG,  "Unit": "Non dimensional"},
+                    "CL_ht_fromSinvtoG"   : {"Value": CL_ht_fromSinvtoG,  "Unit": "Non dimensional"},
+                    "CL_new_fromSinvtoG"  : {"Value": CL_new_fromSinvtoG, "Unit": "Non dimensional"},
+                    "CL_wb_fromGtoF"      : {"Value": CL_wb_fromGtoF,     "Unit": "Non dimensional"},
+                    "CL_ht_fromGtoF"      : {"Value": CL_ht_fromGtoF,     "Unit": "Non dimensional"},
+                    "CL_new_fromGtoF"     : {"Value": CL_new_fromGtoF,    "Unit": "Non dimensional"},
+                    "CL_wb_fromFtoE"      : {"Value": CL_wb_fromFtoE,     "Unit": "Non dimensional"},
+                    "CL_ht_fromFtoE"      : {"Value": CL_ht_fromFtoE,     "Unit": "Non dimensional"},
+                    "CL_new_fromFtoE"     : {"Value": CL_new_fromFtoE,    "Unit": "Non dimensional"},
+                    "CL_wb_fromEto0"      : {"Value": CL_wb_fromEto0,     "Unit": "Non dimensional"},
+                    "CL_ht_fromEto0"      : {"Value": CL_ht_fromEto0,     "Unit": "Non dimensional"},
+                    "CL_new_fromEto0"     : {"Value": CL_new_fromEto0,    "Unit": "Non dimensional"},
+    
+                    "L_wb_from0toS"      : {"Value": L_wb_from0toS,     "Unit": "daN"},
+                    "L_ht_from0toS"      : {"Value": L_ht_from0toS,     "Unit": "daN"},
+                    "L_new_from0toS"     : {"Value": L_new_from0toS,    "Unit": "daN"},
+                    "L_wb_fromStoA"      : {"Value": L_wb_fromStoA,     "Unit": "daN"},
+                    "L_ht_fromStoA"      : {"Value": L_ht_fromStoA,     "Unit": "daN"},
+                    "L_new_fromStoA"     : {"Value": L_new_fromStoA,    "Unit": "daN"},
+                    "L_wb_fromAtoGust1"  : {"Value": L_wb_fromAtoGust1, "Unit": "daN"},
+                    "L_ht_fromAtoGust1"  : {"Value": L_ht_fromAtoGust1, "Unit": "daN"},
+                    "L_new_fromAtoGust1" : {"Value": L_new_fromAtoGust1,"Unit": "daN"},
+                    "L_wb_fromGust1toC"  : {"Value": L_wb_fromGust1toC, "Unit": "daN"},
+                    "L_ht_fromGust1toC"  : {"Value": L_ht_fromGust1toC, "Unit": "daN"},
+                    "L_new_fromGust1toC" : {"Value": L_new_fromGust1toC,"Unit": "daN"},
+                    "L_wb_fromCtoGust2"  : {"Value": L_wb_fromCtoGust2, "Unit": "daN"},
+                    "L_ht_fromCtoGust2"  : {"Value": L_ht_fromCtoGust2, "Unit": "daN"},
+                    "L_new_fromCtoGust2" : {"Value": L_new_fromCtoGust2,"Unit": "daN"},
+                    "L_wb_fromGust2toD"  : {"Value": L_wb_fromGust2toD, "Unit": "daN"},
+                    "L_ht_fromGust2toD"  : {"Value": L_ht_fromGust2toD, "Unit": "daN"},
+                    "L_new_fromGust2toD" : {"Value": L_new_fromGust2toD,"Unit": "daN"},
+                    "L_wb_fromDto0"      : {"Value": L_wb_fromDto0,     "Unit": "daN"},
+                    "L_ht_fromDto0"      : {"Value": L_ht_fromDto0,     "Unit": "daN"},
+                    "L_new_fromDto0"     : {"Value": L_new_fromDto0,    "Unit": "daN"},
+                    "L_wb_from0toSinv"   : {"Value": L_wb_from0toSinv,  "Unit": "daN"},
+                    "L_ht_from0toSinv"   : {"Value": L_ht_from0toSinv,  "Unit": "daN"},
+                    "L_new_from0toSinv"  : {"Value": L_new_from0toSinv, "Unit": "daN"},
+                    "L_wb_fromSinvtoG"   : {"Value": L_wb_fromSinvtoG,  "Unit": "daN"},
+                    "L_ht_fromSinvtoG"   : {"Value": L_ht_fromSinvtoG,  "Unit": "daN"},
+                    "L_new_fromSinvtoG"  : {"Value": L_new_fromSinvtoG, "Unit": "daN"},
+                    "L_wb_fromGtoF"      : {"Value": L_wb_fromGtoF,     "Unit": "daN"},
+                    "L_ht_fromGtoF"      : {"Value": L_ht_fromGtoF,     "Unit": "daN"},
+                    "L_new_fromGtoF"     : {"Value": L_new_fromGtoF,    "Unit": "daN"},
+                    "L_wb_fromFtoE"      : {"Value": L_wb_fromFtoE,     "Unit": "daN"},
+                    "L_ht_fromFtoE"      : {"Value": L_ht_fromFtoE,     "Unit": "daN"},
+                    "L_new_fromFtoE"     : {"Value": L_new_fromFtoE,    "Unit": "daN"},
+                    "L_wb_fromEto0"      : {"Value": L_wb_fromEto0,     "Unit": "daN"},
+                    "L_ht_fromEto0"      : {"Value": L_ht_fromEto0,     "Unit": "daN"},
+                    "L_new_fromEto0"     : {"Value": L_new_fromEto0,    "Unit": "daN"},
+    
+                    "CM_due_to_CL_from0toS"      : {"Value": CM_due_to_CL_from0toS,     "Unit": "Non dimensional"},
+                    "CM_due_to_CD_from0toS"      : {"Value": CM_due_to_CD_from0toS,     "Unit": "Non dimensional"},
+                    "CM_CG_from0toS"             : {"Value": CM_CG_from0toS,            "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromStoA"      : {"Value": CM_due_to_CL_fromStoA,     "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromStoA"      : {"Value": CM_due_to_CD_fromStoA,     "Unit": "Non dimensional"},
+                    "CM_CG_fromStoA"             : {"Value": CM_CG_fromStoA,            "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromAtoGust1"  : {"Value": CM_due_to_CL_fromAtoGust1, "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromAtoGust1"  : {"Value": CM_due_to_CD_fromAtoGust1, "Unit": "Non dimensional"},
+                    "CM_CG_fromAtoGust1"         : {"Value": CM_CG_fromAtoGust1,        "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromGust1toC"  : {"Value": CM_due_to_CL_fromGust1toC, "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromGust1toC"  : {"Value": CM_due_to_CD_fromGust1toC, "Unit": "Non dimensional"},
+                    "CM_CG_fromGust1toC"         : {"Value": CM_CG_fromGust1toC,        "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromCtoGust2"  : {"Value": CM_due_to_CL_fromCtoGust2, "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromCtoGust2"  : {"Value": CM_due_to_CD_fromCtoGust2, "Unit": "Non dimensional"},
+                    "CM_CG_fromCtoGust2"         : {"Value": CM_CG_fromCtoGust2,        "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromGust2toD"  : {"Value": CM_due_to_CL_fromGust2toD, "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromGust2toD"  : {"Value": CM_due_to_CD_fromGust2toD, "Unit": "Non dimensional"},
+                    "CM_CG_fromGust2toD"         : {"Value": CM_CG_fromGust2toD,        "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromDto0"      : {"Value": CM_due_to_CL_fromDto0,     "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromDto0"      : {"Value": CM_due_to_CD_fromDto0,     "Unit": "Non dimensional"},
+                    "CM_CG_fromDto0"             : {"Value": CM_CG_fromDto0,            "Unit": "Non dimensional"},
+                    "CM_due_to_CL_from0toSinv"   : {"Value": CM_due_to_CL_from0toSinv,  "Unit": "Non dimensional"},
+                    "CM_due_to_CD_from0toSinv"   : {"Value": CM_due_to_CD_from0toSinv,  "Unit": "Non dimensional"},
+                    "CM_CG_from0toSinv"          : {"Value": CM_CG_from0toSinv,         "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromSinvtoG"   : {"Value": CM_due_to_CL_fromSinvtoG,  "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromSinvtoG"   : {"Value": CM_due_to_CD_fromSinvtoG,  "Unit": "Non dimensional"},
+                    "CM_CG_fromSinvtoG"          : {"Value": CM_CG_fromSinvtoG,         "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromGtoF"      : {"Value": CM_due_to_CL_fromGtoF,     "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromGtoF"      : {"Value": CM_due_to_CD_fromGtoF,     "Unit": "Non dimensional"},
+                    "CM_CG_fromGtoF"             : {"Value": CM_CG_fromGtoF,            "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromFtoE"      : {"Value": CM_due_to_CL_fromFtoE,     "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromFtoE"      : {"Value": CM_due_to_CD_fromFtoE,     "Unit": "Non dimensional"},
+                    "CM_CG_fromFtoE"             : {"Value": CM_CG_fromFtoE,            "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromEto0"      : {"Value": CM_due_to_CL_fromEto0,     "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromEto0"      : {"Value": CM_due_to_CD_fromEto0,     "Unit": "Non dimensional"},
+                    "CM_CG_fromEto0"             : {"Value": CM_CG_fromEto0,            "Unit": "Non dimensional"}
+                    }
+                }
+
+        elif (pos_case_flag == "Case2") and (neg_case_flag == "Case1_inverted"):
+            
+            
+            Balancing_loads = {
+                "Balancing_loads": {
+                    "V_fe_from0toS":     {"Value": V_fe_from0toS, "Unit": "m/s"},
+                    "n_fe_from0toS":     {"Value": n_fe_from0toS, "Unit": "g"},
+                    "V_fe_fromStoA":     {"Value": V_fe_fromStoA, "Unit": "m/s"},
+                    "n_fe_fromStoA":     {"Value": n_fe_fromStoA, "Unit": "g"},
+                    "V_fe_fromAtoC":     {"Value": V_fe_fromAtoC, "Unit": "m/s"},
+                    "n_fe_fromAtoC":     {"Value": n_fe_fromAtoC, "Unit": "g"},
+                    "V_fe_fromCtoD":     {"Value": V_fe_fromCtoD, "Unit": "m/s"},
+                    "n_fe_fromCtoD":     {"Value": n_fe_fromCtoD, "Unit": "g"},
+                    "V_fe_fromDto0":     {"Value": V_fe_fromDto0, "Unit": "m/s"},
+                    "n_fe_fromDto0":     {"Value": n_fe_fromDto0, "Unit": "g"},
+                    "V_fe_from0toSinv":  {"Value": V_fe_from0toSinv, "Unit": "m/s"},
+                    "n_fe_from0toSinv":  {"Value": n_fe_from0toSinv, "Unit": "g"},
+                    "V_fe_fromSinvtoG":  {"Value": V_fe_fromSinvtoG, "Unit": "m/s"},
+                    "n_fe_fromSinvtoG":  {"Value": n_fe_fromSinvtoG, "Unit": "g"},
+                    "V_fe_fromGtoGust1": {"Value": V_fe_fromGtoGust1, "Unit": "m/s"},
+                    "n_fe_fromGtoGust1": {"Value": n_fe_fromGtoGust1, "Unit": "g"},
+                    "V_fe_fromGust1toF": {"Value": V_fe_fromGust1toF, "Unit": "m/s"},
+                    "n_fe_fromGust1toF": {"Value": n_fe_fromGust1toF, "Unit": "g"},
+                    "V_fe_fromFtoE"    : {"Value": V_fe_fromFtoE, "Unit": "m/s"},
+                    "n_fe_fromFtoE"    : {"Value": n_fe_fromFtoE, "Unit": "g"},
+                    "V_fe_fromEto0"    : {"Value": V_fe_fromEto0, "Unit": "m/s"},
+                    "n_fe_fromEto0"    : {"Value": n_fe_fromEto0, "Unit": "g"},
+ 
+                    "q_from0toS"     : {"Value": q_from0toS,      "Unit": "Pa"},
+                    "CD_from0toS"    : {"Value": CD_from0toS,     "Unit": "Non dimensional"},
+                    "q_fromStoA"     : {"Value": q_fromStoA,      "Unit": "Pa"},
+                    "CD_fromStoA"    : {"Value": CD_fromStoA,     "Unit": "Non dimensional"},
+                    "q_fromAtoC"     : {"Value": q_fromAtoC,      "Unit": "Pa"},
+                    "CD_fromAtoC"    : {"Value": CD_fromAtoC,     "Unit": "Non dimensional"},
+                    "q_fromCtoD"     : {"Value": q_fromCtoD,      "Unit": "Pa"},
+                    "CD_fromCtoD"    : {"Value": CD_fromCtoD,     "Unit": "Non dimensional"},
+                    "q_fromDto0"     : {"Value": q_fromDto0,      "Unit": "Pa"},
+                    "CD_fromDto0"    : {"Value": CD_fromDto0,     "Unit": "Non dimensional"},
+                    "q_from0toSinv"  : {"Value": q_from0toSinv,   "Unit": "Pa"},
+                    "CD_from0toSinv" : {"Value": CD_from0toSinv,  "Unit": "Non dimensional"},
+                    "q_fromSinvtoG"  : {"Value": q_fromSinvtoG,   "Unit": "Pa"},
+                    "CD_fromSinvtoG" : {"Value": CD_fromSinvtoG,  "Unit": "Non dimensional"},
+                    "q_fromGtoGust1" : {"Value": q_fromGtoGust1,  "Unit": "Pa"},
+                    "CD_fromGtoGust1": {"Value": CD_fromGtoGust1, "Unit": "Non dimensional"},
+                    "q_fromGust1toF" : {"Value": q_fromGust1toF,  "Unit": "Pa"},
+                    "CD_fromGust1toF": {"Value": CD_fromGust1toF, "Unit": "Non dimensional"},
+                    "q_fromFtoE"     : {"Value": q_fromFtoE,      "Unit": "Pa"},
+                    "CD_fromFtoE"    : {"Value": CD_fromFtoE,     "Unit": "Non dimensional"},
+                    "q_fromEto0"     : {"Value": q_fromEto0,      "Unit": "Pa"},
+                    "CD_fromEto0"    : {"Value": CD_fromEto0,     "Unit": "Non dimensional"},
+
+                    "alfa_from0toS"        : {"Value": alfa_from0toS,         "Unit": "deg"},
+                    "alfa_new_from0toS"    : {"Value": alfa_new_from0toS,     "Unit": "deg"},
+                    "alfa_fromStoA"        : {"Value": alfa_fromStoA,         "Unit": "deg"},
+                    "alfa_new_fromStoA"    : {"Value": alfa_new_fromStoA,     "Unit": "deg"},
+                    "alfa_fromAtoC"        : {"Value": alfa_fromAtoC,         "Unit": "deg"},
+                    "alfa_new_fromAtoC"    : {"Value": alfa_new_fromAtoC,     "Unit": "deg"},
+                    "alfa_fromCtoD"        : {"Value": alfa_fromCtoD,         "Unit": "deg"},
+                    "alfa_new_fromCtoD"    : {"Value": alfa_new_fromCtoD,     "Unit": "deg"},
+                    "alfa_fromDto0"        : {"Value": alfa_fromDto0,         "Unit": "deg"},
+                    "alfa_new_fromDto0"    : {"Value": alfa_new_fromDto0,     "Unit": "deg"},
+                    "alfa_from0toSinv"     : {"Value": alfa_from0toSinv,      "Unit": "deg"},
+                    "alfa_new_from0toSinv" : {"Value": alfa_new_from0toSinv,  "Unit": "deg"},
+                    "alfa_fromSinvtoG"     : {"Value": alfa_fromSinvtoG,      "Unit": "deg"},
+                    "alfa_new_fromSinvtoG" : {"Value": alfa_new_fromSinvtoG,  "Unit": "deg"},
+                    "alfa_fromGtoGust1"    : {"Value": alfa_fromGtoGust1,     "Unit": "deg"},
+                    "alfa_new_fromGtoGust1": {"Value": alfa_new_fromGtoGust1, "Unit": "deg"},
+                    "alfa_fromGust1toF"    : {"Value": alfa_fromGust1toF,     "Unit": "deg"},
+                    "alfa_new_fromGust1toF": {"Value": alfa_new_fromGust1toF, "Unit": "deg"},
+                    "alfa_fromFtoE"        : {"Value": alfa_fromFtoE,         "Unit": "deg"},
+                    "alfa_new_fromFtoE"    : {"Value": alfa_new_fromFtoE,     "Unit": "deg"},
+                    "alfa_fromEto0"        : {"Value": alfa_fromEto0,         "Unit": "deg"},
+                    "alfa_new_fromEto0"    : {"Value": alfa_new_fromEto0,     "Unit": "deg"},
+
+                    "CL_wb_from0toS"     : {"Value": CL_wb_from0toS,      "Unit": "Non dimensional"},
+                    "CL_ht_from0toS"     : {"Value": CL_ht_from0toS,      "Unit": "Non dimensional"},
+                    "CL_new_from0toS"    : {"Value": CL_new_from0toS,     "Unit": "Non dimensional"},
+                    "CL_wb_fromStoA"     : {"Value": CL_wb_fromStoA,      "Unit": "Non dimensional"},
+                    "CL_ht_fromStoA"     : {"Value": CL_ht_fromStoA,      "Unit": "Non dimensional"},
+                    "CL_new_fromStoA"    : {"Value": CL_new_fromStoA,     "Unit": "Non dimensional"},
+                    "CL_wb_fromAtoC"     : {"Value": CL_wb_fromAtoC,      "Unit": "Non dimensional"},
+                    "CL_ht_fromAtoC"     : {"Value": CL_ht_fromAtoC,      "Unit": "Non dimensional"},
+                    "CL_new_fromAtoC"    : {"Value": CL_new_fromAtoC,     "Unit": "Non dimensional"},
+                    "CL_wb_fromCtoD"     : {"Value": CL_wb_fromCtoD,      "Unit": "Non dimensional"},
+                    "CL_ht_fromCtoD"     : {"Value": CL_ht_fromCtoD,      "Unit": "Non dimensional"},
+                    "CL_new_fromCtoD"    : {"Value": CL_new_fromCtoD,     "Unit": "Non dimensional"},
+                    "CL_wb_fromDto0"     : {"Value": CL_wb_fromDto0,      "Unit": "Non dimensional"},
+                    "CL_ht_fromDto0"     : {"Value": CL_ht_fromDto0,      "Unit": "Non dimensional"},
+                    "CL_new_fromDto0"    : {"Value": CL_new_fromDto0,     "Unit": "Non dimensional"},
+                    "CL_wb_from0toSinv"  : {"Value": CL_wb_from0toSinv,   "Unit": "Non dimensional"},
+                    "CL_ht_from0toSinv"  : {"Value": CL_ht_from0toSinv,   "Unit": "Non dimensional"},
+                    "CL_new_from0toSinv" : {"Value": CL_new_from0toSinv,  "Unit": "Non dimensional"},
+                    "CL_wb_fromSinvtoG"  : {"Value": CL_wb_fromSinvtoG,   "Unit": "Non dimensional"},
+                    "CL_ht_fromSinvtoG"  : {"Value": CL_ht_fromSinvtoG,   "Unit": "Non dimensional"},
+                    "CL_new_fromSinvtoG" : {"Value": CL_new_fromSinvtoG,  "Unit": "Non dimensional"},
+                    "CL_wb_fromGtoGust1" : {"Value": CL_wb_fromGtoGust1,  "Unit": "Non dimensional"},
+                    "CL_ht_fromGtoGust1" : {"Value": CL_ht_fromGtoGust1,  "Unit": "Non dimensional"},
+                    "CL_new_fromGtoGust1": {"Value": CL_new_fromGtoGust1, "Unit": "Non dimensional"},
+                    "CL_wb_fromGust1toF" : {"Value": CL_wb_fromGust1toF,  "Unit": "Non dimensional"},
+                    "CL_ht_fromGust1toF" : {"Value": CL_ht_fromGust1toF,  "Unit": "Non dimensional"},
+                    "CL_new_fromGust1toF": {"Value": CL_new_fromGust1toF, "Unit": "Non dimensional"},
+                    "CL_wb_fromFtoE"     : {"Value": CL_wb_fromFtoE,      "Unit": "Non dimensional"},
+                    "CL_ht_fromFtoE"     : {"Value": CL_ht_fromFtoE,      "Unit": "Non dimensional"},
+                    "CL_new_fromFtoE"    : {"Value": CL_new_fromFtoE,     "Unit": "Non dimensional"},
+                    "CL_wb_fromEto0"     : {"Value": CL_wb_fromEto0,      "Unit": "Non dimensional"},
+                    "CL_ht_fromEto0"     : {"Value": CL_ht_fromEto0,      "Unit": "Non dimensional"},
+                    "CL_new_fromEto0"    : {"Value": CL_new_fromEto0,     "Unit": "Non dimensional"},
+
+                    "L_wb_from0toS"     : {"Value": L_wb_from0toS,      "Unit": "daN"},
+                    "L_ht_from0toS"     : {"Value": L_ht_from0toS,      "Unit": "daN"},
+                    "L_new_from0toS"    : {"Value": L_new_from0toS,     "Unit": "daN"},
+                    "L_wb_fromStoA"     : {"Value": L_wb_fromStoA,      "Unit": "daN"},
+                    "L_ht_fromStoA"     : {"Value": L_ht_fromStoA,      "Unit": "daN"},
+                    "L_new_fromStoA"    : {"Value": L_new_fromStoA,     "Unit": "daN"},
+                    "L_wb_fromAtoC"     : {"Value": L_wb_fromAtoC,      "Unit": "daN"},
+                    "L_ht_fromAtoC"     : {"Value": L_ht_fromAtoC,      "Unit": "daN"},
+                    "L_new_fromAtoC"    : {"Value": L_new_fromAtoC,     "Unit": "daN"},
+                    "L_wb_fromCtoD"     : {"Value": L_wb_fromCtoD,      "Unit": "daN"},
+                    "L_ht_fromCtoD"     : {"Value": L_ht_fromCtoD,      "Unit": "daN"},
+                    "L_new_fromCtoD"    : {"Value": L_new_fromCtoD,     "Unit": "daN"},
+                    "L_wb_fromDto0"     : {"Value": L_wb_fromDto0,      "Unit": "daN"},
+                    "L_ht_fromDto0"     : {"Value": L_ht_fromDto0,      "Unit": "daN"},
+                    "L_new_fromDto0"    : {"Value": L_new_fromDto0,     "Unit": "daN"},
+                    "L_wb_from0toSinv"  : {"Value": L_wb_from0toSinv,   "Unit": "daN"},
+                    "L_ht_from0toSinv"  : {"Value": L_ht_from0toSinv,   "Unit": "daN"},
+                    "L_new_from0toSinv" : {"Value": L_new_from0toSinv,  "Unit": "daN"},
+                    "L_wb_fromSinvtoG"  : {"Value": L_wb_fromSinvtoG,   "Unit": "daN"},
+                    "L_ht_fromSinvtoG"  : {"Value": L_ht_fromSinvtoG,   "Unit": "daN"},
+                    "L_new_fromSinvtoG" : {"Value": L_new_fromSinvtoG,  "Unit": "daN"},
+                    "L_wb_fromGtoGust1" : {"Value": L_wb_fromGtoGust1,  "Unit": "daN"},
+                    "L_ht_fromGtoGust1" : {"Value": L_ht_fromGtoGust1,  "Unit": "daN"},
+                    "L_new_fromGtoGust1": {"Value": L_new_fromGtoGust1, "Unit": "daN"},
+                    "L_wb_fromGust1toF" : {"Value": L_wb_fromGust1toF,  "Unit": "daN"},
+                    "L_ht_fromGust1toF" : {"Value": L_ht_fromGust1toF,  "Unit": "daN"},
+                    "L_new_fromGust1toF": {"Value": L_new_fromGust1toF, "Unit": "daN"},
+                    "L_wb_fromFtoE"     : {"Value": L_wb_fromFtoE,      "Unit": "daN"},
+                    "L_ht_fromFtoE"     : {"Value": L_ht_fromFtoE,      "Unit": "daN"},
+                    "L_new_fromFtoE"    : {"Value": L_new_fromFtoE,     "Unit": "daN"},
+                    "L_wb_fromEto0"     : {"Value": L_wb_fromEto0,      "Unit": "daN"},
+                    "L_ht_fromEto0"     : {"Value": L_ht_fromEto0,      "Unit": "daN"},
+                    "L_new_fromEto0"    : {"Value": L_new_fromEto0,     "Unit": "daN"},
+
+                    "CM_due_to_CL_from0toS"     : {"Value": CM_due_to_CL_from0toS,      "Unit": "Non dimensional"},
+                    "CM_due_to_CD_from0toS"     : {"Value": CM_due_to_CD_from0toS,      "Unit": "Non dimensional"},
+                    "CM_CG_from0toS"            : {"Value": CM_CG_from0toS,             "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromStoA"     : {"Value": CM_due_to_CL_fromStoA,      "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromStoA"     : {"Value": CM_due_to_CD_fromStoA,      "Unit": "Non dimensional"},
+                    "CM_CG_fromStoA"            : {"Value": CM_CG_fromStoA,             "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromAtoC"     : {"Value": CM_due_to_CL_fromAtoC,      "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromAtoC"     : {"Value": CM_due_to_CD_fromAtoC,      "Unit": "Non dimensional"},
+                    "CM_CG_fromAtoC"            : {"Value": CM_CG_fromAtoC,             "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromCtoD"     : {"Value": CM_due_to_CL_fromCtoD,      "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromCtoD"     : {"Value": CM_due_to_CD_fromCtoD,      "Unit": "Non dimensional"},
+                    "CM_CG_fromCtoD"            : {"Value": CM_CG_fromCtoD,             "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromDto0"     : {"Value": CM_due_to_CL_fromDto0,      "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromDto0"     : {"Value": CM_due_to_CD_fromDto0,      "Unit": "Non dimensional"},
+                    "CM_CG_fromDto0"            : {"Value": CM_CG_fromDto0,             "Unit": "Non dimensional"},
+                    "CM_due_to_CL_from0toSinv"  : {"Value": CM_due_to_CL_from0toSinv,   "Unit": "Non dimensional"},
+                    "CM_due_to_CD_from0toSinv"  : {"Value": CM_due_to_CD_from0toSinv,   "Unit": "Non dimensional"},
+                    "CM_CG_from0toSinv"         : {"Value": CM_CG_from0toSinv,          "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromSinvtoG"  : {"Value": CM_due_to_CL_fromSinvtoG,   "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromSinvtoG"  : {"Value": CM_due_to_CD_fromSinvtoG,   "Unit": "Non dimensional"},
+                    "CM_CG_fromSinvtoG"         : {"Value": CM_CG_fromSinvtoG,          "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromGtoGust1" : {"Value": CM_due_to_CL_fromGtoGust1,  "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromGtoGust1" : {"Value": CM_due_to_CD_fromGtoGust1,  "Unit": "Non dimensional"},
+                    "CM_CG_fromGtoGust1"        : {"Value": CM_CG_fromGtoGust1,         "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromGust1toF" : {"Value": CM_due_to_CL_fromGust1toF,  "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromGust1toF" : {"Value": CM_due_to_CD_fromGust1toF,  "Unit": "Non dimensional"},
+                    "CM_CG_fromGust1toF"        : {"Value": CM_CG_fromGust1toF,         "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromFtoE"     : {"Value": CM_due_to_CL_fromFtoE,      "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromFtoE"     : {"Value": CM_due_to_CD_fromFtoE,      "Unit": "Non dimensional"},
+                    "CM_CG_fromFtoE"            : {"Value": CM_CG_fromFtoE,             "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromEto0"     : {"Value": CM_due_to_CL_fromEto0,      "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromEto0"     : {"Value": CM_due_to_CD_fromEto0,      "Unit": "Non dimensional"},
+                    "CM_CG_fromEto0"            : {"Value": CM_CG_fromEto0,             "Unit": "Non dimensional"}
+                    }
+                }
+
+        elif (pos_case_flag == "Case2") and (neg_case_flag == "Case2_inverted"):
+            
+            
+            Balancing_loads = {
+                "Balancing_loads": {
+                    "V_fe_from0toS":     {"Value": V_fe_from0toS, "Unit": "m/s"},
+                    "n_fe_from0toS":     {"Value": n_fe_from0toS, "Unit": "g"},
+                    "V_fe_fromStoA":     {"Value": V_fe_fromStoA, "Unit": "m/s"},
+                    "n_fe_fromStoA":     {"Value": n_fe_fromStoA, "Unit": "g"},
+                    "V_fe_fromAtoC":     {"Value": V_fe_fromAtoC, "Unit": "m/s"},
+                    "n_fe_fromAtoC":     {"Value": n_fe_fromAtoC, "Unit": "g"},
+                    "V_fe_fromCtoD":     {"Value": V_fe_fromCtoD, "Unit": "m/s"},
+                    "n_fe_fromCtoD":     {"Value": n_fe_fromCtoD, "Unit": "g"},
+                    "V_fe_fromDto0":     {"Value": V_fe_fromDto0, "Unit": "m/s"},
+                    "n_fe_fromDto0":     {"Value": n_fe_fromDto0, "Unit": "g"},
+                    "V_fe_from0toSinv":  {"Value": V_fe_from0toSinv, "Unit": "m/s"},
+                    "n_fe_from0toSinv":  {"Value": n_fe_from0toSinv, "Unit": "g"},
+                    "V_fe_fromSinvtoG":  {"Value": V_fe_fromSinvtoG, "Unit": "m/s"},
+                    "n_fe_fromSinvtoG":  {"Value": n_fe_fromSinvtoG, "Unit": "g"},
+                    "V_fe_fromGtoF":     {"Value": V_fe_fromGtoF, "Unit": "m/s"},
+                    "n_fe_fromGtoF":     {"Value": n_fe_fromGtoF, "Unit": "g"},
+                    "V_fe_fromFtoE":     {"Value": V_fe_fromFtoE, "Unit": "m/s"},
+                    "n_fe_fromFtoE":     {"Value": n_fe_fromFtoE, "Unit": "g"},
+                    "V_fe_fromEto0":     {"Value": V_fe_fromEto0, "Unit": "m/s"},
+                    "n_fe_fromEto0":     {"Value": n_fe_fromEto0, "Unit": "g"},
+
+                    "q_from0toS":     {"Value": q_from0toS, "Unit": "Pa"},
+                    "CD_from0toS":     {"Value": CD_from0toS, "Unit": "Non dimensional"},
+                    "q_fromStoA":     {"Value": q_fromStoA, "Unit": "Pa"},
+                    "CD_fromStoA":     {"Value": CD_fromStoA, "Unit": "Non dimensional"},
+                    "q_fromAtoC":     {"Value": q_fromAtoC, "Unit": "Pa"},
+                    "CD_fromAtoC":     {"Value": CD_fromAtoC, "Unit": "Non dimensional"},
+                    "q_fromCtoD":     {"Value": q_fromCtoD, "Unit": "Pa"},
+                    "CD_fromCtoD":     {"Value": CD_fromCtoD, "Unit": "Non dimensional"},
+                    "q_fromDto0":     {"Value": q_fromDto0, "Unit": "Pa"},
+                    "CD_fromDto0":     {"Value": CD_fromDto0, "Unit": "Non dimensional"},
+                    "q_from0toSinv":  {"Value": q_from0toSinv, "Unit": "Pa"},
+                    "CD_from0toSinv":  {"Value": CD_from0toSinv, "Unit": "Non dimensional"},
+                    "q_fromSinvtoG":  {"Value": q_fromSinvtoG, "Unit": "Pa"},
+                    "CD_fromSinvtoG":  {"Value": CD_fromSinvtoG, "Unit": "Non dimensional"},
+                    "q_fromGtoF":     {"Value": q_fromGtoF, "Unit": "Pa"},
+                    "CD_fromGtoF":     {"Value": CD_fromGtoF, "Unit": "Non dimensional"},
+                    "q_fromFtoE":     {"Value": q_fromFtoE, "Unit": "Pa"},
+                    "CD_fromFtoE":     {"Value": CD_fromFtoE, "Unit": "Non dimensional"},
+                    "q_fromEto0":     {"Value": q_fromEto0, "Unit": "Pa"},
+                    "CD_fromEto0":     {"Value": CD_fromEto0, "Unit": "Non dimensional"},
+
+                    "alfa_from0toS":     {"Value": alfa_from0toS, "Unit": "deg"},
+                    "alfa_new_from0toS":     {"Value": alfa_new_from0toS, "Unit": "deg"},
+                    "alfa_fromStoA":     {"Value": alfa_fromStoA, "Unit": "deg"},
+                    "alfa_new_fromStoA":     {"Value": alfa_new_fromStoA, "Unit": "deg"},
+                    "alfa_fromAtoC":     {"Value": alfa_fromAtoC, "Unit": "deg"},
+                    "alfa_new_fromAtoC":     {"Value": alfa_new_fromAtoC, "Unit": "deg"},
+                    "alfa_fromCtoD":     {"Value": alfa_fromCtoD, "Unit": "deg"},
+                    "alfa_new_fromCtoD":     {"Value": alfa_new_fromCtoD, "Unit": "deg"},
+                    "alfa_fromDto0":     {"Value": alfa_fromDto0, "Unit": "deg"},
+                    "alfa_new_fromDto0":     {"Value": alfa_new_fromDto0, "Unit": "deg"},
+                    "alfa_from0toSinv":  {"Value": alfa_from0toSinv, "Unit": "deg"},
+                    "alfa_new_from0toSinv":  {"Value": alfa_new_from0toSinv, "Unit": "deg"},
+                    "alfa_fromSinvtoG":  {"Value": alfa_fromSinvtoG, "Unit": "deg"},
+                    "alfa_new_fromSinvtoG":  {"Value": alfa_new_fromSinvtoG, "Unit": "deg"},
+                    "alfa_fromGtoF":     {"Value": alfa_fromGtoF, "Unit": "deg"},
+                    "alfa_new_fromGtoF":     {"Value": alfa_new_fromGtoF, "Unit": "deg"},
+                    "alfa_fromFtoE":     {"Value": alfa_fromFtoE, "Unit": "deg"},
+                    "alfa_new_fromFtoE":     {"Value": alfa_new_fromFtoE, "Unit": "deg"},
+                    "alfa_fromEto0":     {"Value": alfa_fromEto0, "Unit": "deg"},
+                    "alfa_new_fromEto0":     {"Value": alfa_new_fromEto0, "Unit": "deg"},
+
+                    "CL_wb_from0toS":     {"Value": CL_wb_from0toS, "Unit": "Non dimensional"},
+                    "CL_ht_from0toS":     {"Value": CL_ht_from0toS, "Unit": "Non dimensional"},
+                    "CL_new_from0toS":     {"Value": CL_new_from0toS, "Unit": "Non dimensional"},
+                    "CL_wb_fromStoA":     {"Value": CL_wb_fromStoA, "Unit": "Non dimensional"},
+                    "CL_ht_fromStoA":     {"Value": CL_ht_fromStoA, "Unit": "Non dimensional"},
+                    "CL_new_fromStoA":     {"Value": CL_new_fromStoA, "Unit": "Non dimensional"},
+                    "CL_wb_fromAtoC":     {"Value": CL_wb_fromAtoC, "Unit": "Non dimensional"},
+                    "CL_ht_fromAtoC":     {"Value": CL_ht_fromAtoC, "Unit": "Non dimensional"},
+                    "CL_new_fromAtoC":     {"Value": CL_new_fromAtoC, "Unit": "Non dimensional"},
+                    "CL_wb_fromCtoD":     {"Value": CL_wb_fromCtoD, "Unit": "Non dimensional"},
+                    "CL_ht_fromCtoD":     {"Value": CL_ht_fromCtoD, "Unit": "Non dimensional"},
+                    "CL_new_fromCtoD":     {"Value": CL_new_fromCtoD, "Unit": "Non dimensional"},
+                    "CL_wb_fromDto0":     {"Value": CL_wb_fromDto0, "Unit": "Non dimensional"},
+                    "CL_ht_fromDto0":     {"Value": CL_ht_fromDto0, "Unit": "Non dimensional"},
+                    "CL_new_fromDto0":     {"Value": CL_new_fromDto0, "Unit": "Non dimensional"},
+                    "CL_wb_from0toSinv":  {"Value": CL_wb_from0toSinv, "Unit": "Non dimensional"},
+                    "CL_ht_from0toSinv":  {"Value": CL_ht_from0toSinv, "Unit": "Non dimensional"},
+                    "CL_new_from0toSinv":  {"Value": CL_new_from0toSinv, "Unit": "Non dimensional"},
+                    "CL_wb_fromSinvtoG":  {"Value": CL_wb_fromSinvtoG, "Unit": "Non dimensional"},
+                    "CL_ht_fromSinvtoG":  {"Value": CL_ht_fromSinvtoG, "Unit": "Non dimensional"},
+                    "CL_new_fromSinvtoG":  {"Value": CL_new_fromSinvtoG, "Unit": "Non dimensional"},
+                    "CL_wb_fromGtoF":     {"Value": CL_wb_fromGtoF, "Unit": "Non dimensional"},
+                    "CL_ht_fromGtoF":     {"Value": CL_ht_fromGtoF, "Unit": "Non dimensional"},
+                    "CL_new_fromGtoF":     {"Value": CL_new_fromGtoF, "Unit": "Non dimensional"},
+                    "CL_wb_fromFtoE":     {"Value": CL_wb_fromFtoE, "Unit": "Non dimensional"},
+                    "CL_ht_fromFtoE":     {"Value": CL_ht_fromFtoE, "Unit": "Non dimensional"},
+                    "CL_new_fromFtoE":     {"Value": CL_new_fromFtoE, "Unit": "Non dimensional"},
+                    "CL_wb_fromEto0":     {"Value": CL_wb_fromEto0, "Unit": "Non dimensional"},
+                    "CL_ht_fromEto0":     {"Value": CL_ht_fromEto0, "Unit": "Non dimensional"},
+                    "CL_new_fromEto0":     {"Value": CL_new_fromEto0, "Unit": "Non dimensional"},    
+
+                    "L_wb_from0toS":     {"Value": L_wb_from0toS, "Unit": "daN"},
+                    "L_ht_from0toS":     {"Value": L_ht_from0toS, "Unit": "daN"},
+                    "L_new_from0toS":     {"Value": L_new_from0toS, "Unit": "daN"},
+                    "L_wb_fromStoA":     {"Value": L_wb_fromStoA, "Unit": "daN"},
+                    "L_ht_fromStoA":     {"Value": L_ht_fromStoA, "Unit": "daN"},
+                    "L_new_fromStoA":     {"Value": L_new_fromStoA, "Unit": "daN"},
+                    "L_wb_fromAtoC":     {"Value": L_wb_fromAtoC, "Unit": "daN"},
+                    "L_ht_fromAtoC":     {"Value": L_ht_fromAtoC, "Unit": "daN"},
+                    "L_new_fromAtoC":     {"Value": L_new_fromAtoC, "Unit": "daN"},
+                    "L_wb_fromCtoD":     {"Value": L_wb_fromCtoD, "Unit": "daN"},
+                    "L_ht_fromCtoD":     {"Value": L_ht_fromCtoD, "Unit": "daN"},
+                    "L_new_fromCtoD":     {"Value": L_new_fromCtoD, "Unit": "daN"},
+                    "L_wb_fromDto0":     {"Value": L_wb_fromDto0, "Unit": "daN"},
+                    "L_ht_fromDto0":     {"Value": L_ht_fromDto0, "Unit": "daN"},
+                    "L_new_fromDto0":     {"Value": L_new_fromDto0, "Unit": "daN"},
+                    "L_wb_from0toSinv":  {"Value": L_wb_from0toSinv, "Unit": "daN"},
+                    "L_ht_from0toSinv":  {"Value": L_ht_from0toSinv, "Unit": "daN"},
+                    "L_new_from0toSinv":  {"Value": L_new_from0toSinv, "Unit": "daN"},
+                    "L_wb_fromSinvtoG":  {"Value": L_wb_fromSinvtoG, "Unit": "daN"},
+                    "L_ht_fromSinvtoG":  {"Value": L_ht_fromSinvtoG, "Unit": "daN"},
+                    "L_new_fromSinvtoG":  {"Value": L_new_fromSinvtoG, "Unit": "daN"},
+                    "L_wb_fromGtoF":     {"Value": L_wb_fromGtoF, "Unit": "daN"},
+                    "L_ht_fromGtoF":     {"Value": L_ht_fromGtoF, "Unit": "daN"},
+                    "L_new_fromGtoF":     {"Value": L_new_fromGtoF, "Unit": "daN"},
+                    "L_wb_fromFtoE":     {"Value": L_wb_fromFtoE, "Unit": "daN"},
+                    "L_ht_fromFtoE":     {"Value": L_ht_fromFtoE, "Unit": "daN"},
+                    "L_new_fromFtoE":     {"Value": L_new_fromFtoE, "Unit": "daN"},
+                    "L_wb_fromEto0":     {"Value": L_wb_fromEto0, "Unit": "daN"},
+                    "L_ht_fromEto0":     {"Value": L_ht_fromEto0, "Unit": "daN"},
+                    "L_new_fromEto0":     {"Value": L_new_fromEto0, "Unit": "daN"},
+
+                    "CM_due_to_CL_from0toS":     {"Value": CM_due_to_CL_from0toS, "Unit": "Non dimensional"},
+                    "CM_due_to_CD_from0toS":     {"Value": CM_due_to_CD_from0toS, "Unit": "Non dimensional"},
+                    "CM_CG_from0toS":     {"Value": CM_CG_from0toS, "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromStoA":     {"Value": CM_due_to_CL_fromStoA, "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromStoA":     {"Value": CM_due_to_CD_fromStoA, "Unit": "Non dimensional"},
+                    "CM_CG_fromStoA":     {"Value": CM_CG_fromStoA, "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromAtoC":     {"Value": CM_due_to_CL_fromAtoC, "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromAtoC":     {"Value": CM_due_to_CD_fromAtoC, "Unit": "Non dimensional"},
+                    "CM_CG_fromAtoC":     {"Value": CM_CG_fromAtoC, "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromCtoD":     {"Value": CM_due_to_CL_fromCtoD, "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromCtoD":     {"Value": CM_due_to_CD_fromCtoD, "Unit": "Non dimensional"},
+                    "CM_CG_fromCtoD":     {"Value": CM_CG_fromCtoD, "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromDto0":     {"Value": CM_due_to_CL_fromDto0, "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromDto0":     {"Value": CM_due_to_CD_fromDto0, "Unit": "Non dimensional"},
+                    "CM_CG_fromDto0":     {"Value": CM_CG_fromDto0, "Unit": "Non dimensional"},
+                    "CM_due_to_CL_from0toSinv":  {"Value": CM_due_to_CL_from0toSinv, "Unit": "Non dimensional"},
+                    "CM_due_to_CD_from0toSinv":  {"Value": CM_due_to_CD_from0toSinv, "Unit": "Non dimensional"},
+                    "CM_CG_from0toSinv":  {"Value": CM_CG_from0toSinv, "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromSinvtoG":  {"Value": CM_due_to_CL_fromSinvtoG, "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromSinvtoG":  {"Value": CM_due_to_CD_fromSinvtoG, "Unit": "Non dimensional"},
+                    "CM_CG_fromSinvtoG":  {"Value": CM_CG_fromSinvtoG, "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromGtoF":     {"Value": CM_due_to_CL_fromGtoF, "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromGtoF":     {"Value": CM_due_to_CD_fromGtoF, "Unit": "Non dimensional"},
+                    "CM_CG_fromGtoF":     {"Value": CM_CG_fromGtoF, "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromFtoE":     {"Value": CM_due_to_CL_fromFtoE, "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromFtoE":     {"Value": CM_due_to_CD_fromFtoE, "Unit": "Non dimensional"},
+                    "CM_CG_fromFtoE":     {"Value": CM_CG_fromFtoE, "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromEto0":     {"Value": CM_due_to_CL_fromEto0, "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromEto0":     {"Value": CM_due_to_CD_fromEto0, "Unit": "Non dimensional"},
+                    "CM_CG_fromEto0":     {"Value": CM_CG_fromEto0, "Unit": "Non dimensional"}  
+
+                    }
+                }
+
+        elif (pos_case_flag == "Case2") and (neg_case_flag == "Case3_inverted"):
+            
+            
+            Balancing_loads = {
+                "Balancing_loads": {
+                    "V_fe_from0toS":     {"Value": V_fe_from0toS, "Unit": "m/s"},
+                    "n_fe_from0toS":     {"Value": n_fe_from0toS, "Unit": "g"},
+                    "V_fe_fromStoA":     {"Value": V_fe_fromStoA, "Unit": "m/s"},
+                    "n_fe_fromStoA":     {"Value": n_fe_fromStoA, "Unit": "g"},
+                    "V_fe_fromAtoC":     {"Value": V_fe_fromAtoC, "Unit": "m/s"},
+                    "n_fe_fromAtoC":     {"Value": n_fe_fromAtoC, "Unit": "g"},
+                    "V_fe_fromCtoD":     {"Value": V_fe_fromCtoD, "Unit": "m/s"},
+                    "n_fe_fromCtoD":     {"Value": n_fe_fromCtoD, "Unit": "g"},
+                    "V_fe_fromDto0":     {"Value": V_fe_fromDto0, "Unit": "m/s"},
+                    "n_fe_fromDto0":     {"Value": n_fe_fromDto0, "Unit": "g"},
+                    "V_fe_from0toSinv":  {"Value": V_fe_from0toSinv, "Unit": "m/s"},
+                    "n_fe_from0toSinv":  {"Value": n_fe_from0toSinv, "Unit": "g"},
+                    "V_fe_fromSinvtoG":  {"Value": V_fe_fromSinvtoG, "Unit": "m/s"},
+                    "n_fe_fromSinvtoG":  {"Value": n_fe_fromSinvtoG, "Unit": "g"},
+                    "V_fe_fromGtoF":     {"Value": V_fe_fromGtoF, "Unit": "m/s"},
+                    "n_fe_fromGtoF":     {"Value": n_fe_fromGtoF, "Unit": "g"},
+                    "V_fe_fromFtoE"    : {"Value": V_fe_fromFtoE, "Unit": "m/s"},
+                    "n_fe_fromFtoE"    : {"Value": n_fe_fromFtoE, "Unit": "g"},
+                    "V_fe_fromEto0"    : {"Value": V_fe_fromEto0, "Unit": "m/s"},
+                    "n_fe_fromEto0"    : {"Value": n_fe_fromEto0, "Unit": "g"},
+
+                    "q_from0toS":     {"Value": q_from0toS, "Unit": "Pa"},
+                    "CD_from0toS":     {"Value": CD_from0toS, "Unit": "Non dimensional"},
+                    "q_fromStoA":     {"Value": q_fromStoA, "Unit": "Pa"},
+                    "CD_fromStoA":     {"Value": CD_fromStoA, "Unit": "Non dimensional"},
+                    "q_fromAtoC":     {"Value": q_fromAtoC, "Unit": "Pa"},
+                    "CD_fromAtoC":     {"Value": CD_fromAtoC, "Unit": "Non dimensional"},
+                    "q_fromCtoD":     {"Value": q_fromCtoD, "Unit": "Pa"},
+                    "CD_fromCtoD":     {"Value": CD_fromCtoD, "Unit": "Non dimensional"},
+                    "q_fromDto0":     {"Value": q_fromDto0, "Unit": "Pa"},
+                    "CD_fromDto0":     {"Value": CD_fromDto0, "Unit": "Non dimensional"},
+                    "q_from0toSinv":  {"Value": q_from0toSinv, "Unit": "Pa"},
+                    "CD_from0toSinv":  {"Value": CD_from0toSinv, "Unit": "Non dimensional"},
+                    "q_fromSinvtoG":  {"Value": q_fromSinvtoG, "Unit": "Pa"},
+                    "CD_fromSinvtoG":  {"Value": CD_fromSinvtoG, "Unit": "Non dimensional"},
+                    "q_fromGtoF":     {"Value": q_fromGtoF, "Unit": "Pa"},
+                    "CD_fromGtoF":     {"Value": CD_fromGtoF, "Unit": "Non dimensional"},
+                    "q_fromFtoE"    : {"Value": q_fromFtoE, "Unit": "Pa"},
+                    "CD_fromFtoE"    : {"Value": CD_fromFtoE, "Unit": "Non dimensional"},
+                    "q_fromEto0"    : {"Value": q_fromEto0, "Unit": "Pa"},
+                    "CD_fromEto0"    : {"Value": CD_fromEto0, "Unit": "Non dimensional"},
+                    
+                    "alfa_from0toS":     {"Value": alfa_from0toS, "Unit": "deg"},
+                    "alfa_new_from0toS":     {"Value": alfa_new_from0toS, "Unit": "deg"},
+                    "alfa_fromStoA":     {"Value": alfa_fromStoA, "Unit": "deg"},
+                    "alfa_new_fromStoA":     {"Value": alfa_new_fromStoA, "Unit": "deg"},
+                    "alfa_fromAtoC":     {"Value": alfa_fromAtoC, "Unit": "deg"},
+                    "alfa_new_fromAtoC":     {"Value": alfa_new_fromAtoC, "Unit": "deg"},
+                    "alfa_fromCtoD":     {"Value": alfa_fromCtoD, "Unit": "deg"},
+                    "alfa_new_fromCtoD":     {"Value": alfa_new_fromCtoD, "Unit": "deg"},
+                    "alfa_fromDto0":     {"Value": alfa_fromDto0, "Unit": "deg"},
+                    "alfa_new_fromDto0":     {"Value": alfa_new_fromDto0, "Unit": "deg"},
+                    "alfa_from0toSinv":  {"Value": alfa_from0toSinv, "Unit": "deg"},
+                    "alfa_new_from0toSinv":  {"Value": alfa_new_from0toSinv, "Unit": "deg"},
+                    "alfa_fromSinvtoG":  {"Value": alfa_fromSinvtoG, "Unit": "deg"},
+                    "alfa_new_fromSinvtoG":  {"Value": alfa_new_fromSinvtoG, "Unit": "deg"},
+                    "alfa_fromGtoF":     {"Value": alfa_fromGtoF, "Unit": "deg"},
+                    "alfa_new_fromGtoF":     {"Value": alfa_new_fromGtoF, "Unit": "deg"},
+                    "alfa_fromFtoE"    : {"Value": alfa_fromFtoE, "Unit": "deg"},
+                    "alfa_new_fromFtoE"    : {"Value": alfa_new_fromFtoE, "Unit": "deg"},
+                    "alfa_fromEto0"    : {"Value": alfa_fromEto0, "Unit": "deg"},
+                    "alfa_new_fromEto0"    : {"Value": alfa_new_fromEto0, "Unit": "deg"},
+                    
+                    "CL_wb_from0toS":     {"Value": CL_wb_from0toS, "Unit": "Non dimensional"},
+                    "CL_ht_from0toS":     {"Value": CL_ht_from0toS, "Unit": "Non dimensional"},
+                    "CL_new_from0toS":     {"Value": CL_new_from0toS, "Unit": "Non dimensional"},
+                    "CL_wb_fromStoA":     {"Value": CL_wb_fromStoA, "Unit": "Non dimensional"},
+                    "CL_ht_fromStoA":     {"Value": CL_ht_fromStoA, "Unit": "Non dimensional"},
+                    "CL_new_fromStoA":     {"Value": CL_new_fromStoA, "Unit": "Non dimensional"},
+                    "CL_wb_fromAtoC":     {"Value": CL_wb_fromAtoC, "Unit": "Non dimensional"},
+                    "CL_ht_fromAtoC":     {"Value": CL_ht_fromAtoC, "Unit": "Non dimensional"},
+                    "CL_new_fromAtoC":     {"Value": CL_new_fromAtoC, "Unit": "Non dimensional"},
+                    "CL_wb_fromCtoD":     {"Value": CL_wb_fromCtoD, "Unit": "Non dimensional"},
+                    "CL_ht_fromCtoD":     {"Value": CL_ht_fromCtoD, "Unit": "Non dimensional"},
+                    "CL_new_fromCtoD":     {"Value": CL_new_fromCtoD, "Unit": "Non dimensional"},
+                    "CL_wb_fromDto0":     {"Value": CL_wb_fromDto0, "Unit": "Non dimensional"},
+                    "CL_ht_fromDto0":     {"Value": CL_ht_fromDto0, "Unit": "Non dimensional"},
+                    "CL_new_fromDto0":     {"Value": CL_new_fromDto0, "Unit": "Non dimensional"},
+                    "CL_wb_from0toSinv":  {"Value": CL_wb_from0toSinv, "Unit": "Non dimensional"},
+                    "CL_ht_from0toSinv":  {"Value": CL_ht_from0toSinv, "Unit": "Non dimensional"},
+                    "CL_new_from0toSinv":  {"Value": CL_new_from0toSinv, "Unit": "Non dimensional"},
+                    "CL_wb_fromSinvtoG":  {"Value": CL_wb_fromSinvtoG, "Unit": "Non dimensional"},
+                    "CL_ht_fromSinvtoG":  {"Value": CL_ht_fromSinvtoG, "Unit": "Non dimensional"},
+                    "CL_new_fromSinvtoG":  {"Value": CL_new_fromSinvtoG, "Unit": "Non dimensional"},
+                    "CL_wb_fromGtoF":     {"Value": CL_wb_fromGtoF, "Unit": "Non dimensional"},
+                    "CL_ht_fromGtoF":     {"Value": CL_ht_fromGtoF, "Unit": "Non dimensional"},
+                    "CL_new_fromGtoF":     {"Value": CL_new_fromGtoF, "Unit": "Non dimensional"},
+                    "CL_wb_fromFtoE"    : {"Value": CL_wb_fromFtoE, "Unit": "Non dimensional"},
+                    "CL_ht_fromFtoE"    : {"Value": CL_ht_fromFtoE, "Unit": "Non dimensional"},
+                    "CL_new_fromFtoE"    : {"Value": CL_new_fromFtoE, "Unit": "Non dimensional"},
+                    "CL_wb_fromEto0"    : {"Value": CL_wb_fromEto0, "Unit": "Non dimensional"},
+                    "CL_ht_fromEto0"    : {"Value": CL_ht_fromEto0, "Unit": "Non dimensional"},
+                    "CL_new_fromEto0"    : {"Value": CL_new_fromEto0, "Unit": "Non dimensional"},
+                    
+                    "L_wb_from0toS":     {"Value": L_wb_from0toS, "Unit": "daN"},
+                    "L_ht_from0toS":     {"Value": L_ht_from0toS, "Unit": "daN"},
+                    "L_new_from0toS":     {"Value": L_new_from0toS, "Unit": "daN"},
+                    "L_wb_fromStoA":     {"Value": L_wb_fromStoA, "Unit": "daN"},
+                    "L_ht_fromStoA":     {"Value": L_ht_fromStoA, "Unit": "daN"},
+                    "L_new_fromStoA":     {"Value": L_new_fromStoA, "Unit": "daN"},
+                    "L_wb_fromAtoC":     {"Value": L_wb_fromAtoC, "Unit": "daN"},
+                    "L_ht_fromAtoC":     {"Value": L_ht_fromAtoC, "Unit": "daN"},
+                    "L_new_fromAtoC":     {"Value": L_new_fromAtoC, "Unit": "daN"},
+                    "L_wb_fromCtoD":     {"Value": L_wb_fromCtoD, "Unit": "daN"},
+                    "L_ht_fromCtoD":     {"Value": L_ht_fromCtoD, "Unit": "daN"},
+                    "L_new_fromCtoD":     {"Value": L_new_fromCtoD, "Unit": "daN"},
+                    "L_wb_fromDto0":     {"Value": L_wb_fromDto0, "Unit": "daN"},
+                    "L_ht_fromDto0":     {"Value": L_ht_fromDto0, "Unit": "daN"},
+                    "L_new_fromDto0":     {"Value": L_new_fromDto0, "Unit": "daN"},
+                    "L_wb_from0toSinv":  {"Value": L_wb_from0toSinv, "Unit": "daN"},
+                    "L_ht_from0toSinv":  {"Value": L_ht_from0toSinv, "Unit": "daN"},
+                    "L_new_from0toSinv":  {"Value": L_new_from0toSinv, "Unit": "daN"},
+                    "L_wb_fromSinvtoG":  {"Value": L_wb_fromSinvtoG, "Unit": "daN"},
+                    "L_ht_fromSinvtoG":  {"Value": L_ht_fromSinvtoG, "Unit": "daN"},
+                    "L_new_fromSinvtoG":  {"Value": L_new_fromSinvtoG, "Unit": "daN"},
+                    "L_wb_fromGtoF":     {"Value": L_wb_fromGtoF, "Unit": "daN"},
+                    "L_ht_fromGtoF":     {"Value": L_ht_fromGtoF, "Unit": "daN"},
+                    "L_new_fromGtoF":     {"Value": L_new_fromGtoF, "Unit": "daN"},
+                    "L_wb_fromFtoE"    : {"Value": L_wb_fromFtoE, "Unit": "daN"},
+                    "L_ht_fromFtoE"    : {"Value": L_ht_fromFtoE, "Unit": "daN"},
+                    "L_new_fromFtoE"    : {"Value": L_new_fromFtoE, "Unit": "daN"},
+                    "L_wb_fromEto0"    : {"Value": L_wb_fromEto0, "Unit": "daN"},
+                    "L_ht_fromEto0"    : {"Value": L_ht_fromEto0, "Unit": "daN"},
+                    "L_new_fromEto0"    : {"Value": L_new_fromEto0, "Unit": "daN"},
+                                        
+                    "CM_due_to_CL_from0toS":     {"Value": CM_due_to_CL_from0toS, "Unit": "Non dimensional"},
+                    "CM_due_to_CD_from0toS":     {"Value": CM_due_to_CD_from0toS, "Unit": "Non dimensional"},
+                    "CM_CG_from0toS":     {"Value": CM_CG_from0toS, "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromStoA":     {"Value": CM_due_to_CL_fromStoA, "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromStoA":     {"Value": CM_due_to_CD_fromStoA, "Unit": "Non dimensional"},
+                    "CM_CG_fromStoA":     {"Value": CM_CG_fromStoA, "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromAtoC":     {"Value": CM_due_to_CL_fromAtoC, "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromAtoC":     {"Value": CM_due_to_CD_fromAtoC, "Unit": "Non dimensional"},
+                    "CM_CG_fromAtoC":     {"Value": CM_CG_fromAtoC, "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromCtoD":     {"Value": CM_due_to_CL_fromCtoD, "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromCtoD":     {"Value": CM_due_to_CD_fromCtoD, "Unit": "Non dimensional"},
+                    "CM_CG_fromCtoD":     {"Value": CM_CG_fromCtoD, "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromDto0":     {"Value": CM_due_to_CL_fromDto0, "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromDto0":     {"Value": CM_due_to_CD_fromDto0, "Unit": "Non dimensional"},
+                    "CM_CG_fromDto0":     {"Value": CM_CG_fromDto0, "Unit": "Non dimensional"},
+                    "CM_due_to_CL_from0toSinv":  {"Value": CM_due_to_CL_from0toSinv, "Unit": "Non dimensional"},
+                    "CM_due_to_CD_from0toSinv":  {"Value": CM_due_to_CD_from0toSinv, "Unit": "Non dimensional"},
+                    "CM_CG_from0toSinv":  {"Value": CM_CG_from0toSinv, "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromSinvtoG":  {"Value": CM_due_to_CL_fromSinvtoG, "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromSinvtoG":  {"Value": CM_due_to_CD_fromSinvtoG, "Unit": "Non dimensional"},
+                    "CM_CG_fromSinvtoG":  {"Value": CM_CG_fromSinvtoG, "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromGtoF":     {"Value": CM_due_to_CL_fromGtoF, "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromGtoF":     {"Value": CM_due_to_CD_fromGtoF, "Unit": "Non dimensional"},
+                    "CM_CG_fromGtoF":     {"Value": CM_CG_fromGtoF, "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromFtoE"    : {"Value": CM_due_to_CL_fromFtoE, "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromFtoE"    : {"Value": CM_due_to_CD_fromFtoE, "Unit": "Non dimensional"},
+                    "CM_CG_fromFtoE"    : {"Value": CM_CG_fromFtoE, "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromEto0"    : {"Value": CM_due_to_CL_fromEto0, "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromEto0"    : {"Value": CM_due_to_CD_fromEto0, "Unit": "Non dimensional"},
+                    "CM_CG_fromEto0"    : {"Value": CM_CG_fromEto0, "Unit": "Non dimensional"}
+                    
+                    }
+                }
+
+        elif (pos_case_flag == "Case3") and (neg_case_flag == "Case1_inverted"):
+            
+            
+            Balancing_loads = {
+                "Balancing_loads": {
+                    "V_fe_from0toS": {"Value": V_fe_from0toS, "Unit": "m/s"},
+                    "n_fe_from0toS": {"Value": n_fe_from0toS, "Unit": "g"},
+                    "V_fe_fromStoA": {"Value": V_fe_fromStoA, "Unit": "m/s"},
+                    "n_fe_fromStoA": {"Value": n_fe_fromStoA, "Unit": "g"},
+                    "V_fe_fromAtoGust1": {"Value": V_fe_fromAtoGust1, "Unit": "m/s"},
+                    "n_fe_fromAtoGust1": {"Value": n_fe_fromAtoGust1, "Unit": "g"},
+                    "V_fe_fromGust1toC": {"Value": V_fe_fromGust1toC, "Unit": "m/s"},
+                    "n_fe_fromGust1toC": {"Value": n_fe_fromGust1toC, "Unit": "g"},
+                    "V_fe_fromCtoGust2": {"Value": V_fe_fromCtoGust2, "Unit": "m/s"},
+                    "n_fe_fromCtoGust2": {"Value": n_fe_fromCtoGust2, "Unit": "g"},
+                    "V_fe_fromGust2toD": {"Value": V_fe_fromGust2toD, "Unit": "m/s"},
+                    "n_fe_fromGust2toD": {"Value": n_fe_fromGust2toD, "Unit": "g"},
+                    "V_fe_fromDto0":     {"Value": V_fe_fromDto0, "Unit": "m/s"},
+                    "n_fe_fromDto0":     {"Value": n_fe_fromDto0, "Unit": "g"},
+                    "V_fe_from0toSinv":  {"Value": V_fe_from0toSinv, "Unit": "m/s"},
+                    "n_fe_from0toSinv":  {"Value": n_fe_from0toSinv, "Unit": "g"},
+                    "V_fe_fromSinvtoG":  {"Value": V_fe_fromSinvtoG, "Unit": "m/s"},
+                    "n_fe_fromSinvtoG":  {"Value": n_fe_fromSinvtoG, "Unit": "g"},
+                    "V_fe_fromGtoGust1": {"Value": V_fe_fromGtoGust1, "Unit": "m/s"},
+                    "n_fe_fromGtoGust1": {"Value": n_fe_fromGtoGust1, "Unit": "g"},
+                    "V_fe_fromGust1toF": {"Value": V_fe_fromGust1toF, "Unit": "m/s"},
+                    "n_fe_fromGust1toF": {"Value": n_fe_fromGust1toF, "Unit": "g"},
+                    "V_fe_fromFtoE"    : {"Value": V_fe_fromFtoE, "Unit": "m/s"},
+                    "n_fe_fromFtoE"    : {"Value": n_fe_fromFtoE, "Unit": "g"},
+                    "V_fe_fromEto0"    : {"Value": V_fe_fromEto0, "Unit": "m/s"},
+                    "n_fe_fromEto0"    : {"Value": n_fe_fromEto0, "Unit": "g"},
+
+                    "q_from0toS": {"Value": q_from0toS, "Unit": "Pa"},
+                    "CD_from0toS": {"Value": CD_from0toS, "Unit": "Non dimensional"},
+                    "q_fromStoA": {"Value": q_fromStoA, "Unit": "Pa"},
+                    "CD_fromStoA": {"Value": CD_fromStoA, "Unit": "Non dimensional"},
+                    "q_fromAtoGust1": {"Value": q_fromAtoGust1, "Unit": "Pa"},
+                    "CD_fromAtoGust1": {"Value": CD_fromAtoGust1, "Unit": "Non dimensional"},
+                    "q_fromGust1toC": {"Value": q_fromGust1toC, "Unit": "Pa"},
+                    "CD_fromGust1toC": {"Value": CD_fromGust1toC, "Unit": "Non dimensional"},
+                    "q_fromCtoGust2": {"Value": q_fromCtoGust2, "Unit": "Pa"},
+                    "CD_fromCtoGust2": {"Value": CD_fromCtoGust2, "Unit": "Non dimensional"},
+                    "q_fromGust2toD": {"Value": q_fromGust2toD, "Unit": "Pa"},
+                    "CD_fromGust2toD": {"Value": CD_fromGust2toD, "Unit": "Non dimensional"},
+                    "q_fromDto0":     {"Value": q_fromDto0, "Unit": "Pa"},
+                    "CD_fromDto0":     {"Value": CD_fromDto0, "Unit": "Non dimensional"},
+                    "q_from0toSinv":  {"Value": q_from0toSinv, "Unit": "Pa"},
+                    "CD_from0toSinv":  {"Value": CD_from0toSinv, "Unit": "Non dimensional"},
+                    "q_fromSinvtoG":  {"Value": q_fromSinvtoG, "Unit": "Pa"},
+                    "CD_fromSinvtoG":  {"Value": CD_fromSinvtoG, "Unit": "Non dimensional"},
+                    "q_fromGtoGust1": {"Value": q_fromGtoGust1, "Unit": "Pa"},
+                    "CD_fromGtoGust1": {"Value": CD_fromGtoGust1, "Unit": "Non dimensional"},
+                    "q_fromGust1toF": {"Value": q_fromGust1toF, "Unit": "Pa"},
+                    "CD_fromGust1toF": {"Value": CD_fromGust1toF, "Unit": "Non dimensional"},
+                    "q_fromFtoE"    : {"Value": q_fromFtoE, "Unit": "Pa"},
+                    "CD_fromFtoE"    : {"Value": CD_fromFtoE, "Unit": "Non dimensional"},
+                    "q_fromEto0"    : {"Value": q_fromEto0, "Unit": "Pa"},
+                    "CD_fromEto0"    : {"Value": CD_fromEto0, "Unit": "Non dimensional"},
+
+                    "alfa_from0toS": {"Value": alfa_from0toS, "Unit": "deg"},
+                    "alfa_new_from0toS": {"Value": alfa_new_from0toS, "Unit": "deg"},
+                    "alfa_fromStoA": {"Value": alfa_fromStoA, "Unit": "deg"},
+                    "alfa_new_fromStoA": {"Value": alfa_new_fromStoA, "Unit": "deg"},
+                    "alfa_fromAtoGust1": {"Value": alfa_fromAtoGust1, "Unit": "deg"},
+                    "alfa_new_fromAtoGust1": {"Value": alfa_new_fromAtoGust1, "Unit": "deg"},
+                    "alfa_fromGust1toC": {"Value": alfa_fromGust1toC, "Unit": "deg"},
+                    "alfa_new_fromGust1toC": {"Value": alfa_new_fromGust1toC, "Unit": "deg"},
+                    "alfa_fromCtoGust2": {"Value": alfa_fromCtoGust2, "Unit": "deg"},
+                    "alfa_new_fromCtoGust2": {"Value": alfa_new_fromCtoGust2, "Unit": "deg"},
+                    "alfa_fromGust2toD": {"Value": alfa_fromGust2toD, "Unit": "deg"},
+                    "alfa_new_fromGust2toD": {"Value": alfa_new_fromGust2toD, "Unit": "deg"},
+                    "alfa_fromDto0":     {"Value": alfa_fromDto0, "Unit": "deg"},
+                    "alfa_new_fromDto0":     {"Value": alfa_new_fromDto0, "Unit": "deg"},
+                    "alfa_from0toSinv":  {"Value": alfa_from0toSinv, "Unit": "deg"},
+                    "alfa_new_from0toSinv":  {"Value": alfa_new_from0toSinv, "Unit": "deg"},
+                    "alfa_fromSinvtoG":  {"Value": alfa_fromSinvtoG, "Unit": "deg"},
+                    "alfa_new_fromSinvtoG":  {"Value": alfa_new_fromSinvtoG, "Unit": "deg"},
+                    "alfa_fromGtoGust1": {"Value": alfa_fromGtoGust1, "Unit": "deg"},
+                    "alfa_new_fromGtoGust1": {"Value": alfa_new_fromGtoGust1, "Unit": "deg"},
+                    "alfa_fromGust1toF": {"Value": alfa_fromGust1toF, "Unit": "deg"},
+                    "alfa_new_fromGust1toF": {"Value": alfa_new_fromGust1toF, "Unit": "deg"},
+                    "alfa_fromFtoE"    : {"Value": alfa_fromFtoE, "Unit": "deg"},
+                    "alfa_new_fromFtoE"    : {"Value": alfa_new_fromFtoE, "Unit": "deg"},
+                    "alfa_fromEto0"    : {"Value": alfa_fromEto0, "Unit": "deg"},
+                    "alfa_new_fromEto0"    : {"Value": alfa_new_fromEto0, "Unit": "deg"},
+
+                    "CL_wb_from0toS": {"Value": CL_wb_from0toS, "Unit": "Non dimensional"},
+                    "CL_ht_from0toS": {"Value": CL_ht_from0toS, "Unit": "Non dimensional"},
+                    "CL_new_from0toS": {"Value": CL_new_from0toS, "Unit": "Non dimensional"},
+                    "CL_wb_fromStoA": {"Value": CL_wb_fromStoA, "Unit": "Non dimensional"},
+                    "CL_ht_fromStoA": {"Value": CL_ht_fromStoA, "Unit": "Non dimensional"},
+                    "CL_new_fromStoA": {"Value": CL_new_fromStoA, "Unit": "Non dimensional"},
+                    "CL_wb_fromAtoGust1": {"Value": CL_wb_fromAtoGust1, "Unit": "Non dimensional"},
+                    "CL_ht_fromAtoGust1": {"Value": CL_ht_fromAtoGust1, "Unit": "Non dimensional"},
+                    "CL_new_fromAtoGust1": {"Value": CL_new_fromAtoGust1, "Unit": "Non dimensional"},
+                    "CL_wb_fromGust1toC": {"Value": CL_wb_fromGust1toC, "Unit": "Non dimensional"},
+                    "CL_ht_fromGust1toC": {"Value": CL_ht_fromGust1toC, "Unit": "Non dimensional"},
+                    "CL_new_fromGust1toC": {"Value": CL_new_fromGust1toC, "Unit": "Non dimensional"},
+                    "CL_wb_fromCtoGust2": {"Value": CL_wb_fromCtoGust2, "Unit": "Non dimensional"},
+                    "CL_ht_fromCtoGust2": {"Value": CL_ht_fromCtoGust2, "Unit": "Non dimensional"},
+                    "CL_new_fromCtoGust2": {"Value": CL_new_fromCtoGust2, "Unit": "Non dimensional"},
+                    "CL_wb_fromGust2toD": {"Value": CL_wb_fromGust2toD, "Unit": "Non dimensional"},
+                    "CL_ht_fromGust2toD": {"Value": CL_ht_fromGust2toD, "Unit": "Non dimensional"},
+                    "CL_new_fromGust2toD": {"Value": CL_new_fromGust2toD, "Unit": "Non dimensional"},
+                    "CL_wb_fromDto0":     {"Value": CL_wb_fromDto0, "Unit": "Non dimensional"},
+                    "CL_ht_fromDto0":     {"Value": CL_ht_fromDto0, "Unit": "Non dimensional"},
+                    "CL_new_fromDto0":     {"Value": CL_new_fromDto0, "Unit": "Non dimensional"},
+                    "CL_wb_from0toSinv":  {"Value": CL_wb_from0toSinv, "Unit": "Non dimensional"},
+                    "CL_ht_from0toSinv":  {"Value": CL_ht_from0toSinv, "Unit": "Non dimensional"},
+                    "CL_new_from0toSinv":  {"Value": CL_new_from0toSinv, "Unit": "Non dimensional"},
+                    "CL_wb_fromSinvtoG":  {"Value": CL_wb_fromSinvtoG, "Unit": "Non dimensional"},
+                    "CL_ht_fromSinvtoG":  {"Value": CL_ht_fromSinvtoG, "Unit": "Non dimensional"},
+                    "CL_new_fromSinvtoG":  {"Value": CL_new_fromSinvtoG, "Unit": "Non dimensional"},
+                    "CL_wb_fromGtoGust1": {"Value": CL_wb_fromGtoGust1, "Unit": "Non dimensional"},
+                    "CL_ht_fromGtoGust1": {"Value": CL_ht_fromGtoGust1, "Unit": "Non dimensional"},
+                    "CL_new_fromGtoGust1": {"Value": CL_new_fromGtoGust1, "Unit": "Non dimensional"},
+                    "CL_wb_fromGust1toF": {"Value": CL_wb_fromGust1toF, "Unit": "Non dimensional"},
+                    "CL_ht_fromGust1toF": {"Value": CL_ht_fromGust1toF, "Unit": "Non dimensional"},
+                    "CL_new_fromGust1toF": {"Value": CL_new_fromGust1toF, "Unit": "Non dimensional"},
+                    "CL_wb_fromFtoE"    : {"Value": CL_wb_fromFtoE, "Unit": "Non dimensional"},
+                    "CL_ht_fromFtoE"    : {"Value": CL_ht_fromFtoE, "Unit": "Non dimensional"},
+                    "CL_new_fromFtoE"    : {"Value": CL_new_fromFtoE, "Unit": "Non dimensional"},
+                    "CL_wb_fromEto0"    : {"Value": CL_wb_fromEto0, "Unit": "Non dimensional"},
+                    "CL_ht_fromEto0"    : {"Value": CL_ht_fromEto0, "Unit": "Non dimensional"},
+                    "CL_new_fromEto0"    : {"Value": CL_new_fromEto0, "Unit": "Non dimensional"},
+
+                    "CM_due_to_CL_from0toS": {"Value": CM_due_to_CL_from0toS, "Unit": "Non dimensional"},
+                    "CM_due_to_CD_from0toS": {"Value": CM_due_to_CD_from0toS, "Unit": "Non dimensional"},
+                    "CM_CG_from0toS": {"Value": CM_CG_from0toS, "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromStoA": {"Value": CM_due_to_CL_fromStoA, "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromStoA": {"Value": CM_due_to_CD_fromStoA, "Unit": "Non dimensional"},
+                    "CM_CG_fromStoA": {"Value": CM_CG_fromStoA, "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromAtoGust1": {"Value": CM_due_to_CL_fromAtoGust1, "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromAtoGust1": {"Value": CM_due_to_CD_fromAtoGust1, "Unit": "Non dimensional"},
+                    "CM_CG_fromAtoGust1": {"Value": CM_CG_fromAtoGust1, "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromGust1toC": {"Value": CM_due_to_CL_fromGust1toC, "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromGust1toC": {"Value": CM_due_to_CD_fromGust1toC, "Unit": "Non dimensional"},
+                    "CM_CG_fromGust1toC": {"Value": CM_CG_fromGust1toC, "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromCtoGust2": {"Value": CM_due_to_CL_fromCtoGust2, "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromCtoGust2": {"Value": CM_due_to_CD_fromCtoGust2, "Unit": "Non dimensional"},
+                    "CM_CG_fromCtoGust2": {"Value": CM_CG_fromCtoGust2, "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromGust2toD": {"Value": CM_due_to_CL_fromGust2toD, "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromGust2toD": {"Value": CM_due_to_CD_fromGust2toD, "Unit": "Non dimensional"},
+                    "CM_CG_fromGust2toD": {"Value": CM_CG_fromGust2toD, "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromDto0":     {"Value": CM_due_to_CL_fromDto0, "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromDto0":     {"Value": CM_due_to_CD_fromDto0, "Unit": "Non dimensional"},
+                    "CM_CG_fromDto0":     {"Value": CM_CG_fromDto0, "Unit": "Non dimensional"},
+                    "CM_due_to_CL_from0toSinv":  {"Value": CM_due_to_CL_from0toSinv, "Unit": "Non dimensional"},
+                    "CM_due_to_CD_from0toSinv":  {"Value": CM_due_to_CD_from0toSinv, "Unit": "Non dimensional"},
+                    "CM_CG_from0toSinv":  {"Value": CM_CG_from0toSinv, "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromSinvtoG":  {"Value": CM_due_to_CL_fromSinvtoG, "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromSinvtoG":  {"Value": CM_due_to_CD_fromSinvtoG, "Unit": "Non dimensional"},
+                    "CM_CG_fromSinvtoG":  {"Value": CM_CG_fromSinvtoG, "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromGtoGust1": {"Value": CM_due_to_CL_fromGtoGust1, "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromGtoGust1": {"Value": CM_due_to_CD_fromGtoGust1, "Unit": "Non dimensional"},
+                    "CM_CG_fromGtoGust1": {"Value": CM_CG_fromGtoGust1, "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromGust1toF": {"Value": CM_due_to_CL_fromGust1toF, "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromGust1toF": {"Value": CM_due_to_CD_fromGust1toF, "Unit": "Non dimensional"},
+                    "CM_CG_fromGust1toF": {"Value": CM_CG_fromGust1toF, "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromFtoE"    : {"Value": CM_due_to_CL_fromFtoE, "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromFtoE"    : {"Value": CM_due_to_CD_fromFtoE, "Unit": "Non dimensional"},
+                    "CM_CG_fromFtoE"    : {"Value": CM_CG_fromFtoE, "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromEto0"    : {"Value": CM_due_to_CL_fromEto0, "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromEto0"    : {"Value": CM_due_to_CD_fromEto0, "Unit": "Non dimensional"},
+                    "CM_CG_fromEto0"    : {"Value": CM_CG_fromEto0, "Unit": "Non dimensional"},
+
+                    "L_wb_from0toS": {"Value": L_wb_from0toS, "Unit": "daN"},
+                    "L_ht_from0toS": {"Value": L_ht_from0toS, "Unit": "daN"},
+                    "L_new_from0toS": {"Value": L_new_from0toS, "Unit": "daN"},
+                    "L_wb_fromStoA": {"Value": L_wb_fromStoA, "Unit": "daN"},
+                    "L_ht_fromStoA": {"Value": L_ht_fromStoA, "Unit": "daN"},
+                    "L_new_fromStoA": {"Value": L_new_fromStoA, "Unit": "daN"},
+                    "L_wb_fromAtoGust1": {"Value": L_wb_fromAtoGust1, "Unit": "daN"},
+                    "L_ht_fromAtoGust1": {"Value": L_ht_fromAtoGust1, "Unit": "daN"},
+                    "L_new_fromAtoGust1": {"Value": L_new_fromAtoGust1, "Unit": "daN"},
+                    "L_wb_fromGust1toC": {"Value": L_wb_fromGust1toC, "Unit": "daN"},
+                    "L_ht_fromGust1toC": {"Value": L_ht_fromGust1toC, "Unit": "daN"},
+                    "L_new_fromGust1toC": {"Value": L_new_fromGust1toC, "Unit": "daN"},
+                    "L_wb_fromCtoGust2": {"Value": L_wb_fromCtoGust2, "Unit": "daN"},
+                    "L_ht_fromCtoGust2": {"Value": L_ht_fromCtoGust2, "Unit": "daN"},
+                    "L_new_fromCtoGust2": {"Value": L_new_fromCtoGust2, "Unit": "daN"},
+                    "L_wb_fromGust2toD": {"Value": L_wb_fromGust2toD, "Unit": "daN"},
+                    "L_ht_fromGust2toD": {"Value": L_ht_fromGust2toD, "Unit": "daN"},
+                    "L_new_fromGust2toD": {"Value": L_new_fromGust2toD, "Unit": "daN"},
+                    "L_wb_fromDto0":     {"Value": L_wb_fromDto0, "Unit": "daN"},
+                    "L_ht_fromDto0":     {"Value": L_ht_fromDto0, "Unit": "daN"},
+                    "L_new_fromDto0":     {"Value": L_new_fromDto0, "Unit": "daN"},
+                    "L_wb_from0toSinv":  {"Value": L_wb_from0toSinv, "Unit": "daN"},
+                    "L_ht_from0toSinv":  {"Value": L_ht_from0toSinv, "Unit": "daN"},
+                    "L_new_from0toSinv":  {"Value": L_new_from0toSinv, "Unit": "daN"},
+                    "L_wb_fromSinvtoG":  {"Value": L_wb_fromSinvtoG, "Unit": "daN"},
+                    "L_ht_fromSinvtoG":  {"Value": L_ht_fromSinvtoG, "Unit": "daN"},
+                    "L_new_fromSinvtoG":  {"Value": L_new_fromSinvtoG, "Unit": "daN"},
+                    "L_wb_fromGtoGust1": {"Value": L_wb_fromGtoGust1, "Unit": "daN"},
+                    "L_ht_fromGtoGust1": {"Value": L_ht_fromGtoGust1, "Unit": "daN"},
+                    "L_new_fromGtoGust1": {"Value": L_new_fromGtoGust1, "Unit": "daN"},
+                    "L_wb_fromGust1toF": {"Value": L_wb_fromGust1toF, "Unit": "daN"},
+                    "L_ht_fromGust1toF": {"Value": L_ht_fromGust1toF, "Unit": "daN"},
+                    "L_new_fromGust1toF": {"Value": L_new_fromGust1toF, "Unit": "daN"},
+                    "L_wb_fromFtoE"    : {"Value": L_wb_fromFtoE, "Unit": "daN"},
+                    "L_ht_fromFtoE"    : {"Value": L_ht_fromFtoE, "Unit": "daN"},
+                    "L_new_fromFtoE"    : {"Value": L_new_fromFtoE, "Unit": "daN"},
+                    "L_wb_fromEto0"    : {"Value": L_wb_fromEto0, "Unit": "daN"},
+                    "L_ht_fromEto0"    : {"Value": L_ht_fromEto0, "Unit": "daN"},
+                    "L_new_fromEto0"    : {"Value": L_new_fromEto0, "Unit": "daN"},
+                    }
+                }
+
+        elif (pos_case_flag == "Case3") and (neg_case_flag == "Case2_inverted"):
+            
+            
+            Balancing_loads = {
+                "Balancing_loads": {
+                    "V_fe_from0toS": {"Value": V_fe_from0toS, "Unit": "m/s"},
+                    "n_fe_from0toS": {"Value": n_fe_from0toS, "Unit": "g"},
+                    "V_fe_fromStoA": {"Value": V_fe_fromStoA, "Unit": "m/s"},
+                    "n_fe_fromStoA": {"Value": n_fe_fromStoA, "Unit": "g"},
+                    "V_fe_fromAtoGust1": {"Value": V_fe_fromAtoGust1, "Unit": "m/s"},
+                    "n_fe_fromAtoGust1": {"Value": n_fe_fromAtoGust1, "Unit": "g"},
+                    "V_fe_fromGust1toC": {"Value": V_fe_fromGust1toC, "Unit": "m/s"},
+                    "n_fe_fromGust1toC": {"Value": n_fe_fromGust1toC, "Unit": "g"},
+                    "V_fe_fromCtoGust2": {"Value": V_fe_fromCtoGust2, "Unit": "m/s"},
+                    "n_fe_fromCtoGust2": {"Value": n_fe_fromCtoGust2, "Unit": "g"},
+                    "V_fe_fromGust2toD": {"Value": V_fe_fromGust2toD, "Unit": "m/s"},
+                    "n_fe_fromGust2toD": {"Value": n_fe_fromGust2toD, "Unit": "g"},
+                    "V_fe_fromDto0":     {"Value": V_fe_fromDto0, "Unit": "m/s"},
+                    "n_fe_fromDto0":     {"Value": n_fe_fromDto0, "Unit": "g"},
+                    "V_fe_from0toSinv":  {"Value": V_fe_from0toSinv, "Unit": "m/s"},
+                    "n_fe_from0toSinv":  {"Value": n_fe_from0toSinv, "Unit": "g"},
+                    "V_fe_fromSinvtoG":  {"Value": V_fe_fromSinvtoG, "Unit": "m/s"},
+                    "n_fe_fromSinvtoG":  {"Value": n_fe_fromSinvtoG, "Unit": "g"},
+                    "V_fe_fromGtoF":     {"Value": V_fe_fromGtoF, "Unit": "m/s"},
+                    "n_fe_fromGtoF":     {"Value": n_fe_fromGtoF, "Unit": "g"},
+                    "V_fe_fromFtoE":     {"Value": V_fe_fromFtoE, "Unit": "m/s"},
+                    "n_fe_fromFtoE":     {"Value": n_fe_fromFtoE, "Unit": "g"},
+                    "V_fe_fromEto0":     {"Value": V_fe_fromEto0, "Unit": "m/s"},
+                    "n_fe_fromEto0":     {"Value": n_fe_fromEto0, "Unit": "g"},
+
+                    "q_from0toS": {"Value": q_from0toS, "Unit": "Pa"},
+                    "CD_from0toS": {"Value": CD_from0toS, "Unit": "Non dimensional"},
+                    "q_fromStoA": {"Value": q_fromStoA, "Unit": "Pa"},
+                    "CD_fromStoA": {"Value": CD_fromStoA, "Unit": "Non dimensional"},
+                    "q_fromAtoGust1": {"Value": q_fromAtoGust1, "Unit": "Pa"},
+                    "CD_fromAtoGust1": {"Value": CD_fromAtoGust1, "Unit": "Non dimensional"},
+                    "q_fromGust1toC": {"Value": q_fromGust1toC, "Unit": "Pa"},
+                    "CD_fromGust1toC": {"Value": CD_fromGust1toC, "Unit": "Non dimensional"},
+                    "q_fromCtoGust2": {"Value": q_fromCtoGust2, "Unit": "Pa"},
+                    "CD_fromCtoGust2": {"Value": CD_fromCtoGust2, "Unit": "Non dimensional"},
+                    "q_fromGust2toD": {"Value": q_fromGust2toD, "Unit": "Pa"},
+                    "CD_fromGust2toD": {"Value": CD_fromGust2toD, "Unit": "Non dimensional"},
+                    "q_fromDto0":     {"Value": q_fromDto0, "Unit": "Pa"},
+                    "CD_fromDto0":     {"Value": CD_fromDto0, "Unit": "Non dimensional"},
+                    "q_from0toSinv":  {"Value": q_from0toSinv, "Unit": "Pa"},
+                    "CD_from0toSinv":  {"Value": CD_from0toSinv, "Unit": "Non dimensional"},
+                    "q_fromSinvtoG":  {"Value": q_fromSinvtoG, "Unit": "Pa"},
+                    "CD_fromSinvtoG":  {"Value": CD_fromSinvtoG, "Unit": "Non dimensional"},
+                    "q_fromGtoF":     {"Value": q_fromGtoF, "Unit": "Pa"},
+                    "CD_fromGtoF":     {"Value": CD_fromGtoF, "Unit": "Non dimensional"},
+                    "q_fromFtoE":     {"Value": q_fromFtoE, "Unit": "Pa"},
+                    "CD_fromFtoE":     {"Value": CD_fromFtoE, "Unit": "Non dimensional"},
+                    "q_fromEto0":     {"Value": q_fromEto0, "Unit": "Pa"},
+                    "CD_fromEto0":     {"Value": CD_fromEto0, "Unit": "Non dimensional"},
+
+                    "alfa_from0toS": {"Value": alfa_from0toS, "Unit": "deg"},
+                    "alfa_new_from0toS": {"Value": alfa_new_from0toS, "Unit": "deg"},
+                    "alfa_fromStoA": {"Value": alfa_fromStoA, "Unit": "deg"},
+                    "alfa_new_fromStoA": {"Value": alfa_new_fromStoA, "Unit": "deg"},
+                    "alfa_fromAtoGust1": {"Value": alfa_fromAtoGust1, "Unit": "deg"},
+                    "alfa_new_fromAtoGust1": {"Value": alfa_new_fromAtoGust1, "Unit": "deg"},
+                    "alfa_fromGust1toC": {"Value": alfa_fromGust1toC, "Unit": "deg"},
+                    "alfa_new_fromGust1toC": {"Value": alfa_new_fromGust1toC, "Unit": "deg"},
+                    "alfa_fromCtoGust2": {"Value": alfa_fromCtoGust2, "Unit": "deg"},
+                    "alfa_new_fromCtoGust2": {"Value": alfa_new_fromCtoGust2, "Unit": "deg"},
+                    "alfa_fromGust2toD": {"Value": alfa_fromGust2toD, "Unit": "deg"},
+                    "alfa_new_fromGust2toD": {"Value": alfa_new_fromGust2toD, "Unit": "deg"},
+                    "alfa_fromDto0":     {"Value": alfa_fromDto0, "Unit": "deg"},
+                    "alfa_new_fromDto0":     {"Value": alfa_new_fromDto0, "Unit": "deg"},
+                    "alfa_from0toSinv":  {"Value": alfa_from0toSinv, "Unit": "deg"},
+                    "alfa_new_from0toSinv":  {"Value": alfa_new_from0toSinv, "Unit": "deg"},
+                    "alfa_fromSinvtoG":  {"Value": alfa_fromSinvtoG, "Unit": "deg"},
+                    "alfa_new_fromSinvtoG":  {"Value": alfa_new_fromSinvtoG, "Unit": "deg"},
+                    "alfa_fromGtoF":     {"Value": alfa_fromGtoF, "Unit": "deg"},
+                    "alfa_new_fromGtoF":     {"Value": alfa_new_fromGtoF, "Unit": "deg"},
+                    "alfa_fromFtoE":     {"Value": alfa_fromFtoE, "Unit": "deg"},
+                    "alfa_new_fromFtoE":     {"Value": alfa_new_fromFtoE, "Unit": "deg"},
+                    "alfa_fromEto0":     {"Value": alfa_fromEto0, "Unit": "deg"},
+                    "alfa_new_fromEto0":     {"Value": alfa_new_fromEto0, "Unit": "deg"},
+
+                    "CL_wb_from0toS": {"Value": CL_wb_from0toS, "Unit": "Non dimensional"},
+                    "CL_ht_from0toS": {"Value": CL_ht_from0toS, "Unit": "Non dimensional"},
+                    "CL_new_from0toS": {"Value": CL_new_from0toS, "Unit": "Non dimensional"},
+                    "CL_wb_fromStoA": {"Value": CL_wb_fromStoA, "Unit": "Non dimensional"},
+                    "CL_ht_fromStoA": {"Value": CL_ht_fromStoA, "Unit": "Non dimensional"},
+                    "CL_new_fromStoA": {"Value": CL_new_fromStoA, "Unit": "Non dimensional"},
+                    "CL_wb_fromAtoGust1": {"Value": CL_wb_fromAtoGust1, "Unit": "Non dimensional"},
+                    "CL_ht_fromAtoGust1": {"Value": CL_ht_fromAtoGust1, "Unit": "Non dimensional"},
+                    "CL_new_fromAtoGust1": {"Value": CL_new_fromAtoGust1, "Unit": "Non dimensional"},
+                    "CL_wb_fromGust1toC": {"Value": CL_wb_fromGust1toC, "Unit": "Non dimensional"},
+                    "CL_ht_fromGust1toC": {"Value": CL_ht_fromGust1toC, "Unit": "Non dimensional"},
+                    "CL_new_fromGust1toC": {"Value": CL_new_fromGust1toC, "Unit": "Non dimensional"},
+                    "CL_wb_fromCtoGust2": {"Value": CL_wb_fromCtoGust2, "Unit": "Non dimensional"},
+                    "CL_ht_fromCtoGust2": {"Value": CL_ht_fromCtoGust2, "Unit": "Non dimensional"},
+                    "CL_new_fromCtoGust2": {"Value": CL_new_fromCtoGust2, "Unit": "Non dimensional"},
+                    "CL_wb_fromGust2toD": {"Value": CL_wb_fromGust2toD, "Unit": "Non dimensional"},
+                    "CL_ht_fromGust2toD": {"Value": CL_ht_fromGust2toD, "Unit": "Non dimensional"},
+                    "CL_new_fromGust2toD": {"Value": CL_new_fromGust2toD, "Unit": "Non dimensional"},
+                    "CL_wb_fromDto0":     {"Value": CL_wb_fromDto0, "Unit": "Non dimensional"},
+                    "CL_ht_fromDto0":     {"Value": CL_ht_fromDto0, "Unit": "Non dimensional"},
+                    "CL_new_fromDto0":     {"Value": CL_new_fromDto0, "Unit": "Non dimensional"},
+                    "CL_wb_from0toSinv":  {"Value": CL_wb_from0toSinv, "Unit": "Non dimensional"},
+                    "CL_ht_from0toSinv":  {"Value": CL_ht_from0toSinv, "Unit": "Non dimensional"},
+                    "CL_new_from0toSinv":  {"Value": CL_new_from0toSinv, "Unit": "Non dimensional"},
+                    "CL_wb_fromSinvtoG":  {"Value": CL_wb_fromSinvtoG, "Unit": "Non dimensional"},
+                    "CL_ht_fromSinvtoG":  {"Value": CL_ht_fromSinvtoG, "Unit": "Non dimensional"},
+                    "CL_new_fromSinvtoG":  {"Value": CL_new_fromSinvtoG, "Unit": "Non dimensional"},
+                    "CL_wb_fromGtoF":     {"Value": CL_wb_fromGtoF, "Unit": "Non dimensional"},
+                    "CL_ht_fromGtoF":     {"Value": CL_ht_fromGtoF, "Unit": "Non dimensional"},
+                    "CL_new_fromGtoF":     {"Value": CL_new_fromGtoF, "Unit": "Non dimensional"},
+                    "CL_wb_fromFtoE":     {"Value": CL_wb_fromFtoE, "Unit": "Non dimensional"},
+                    "CL_ht_fromFtoE":     {"Value": CL_ht_fromFtoE, "Unit": "Non dimensional"},
+                    "CL_new_fromFtoE":     {"Value": CL_new_fromFtoE, "Unit": "Non dimensional"},
+                    "CL_wb_fromEto0":     {"Value": CL_wb_fromEto0, "Unit": "Non dimensional"},
+                    "CL_ht_fromEto0":     {"Value": CL_ht_fromEto0, "Unit": "Non dimensional"},
+                    "CL_new_fromEto0":     {"Value": CL_new_fromEto0, "Unit": "Non dimensional"},
+
+                    "CM_due_to_CL_from0toS": {"Value": CM_due_to_CL_from0toS, "Unit": "Non dimensional"},
+                    "CM_due_to_CD_from0toS": {"Value": CM_due_to_CD_from0toS, "Unit": "Non dimensional"},
+                    "CM_CG_from0toS": {"Value": CM_CG_from0toS, "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromStoA": {"Value": CM_due_to_CL_fromStoA, "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromStoA": {"Value": CM_due_to_CD_fromStoA, "Unit": "Non dimensional"},
+                    "CM_CG_fromStoA": {"Value": CM_CG_fromStoA, "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromAtoGust1": {"Value": CM_due_to_CL_fromAtoGust1, "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromAtoGust1": {"Value": CM_due_to_CD_fromAtoGust1, "Unit": "Non dimensional"},
+                    "CM_CG_fromAtoGust1": {"Value": CM_CG_fromAtoGust1, "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromGust1toC": {"Value": CM_due_to_CL_fromGust1toC, "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromGust1toC": {"Value": CM_due_to_CD_fromGust1toC, "Unit": "Non dimensional"},
+                    "CM_CG_fromGust1toC": {"Value": CM_CG_fromGust1toC, "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromCtoGust2": {"Value": CM_due_to_CL_fromCtoGust2, "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromCtoGust2": {"Value": CM_due_to_CD_fromCtoGust2, "Unit": "Non dimensional"},
+                    "CM_CG_fromCtoGust2": {"Value": CM_CG_fromCtoGust2, "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromGust2toD": {"Value": CM_due_to_CL_fromGust2toD, "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromGust2toD": {"Value": CM_due_to_CD_fromGust2toD, "Unit": "Non dimensional"},
+                    "CM_CG_fromGust2toD": {"Value": CM_CG_fromGust2toD, "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromDto0":     {"Value": CM_due_to_CL_fromDto0, "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromDto0":     {"Value": CM_due_to_CD_fromDto0, "Unit": "Non dimensional"},
+                    "CM_CG_fromDto0":     {"Value": CM_CG_fromDto0, "Unit": "Non dimensional"},
+                    "CM_due_to_CL_from0toSinv":  {"Value": CM_due_to_CL_from0toSinv, "Unit": "Non dimensional"},
+                    "CM_due_to_CD_from0toSinv":  {"Value": CM_due_to_CD_from0toSinv, "Unit": "Non dimensional"},
+                    "CM_CG_from0toSinv":  {"Value": CM_CG_from0toSinv, "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromSinvtoG":  {"Value": CM_due_to_CL_fromSinvtoG, "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromSinvtoG":  {"Value": CM_due_to_CD_fromSinvtoG, "Unit": "Non dimensional"},
+                    "CM_CG_fromSinvtoG":  {"Value": CM_CG_fromSinvtoG, "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromGtoF":     {"Value": CM_due_to_CL_fromGtoF, "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromGtoF":     {"Value": CM_due_to_CD_fromGtoF, "Unit": "Non dimensional"},
+                    "CM_CG_fromGtoF":     {"Value": CM_CG_fromGtoF, "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromFtoE":     {"Value": CM_due_to_CL_fromFtoE, "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromFtoE":     {"Value": CM_due_to_CD_fromFtoE, "Unit": "Non dimensional"},
+                    "CM_CG_fromFtoE":     {"Value": CM_CG_fromFtoE, "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromEto0":     {"Value": CM_due_to_CL_fromEto0, "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromEto0":     {"Value": CM_due_to_CD_fromEto0, "Unit": "Non dimensional"},
+                    "CM_CG_fromEto0":     {"Value": CM_CG_fromEto0, "Unit": "Non dimensional"},
+                    }
+                }
+
+        elif (pos_case_flag == "Case3") and (neg_case_flag == "Case3_inverted"):
+            
+            
+            Balancing_loads = {
+                "Balancing_loads": {
+                    "V_fe_from0toS": {"Value": V_fe_from0toS, "Unit": "m/s"},
+                    "n_fe_from0toS": {"Value": n_fe_from0toS, "Unit": "g"},
+                    "V_fe_fromStoA": {"Value": V_fe_fromStoA, "Unit": "m/s"},
+                    "n_fe_fromStoA": {"Value": n_fe_fromStoA, "Unit": "g"},
+                    "V_fe_fromAtoGust1": {"Value": V_fe_fromAtoGust1, "Unit": "m/s"},
+                    "n_fe_fromAtoGust1": {"Value": n_fe_fromAtoGust1, "Unit": "g"},
+                    "V_fe_fromGust1toC": {"Value": V_fe_fromGust1toC, "Unit": "m/s"},
+                    "n_fe_fromGust1toC": {"Value": n_fe_fromGust1toC, "Unit": "g"},
+                    "V_fe_fromCtoGust2": {"Value": V_fe_fromCtoGust2, "Unit": "m/s"},
+                    "n_fe_fromCtoGust2": {"Value": n_fe_fromCtoGust2, "Unit": "g"},
+                    "V_fe_fromGust2toD": {"Value": V_fe_fromGust2toD, "Unit": "m/s"},
+                    "n_fe_fromGust2toD": {"Value": n_fe_fromGust2toD, "Unit": "g"},
+                    "V_fe_fromDto0":     {"Value": V_fe_fromDto0, "Unit": "m/s"},
+                    "n_fe_fromDto0":     {"Value": n_fe_fromDto0, "Unit": "g"},
+                    "V_fe_from0toSinv":  {"Value": V_fe_from0toSinv, "Unit": "m/s"},
+                    "n_fe_from0toSinv":  {"Value": n_fe_from0toSinv, "Unit": "g"},
+                    "V_fe_fromSinvtoG":  {"Value": V_fe_fromSinvtoG, "Unit": "m/s"},
+                    "n_fe_fromSinvtoG":  {"Value": n_fe_fromSinvtoG, "Unit": "g"},
+                    "V_fe_fromGtoF":     {"Value": V_fe_fromGtoF, "Unit": "m/s"},
+                    "n_fe_fromGtoF":     {"Value": n_fe_fromGtoF, "Unit": "g"},
+                    "V_fe_fromFtoE"    : {"Value": V_fe_fromFtoE, "Unit": "m/s"},
+                    "n_fe_fromFtoE"    : {"Value": n_fe_fromFtoE, "Unit": "g"},
+                    "V_fe_fromEto0"    : {"Value": V_fe_fromEto0, "Unit": "m/s"},
+                    "n_fe_fromEto0"    : {"Value": n_fe_fromEto0, "Unit": "g"},
+
+                    "q_from0toS": {"Value": q_from0toS, "Unit": "Pa"},
+                    "CD_from0toS": {"Value": CD_from0toS, "Unit": "Non dimensional"},
+                    "q_fromStoA": {"Value": q_fromStoA, "Unit": "Pa"},
+                    "CD_fromStoA": {"Value": CD_fromStoA, "Unit": "Non dimensional"},
+                    "q_fromAtoGust1": {"Value": q_fromAtoGust1, "Unit": "Pa"},
+                    "CD_fromAtoGust1": {"Value": CD_fromAtoGust1, "Unit": "Non dimensional"},
+                    "q_fromGust1toC": {"Value": q_fromGust1toC, "Unit": "Pa"},
+                    "CD_fromGust1toC": {"Value": CD_fromGust1toC, "Unit": "Non dimensional"},
+                    "q_fromCtoGust2": {"Value": q_fromCtoGust2, "Unit": "Pa"},
+                    "CD_fromCtoGust2": {"Value": CD_fromCtoGust2, "Unit": "Non dimensional"},
+                    "q_fromGust2toD": {"Value": q_fromGust2toD, "Unit": "Pa"},
+                    "CD_fromGust2toD": {"Value": CD_fromGust2toD, "Unit": "Non dimensional"},
+                    "q_fromDto0":     {"Value": q_fromDto0, "Unit": "Pa"},
+                    "CD_fromDto0":     {"Value": CD_fromDto0, "Unit": "Non dimensional"},
+                    "q_from0toSinv":  {"Value": q_from0toSinv, "Unit": "Pa"},
+                    "CD_from0toSinv":  {"Value": CD_from0toSinv, "Unit": "Non dimensional"},
+                    "q_fromSinvtoG":  {"Value": q_fromSinvtoG, "Unit": "Pa"},
+                    "CD_fromSinvtoG":  {"Value": CD_fromSinvtoG, "Unit": "Non dimensional"},
+                    "q_fromGtoF":     {"Value": q_fromGtoF, "Unit": "Pa"},
+                    "CD_fromGtoF":     {"Value": CD_fromGtoF, "Unit": "Non dimensional"},
+                    "q_fromFtoE"    : {"Value": q_fromFtoE, "Unit": "Pa"},
+                    "CD_fromFtoE"    : {"Value": CD_fromFtoE, "Unit": "Non dimensional"},
+                    "q_fromEto0"    : {"Value": q_fromEto0, "Unit": "Pa"},
+                    "CD_fromEto0"    : {"Value": CD_fromEto0, "Unit": "Non dimensional"},
+
+                    "alfa_from0toS": {"Value": alfa_from0toS, "Unit": "deg"},
+                    "alfa_new_from0toS": {"Value": alfa_new_from0toS, "Unit": "deg"},
+                    "alfa_fromStoA": {"Value": alfa_fromStoA, "Unit": "deg"},
+                    "alfa_new_fromStoA": {"Value": alfa_new_fromStoA, "Unit": "deg"},
+                    "alfa_fromAtoGust1": {"Value": alfa_fromAtoGust1, "Unit": "deg"},
+                    "alfa_new_fromAtoGust1": {"Value": alfa_new_fromAtoGust1, "Unit": "deg"},
+                    "alfa_fromGust1toC": {"Value": alfa_fromGust1toC, "Unit": "deg"},
+                    "alfa_new_fromGust1toC": {"Value": alfa_new_fromGust1toC, "Unit": "deg"},
+                    "alfa_fromCtoGust2": {"Value": alfa_fromCtoGust2, "Unit": "deg"},
+                    "alfa_new_fromCtoGust2": {"Value": alfa_new_fromCtoGust2, "Unit": "deg"},
+                    "alfa_fromGust2toD": {"Value": alfa_fromGust2toD, "Unit": "deg"},
+                    "alfa_new_fromGust2toD": {"Value": alfa_new_fromGust2toD, "Unit": "deg"},
+                    "alfa_fromDto0":     {"Value": alfa_fromDto0, "Unit": "deg"},
+                    "alfa_new_fromDto0":     {"Value": alfa_new_fromDto0, "Unit": "deg"},
+                    "alfa_from0toSinv":  {"Value": alfa_from0toSinv, "Unit": "deg"},
+                    "alfa_new_from0toSinv":  {"Value": alfa_new_from0toSinv, "Unit": "deg"},
+                    "alfa_fromSinvtoG":  {"Value": alfa_fromSinvtoG, "Unit": "deg"},
+                    "alfa_new_fromSinvtoG":  {"Value": alfa_new_fromSinvtoG, "Unit": "deg"},
+                    "alfa_fromGtoF":     {"Value": alfa_fromGtoF, "Unit": "deg"},
+                    "alfa_new_fromGtoF":     {"Value": alfa_new_fromGtoF, "Unit": "deg"},
+                    "alfa_fromFtoE"    : {"Value": alfa_fromFtoE, "Unit": "deg"},
+                    "alfa_new_fromFtoE"    : {"Value": alfa_new_fromFtoE, "Unit": "deg"},
+                    "alfa_fromEto0"    : {"Value": alfa_fromEto0, "Unit": "deg"},
+                    "alfa_new_fromEto0"    : {"Value": alfa_new_fromEto0, "Unit": "deg"},
+
+                    "CL_wb_from0toS": {"Value": CL_wb_from0toS, "Unit": "Non dimensional"},
+                    "CL_ht_from0toS": {"Value": CL_ht_from0toS, "Unit": "Non dimensional"},
+                    "CL_new_from0toS": {"Value": CL_new_from0toS, "Unit": "Non dimensional"},
+                    "CL_wb_fromStoA": {"Value": CL_wb_fromStoA, "Unit": "Non dimensional"},
+                    "CL_ht_fromStoA": {"Value": CL_ht_fromStoA, "Unit": "Non dimensional"},
+                    "CL_new_fromStoA": {"Value": CL_new_fromStoA, "Unit": "Non dimensional"},
+                    "CL_wb_fromAtoGust1": {"Value": CL_wb_fromAtoGust1, "Unit": "Non dimensional"},
+                    "CL_ht_fromAtoGust1": {"Value": CL_ht_fromAtoGust1, "Unit": "Non dimensional"},
+                    "CL_new_fromAtoGust1": {"Value": CL_new_fromAtoGust1, "Unit": "Non dimensional"},
+                    "CL_wb_fromGust1toC": {"Value": CL_wb_fromGust1toC, "Unit": "Non dimensional"},
+                    "CL_ht_fromGust1toC": {"Value": CL_ht_fromGust1toC, "Unit": "Non dimensional"},
+                    "CL_new_fromGust1toC": {"Value": CL_new_fromGust1toC, "Unit": "Non dimensional"},
+                    "CL_wb_fromCtoGust2": {"Value": CL_wb_fromCtoGust2, "Unit": "Non dimensional"},
+                    "CL_ht_fromCtoGust2": {"Value": CL_ht_fromCtoGust2, "Unit": "Non dimensional"},
+                    "CL_new_fromCtoGust2": {"Value": CL_new_fromCtoGust2, "Unit": "Non dimensional"},
+                    "CL_wb_fromGust2toD": {"Value": CL_wb_fromGust2toD, "Unit": "Non dimensional"},
+                    "CL_ht_fromGust2toD": {"Value": CL_ht_fromGust2toD, "Unit": "Non dimensional"},
+                    "CL_new_fromGust2toD": {"Value": CL_new_fromGust2toD, "Unit": "Non dimensional"},
+                    "CL_wb_fromDto0":     {"Value": CL_wb_fromDto0, "Unit": "Non dimensional"},
+                    "CL_ht_fromDto0":     {"Value": CL_ht_fromDto0, "Unit": "Non dimensional"},
+                    "CL_new_fromDto0":     {"Value": CL_new_fromDto0, "Unit": "Non dimensional"},
+                    "CL_wb_from0toSinv":  {"Value": CL_wb_from0toSinv, "Unit": "Non dimensional"},
+                    "CL_ht_from0toSinv":  {"Value": CL_ht_from0toSinv, "Unit": "Non dimensional"},
+                    "CL_new_from0toSinv":  {"Value": CL_new_from0toSinv, "Unit": "Non dimensional"},
+                    "CL_wb_fromSinvtoG":  {"Value": CL_wb_fromSinvtoG, "Unit": "Non dimensional"},
+                    "CL_ht_fromSinvtoG":  {"Value": CL_ht_fromSinvtoG, "Unit": "Non dimensional"},
+                    "CL_new_fromSinvtoG":  {"Value": CL_new_fromSinvtoG, "Unit": "Non dimensional"},
+                    "CL_wb_fromGtoF":     {"Value": CL_wb_fromGtoF, "Unit": "Non dimensional"},
+                    "CL_ht_fromGtoF":     {"Value": CL_ht_fromGtoF, "Unit": "Non dimensional"},
+                    "CL_new_fromGtoF":     {"Value": CL_new_fromGtoF, "Unit": "Non dimensional"},
+                    "CL_wb_fromFtoE"    : {"Value": CL_wb_fromFtoE, "Unit": "Non dimensional"},
+                    "CL_ht_fromFtoE"    : {"Value": CL_ht_fromFtoE, "Unit": "Non dimensional"},
+                    "CL_new_fromFtoE"    : {"Value": CL_new_fromFtoE, "Unit": "Non dimensional"},
+                    "CL_wb_fromEto0"    : {"Value": CL_wb_fromEto0, "Unit": "Non dimensional"},
+                    "CL_ht_fromEto0"    : {"Value": CL_ht_fromEto0, "Unit": "Non dimensional"},
+                    "CL_new_fromEto0"    : {"Value": CL_new_fromEto0, "Unit": "Non dimensional"},
+
+                    "L_wb_from0toS": {"Value": L_wb_from0toS, "Unit": "daN"},
+                    "L_ht_from0toS": {"Value": L_ht_from0toS, "Unit": "daN"},
+                    "L_new_from0toS": {"Value": L_new_from0toS, "Unit": "daN"},
+                    "L_wb_fromStoA": {"Value": L_wb_fromStoA, "Unit": "daN"},
+                    "L_ht_fromStoA": {"Value": L_ht_fromStoA, "Unit": "daN"},
+                    "L_new_fromStoA": {"Value": L_new_fromStoA, "Unit": "daN"},
+                    "L_wb_fromAtoGust1": {"Value": L_wb_fromAtoGust1, "Unit": "daN"},
+                    "L_ht_fromAtoGust1": {"Value": L_ht_fromAtoGust1, "Unit": "daN"},
+                    "L_new_fromAtoGust1": {"Value": L_new_fromAtoGust1, "Unit": "daN"},
+                    "L_wb_fromGust1toC": {"Value": L_wb_fromGust1toC, "Unit": "daN"},
+                    "L_ht_fromGust1toC": {"Value": L_ht_fromGust1toC, "Unit": "daN"},
+                    "L_new_fromGust1toC": {"Value": L_new_fromGust1toC, "Unit": "daN"},
+                    "L_wb_fromCtoGust2": {"Value": L_wb_fromCtoGust2, "Unit": "daN"},
+                    "L_ht_fromCtoGust2": {"Value": L_ht_fromCtoGust2, "Unit": "daN"},
+                    "L_new_fromCtoGust2": {"Value": L_new_fromCtoGust2, "Unit": "daN"},
+                    "L_wb_fromGust2toD": {"Value": L_wb_fromGust2toD, "Unit": "daN"},
+                    "L_ht_fromGust2toD": {"Value": L_ht_fromGust2toD, "Unit": "daN"},
+                    "L_new_fromGust2toD": {"Value": L_new_fromGust2toD, "Unit": "daN"},
+                    "L_wb_fromDto0":     {"Value": L_wb_fromDto0, "Unit": "daN"},
+                    "L_ht_fromDto0":     {"Value": L_ht_fromDto0, "Unit": "daN"},
+                    "L_new_fromDto0":     {"Value": L_new_fromDto0, "Unit": "daN"},
+                    "L_wb_from0toSinv":  {"Value": L_wb_from0toSinv, "Unit": "daN"},
+                    "L_ht_from0toSinv":  {"Value": L_ht_from0toSinv, "Unit": "daN"},
+                    "L_new_from0toSinv":  {"Value": L_new_from0toSinv, "Unit": "daN"},
+                    "L_wb_fromSinvtoG":  {"Value": L_wb_fromSinvtoG, "Unit": "daN"},
+                    "L_ht_fromSinvtoG":  {"Value": L_ht_fromSinvtoG, "Unit": "daN"},
+                    "L_new_fromSinvtoG":  {"Value": L_new_fromSinvtoG, "Unit": "daN"},
+                    "L_wb_fromGtoF":     {"Value": L_wb_fromGtoF, "Unit": "daN"},
+                    "L_ht_fromGtoF":     {"Value": L_ht_fromGtoF, "Unit": "daN"},
+                    "L_new_fromGtoF":     {"Value": L_new_fromGtoF, "Unit": "daN"},
+                    "L_wb_fromFtoE"    : {"Value": L_wb_fromFtoE, "Unit": "daN"},
+                    "L_ht_fromFtoE"    : {"Value": L_ht_fromFtoE, "Unit": "daN"},
+                    "L_new_fromFtoE"    : {"Value": L_new_fromFtoE, "Unit": "daN"},
+                    "L_wb_fromEto0"    : {"Value": L_wb_fromEto0, "Unit": "daN"},
+                    "L_ht_fromEto0"    : {"Value": L_ht_fromEto0, "Unit": "daN"},
+                    "L_new_fromEto0"    : {"Value": L_new_fromEto0, "Unit": "daN"},
+
+                    "CM_due_to_CL_from0toS": {"Value": CM_due_to_CL_from0toS, "Unit": "Non dimensional"},
+                    "CM_due_to_CD_from0toS": {"Value": CM_due_to_CD_from0toS, "Unit": "Non dimensional"},
+                    "CM_CG_from0toS": {"Value": CM_CG_from0toS, "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromStoA": {"Value": CM_due_to_CL_fromStoA, "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromStoA": {"Value": CM_due_to_CD_fromStoA, "Unit": "Non dimensional"},
+                    "CM_CG_fromStoA": {"Value": CM_CG_fromStoA, "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromAtoGust1": {"Value": CM_due_to_CL_fromAtoGust1, "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromAtoGust1": {"Value": CM_due_to_CD_fromAtoGust1, "Unit": "Non dimensional"},
+                    "CM_CG_fromAtoGust1": {"Value": CM_CG_fromAtoGust1, "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromGust1toC": {"Value": CM_due_to_CL_fromGust1toC, "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromGust1toC": {"Value": CM_due_to_CD_fromGust1toC, "Unit": "Non dimensional"},
+                    "CM_CG_fromGust1toC": {"Value": CM_CG_fromGust1toC, "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromCtoGust2": {"Value": CM_due_to_CL_fromCtoGust2, "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromCtoGust2": {"Value": CM_due_to_CD_fromCtoGust2, "Unit": "Non dimensional"},
+                    "CM_CG_fromCtoGust2": {"Value": CM_CG_fromCtoGust2, "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromGust2toD": {"Value": CM_due_to_CL_fromGust2toD, "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromGust2toD": {"Value": CM_due_to_CD_fromGust2toD, "Unit": "Non dimensional"},
+                    "CM_CG_fromGust2toD": {"Value": CM_CG_fromGust2toD, "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromDto0":     {"Value": CM_due_to_CL_fromDto0, "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromDto0":     {"Value": CM_due_to_CD_fromDto0, "Unit": "Non dimensional"},
+                    "CM_CG_fromDto0":     {"Value": CM_CG_fromDto0, "Unit": "Non dimensional"},
+                    "CM_due_to_CL_from0toSinv":  {"Value": CM_due_to_CL_from0toSinv, "Unit": "Non dimensional"},
+                    "CM_due_to_CD_from0toSinv":  {"Value": CM_due_to_CD_from0toSinv, "Unit": "Non dimensional"},
+                    "CM_CG_from0toSinv":  {"Value": CM_CG_from0toSinv, "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromSinvtoG":  {"Value": CM_due_to_CL_fromSinvtoG, "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromSinvtoG":  {"Value": CM_due_to_CD_fromSinvtoG, "Unit": "Non dimensional"},
+                    "CM_CG_fromSinvtoG":  {"Value": CM_CG_fromSinvtoG, "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromGtoF":     {"Value": CM_due_to_CL_fromGtoF, "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromGtoF":     {"Value": CM_due_to_CD_fromGtoF, "Unit": "Non dimensional"},
+                    "CM_CG_fromGtoF":     {"Value": CM_CG_fromGtoF, "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromFtoE"    : {"Value": CM_due_to_CL_fromFtoE, "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromFtoE"    : {"Value": CM_due_to_CD_fromFtoE, "Unit": "Non dimensional"},
+                    "CM_CG_fromFtoE"    : {"Value": CM_CG_fromFtoE, "Unit": "Non dimensional"},
+                    "CM_due_to_CL_fromEto0"    : {"Value": CM_due_to_CL_fromEto0, "Unit": "Non dimensional"},
+                    "CM_due_to_CD_fromEto0"    : {"Value": CM_due_to_CD_fromEto0, "Unit": "Non dimensional"},
+                    "CM_CG_fromEto0"    : {"Value": CM_CG_fromEto0, "Unit": "Non dimensional"},
+                    }
+                }
+       
+        return Balancing_loads                                                                      

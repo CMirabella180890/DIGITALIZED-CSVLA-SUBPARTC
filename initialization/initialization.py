@@ -4,6 +4,8 @@ Created on Fri Apr 29 07:51:45 2022
 
 @author: claum
 """
+
+from numpy.polynomial.chebyshev import chebfit, chebval
 from ambiance import Atmosphere
 import shutil
 import numpy as np
@@ -51,32 +53,7 @@ CM0         = p_CM_wb[0]
 CMCL        = p_CM_wb[1]
 CM_alfa_deg = CMCL * p_cl_wb1[1]
 CM_alfa_rad = CM_alfa_deg / np.deg2rad(1)
-# ===================================================    
-# STORE INSIDE THE SIMPLE NAMESPACE OBJECT
-# ===================================================
 CL_wb_max = np.amax(CL_fullmodel)
-Interpolation = { "Interpolation": {       "CL_alfa_deg"    : {"Value": p_cl_wb1[1],               "Unit": "1/deg"},\
-                                           "CL0"            : {"Value": p_cl_wb1[0],               "Unit": "Non dimensional"},\
-                                           "CL_alfa_rad"    : {"Value": p_cl_wb1[1]/np.deg2rad(1), "Unit":"1/rad"},\
-                                           "CL_fullmodel"   : {"Value": CL_fullmodel,              "Unit": "Non dimensional"},\
-                                           "alpha_fullmodel": {"Value": alpha_interp,              "Unit": "deg"},\
-                                           "CL_wb_max"      : {"Value": CL_wb_max,                 "Unit": "Non dimensional"},\
-                                           "alfa_star"      : {"Value": ALPHA_star,                "Unit": "deg"},\
-                                           "alfa0L"         : {"Value": alfa0L,                    "Unit": "deg"},\
-                                           "index_cl_star"  : {"Value": index_cl_star,             "Unit": "Pure number"},\
-                                           "CD_fullmodel"   : {"Value": CD_fullmodel,              "Unit": "Non dimensional"},\
-                                           "CD0"            : {"Value": CD0,                       "Unit": "Non dimensional"},\
-                                           "p_cl_wb1"       : {"Value": p_cl_wb1,                  "Unit": "CL interp. coeff."},\
-                                           "p_cl_wb2"       : {"Value": p_cl_wb2,                  "Unit": "CL interp. coeff."},\
-                                           "p_cd_wb"        : {"Value": p_cd_wb,                   "Unit": "CD interp. coeff."},\
-                                           "CM0"            : {"Value": CM0,                       "Unit": "Non dimensional"},\
-                                           "CMCL"           : {"Value": CMCL,                      "Unit": "Non dimensional"},\
-                                           "CM_alfa_deg"    : {"Value": CM_alfa_deg,               "Unit": "1/deg"},\
-                                           "CM_alfa_rad"    : {"Value": CM_alfa_rad,               "Unit": "1/rad"} } }
-# UPDATING THE AIRCRAFT DICTIONARY TYPE    
-aircraft.update(Interpolation)
-# UPDATING THE AIRCRAFT_DATA SIMPLE NAMESPACE OBJECT
-aircraft_data = SimpleNamespace(**aircraft)
 # ============================================================
 # ================ PLOT INTERPOLATION RESULTS ================ 
 # ============================================================
@@ -120,6 +97,42 @@ yMAC_vt, MAC_vt     = mean_aerodynamic_chord(vt_S, vt_span, vt_taper_ratio,\
 # =============================================================================
 eta, elliptical_load, schrenk_cCL, unit_CL = calc_schrenk_distribution(b_wing, S_wing, chord, y_halfspan)
 fig4, fig5 = plot_schrenk(y_halfspan, chord, elliptical_load, schrenk_cCL, unit_CL)
+# DERIVED DRAG AND PITCHING MOMENT DISTRIBUTIONS 
+unit_CD = chebval(p_cd_wb, unit_CL)
+unit_CM = chebval(p_CM_wb, unit_CL)
+# ===================================================    
+# STORE INSIDE THE SIMPLE NAMESPACE OBJECT
+# ===================================================
+Interpolation = { "Interpolation": {       
+                                           "CL_alfa_deg"    : {"Value": p_cl_wb1[1],               "Unit": "1/deg"},\
+                                           "CL0"            : {"Value": p_cl_wb1[0],               "Unit": "Non dimensional"},\
+                                           "CL_alfa_rad"    : {"Value": p_cl_wb1[1]/np.deg2rad(1), "Unit":"1/rad"},\
+                                           "CL_fullmodel"   : {"Value": CL_fullmodel,              "Unit": "Non dimensional"},\
+                                           "alpha_fullmodel": {"Value": alpha_interp,              "Unit": "deg"},\
+                                           "CL_wb_max"      : {"Value": CL_wb_max,                 "Unit": "Non dimensional"},\
+                                           "alfa_star"      : {"Value": ALPHA_star,                "Unit": "deg"},\
+                                           "alfa0L"         : {"Value": alfa0L,                    "Unit": "deg"},\
+                                           "index_cl_star"  : {"Value": index_cl_star,             "Unit": "Pure number"},\
+                                           "CD_fullmodel"   : {"Value": CD_fullmodel,              "Unit": "Non dimensional"},\
+                                           "CD0"            : {"Value": CD0,                       "Unit": "Non dimensional"},\
+                                           "p_cl_wb1"       : {"Value": p_cl_wb1,                  "Unit": "CL interp. coeff."},\
+                                           "p_cl_wb2"       : {"Value": p_cl_wb2,                  "Unit": "CL interp. coeff."},\
+                                           "p_cd_wb"        : {"Value": p_cd_wb,                   "Unit": "CD interp. coeff."},\
+                                           "CM0"            : {"Value": CM0,                       "Unit": "Non dimensional"},\
+                                           "CMCL"           : {"Value": CMCL,                      "Unit": "Non dimensional"},\
+                                           "CM_alfa_deg"    : {"Value": CM_alfa_deg,               "Unit": "1/deg"},\
+                                           "CM_alfa_rad"    : {"Value": CM_alfa_rad,               "Unit": "1/rad"},\
+                                           "unit_CL"        : {"Value": unit_CL,                   "Unit": "Non dimensional"},\
+                                           "unit_CD"        : {"Value": unit_CD,                   "Unit": "Non dimensional"},\
+                                           "unit_CM"        : {"Value": unit_CM,                   "Unit": "Non dimensional"},\
+                                           "Schrenk_c_CL"   : {"Value": schrenk_cCL,               "Unit": "m"}    
+                                           } 
+                 }
+# UPDATING THE AIRCRAFT DICTIONARY TYPE    
+aircraft.update(Interpolation)
+# UPDATING THE AIRCRAFT_DATA SIMPLE NAMESPACE OBJECT
+aircraft_data = SimpleNamespace(**aircraft)
+# =============================================================================
 # =============================================================================
 #                          UPDATING THE DICTIONARY 
 # =============================================================================
