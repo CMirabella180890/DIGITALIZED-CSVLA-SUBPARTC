@@ -68,7 +68,7 @@ def calc_schrenk_distribution(b_wing, S_wing, chord, y_halfspan):
     
     return eta, elliptical_load, schrenk_cCL, unit_CL
 
-def plot_schrenk(y_halfspan, chord, elliptical_load, schrenk_cCL, unit_CL): 
+def plot_schrenk(y_halfspan, chord, elliptical_load, schrenk_cCL, unit_CL, unit_CD, unit_CM): 
     
     # =======================================
     # ======= CL INTERPOLATION FIGURE =======
@@ -103,4 +103,40 @@ def plot_schrenk(y_halfspan, chord, elliptical_load, schrenk_cCL, unit_CL):
     plt.show()
     # =======================================
     
-    return fig4, fig5
+    # =======================================
+    # ======= CD INTERPOLATION FIGURE =======
+    # =======================================
+    fig6 = plt.figure()
+    # plt.plot(y_halfspan, chord, color="black", linewidth=1.0, linestyle = "dashed", label = r"Chord $c(y)$")
+    # plt.plot(y_halfspan, elliptical_load, color="blue", linewidth=1.0,\
+    #         linestyle = "dashed", label = r"Elliptical load - $C_{l}(y)$")
+    plt.plot(y_halfspan, unit_CD, color="red", linewidth=1.0, label = r"Unitary drag distribution - $C_{d}(y)$")
+    plt.xlabel(r'Station along wing semispan - $y$ [m]')                # x-label to the axes.
+    plt.ylabel(r'Spanwise drag coefficient distribution - $C_{d}(y)$')  # y-label to the axes.
+    plt.title(r'Drag coefficient curve distributions - Schrenk method') # Title to the axes.
+    plt.minorticks_on()
+    plt.grid(True, linestyle='-.', which="both")
+    plt.legend(loc="best")
+    plt.savefig('figure6.pdf', bbox_inches='tight')
+    plt.show()
+    # =======================================
+    
+    # =======================================
+    # ======= CM INTERPOLATION FIGURE =======
+    # =======================================
+    fig7 = plt.figure()
+    # plt.plot(y_halfspan, chord, color="black", linewidth=1.0, linestyle = "dashed", label = r"Chord $c(y)$")
+    # plt.plot(y_halfspan, elliptical_load, color="blue", linewidth=1.0,\
+    #         linestyle = "dashed", label = r"Elliptical load - $C_{l}(y)$")
+    plt.plot(y_halfspan, unit_CM, color="red", linewidth=1.0, label = r"Unitary pitching mom. distribution - $C_{m}(y)$")
+    plt.xlabel(r'Station along wing semispan - $y$ [m]')                # x-label to the axes.
+    plt.ylabel(r'Spanwise pitching mom. coefficient distribution - $C_{m}(y)$')  # y-label to the axes.
+    plt.title(r'Pitching mom. coefficient curve distributions - Schrenk method') # Title to the axes.
+    plt.minorticks_on()
+    plt.grid(True, linestyle='-.', which="both")
+    plt.legend(loc="best")
+    plt.savefig('figure7.pdf', bbox_inches='tight')
+    plt.show()
+    # =======================================
+
+    return fig4, fig5, fig6, fig7

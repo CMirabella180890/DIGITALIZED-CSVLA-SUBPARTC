@@ -96,10 +96,11 @@ yMAC_vt, MAC_vt     = mean_aerodynamic_chord(vt_S, vt_span, vt_taper_ratio,\
 #                          SCHRENK LOAD CALCULATION 
 # =============================================================================
 eta, elliptical_load, schrenk_cCL, unit_CL = calc_schrenk_distribution(b_wing, S_wing, chord, y_halfspan)
-fig4, fig5 = plot_schrenk(y_halfspan, chord, elliptical_load, schrenk_cCL, unit_CL)
 # DERIVED DRAG AND PITCHING MOMENT DISTRIBUTIONS 
-unit_CD = chebval(p_cd_wb, unit_CL)
-unit_CM = chebval(p_CM_wb, unit_CL)
+unit_CD = chebval(unit_CL, p_cd_wb)
+unit_CM = chebval(unit_CL, p_CM_wb)
+# Plotting results
+fig4, fig5, fig6, fig7 = plot_schrenk(y_halfspan, chord, elliptical_load, schrenk_cCL, unit_CL, unit_CD, unit_CM)
 # ===================================================    
 # STORE INSIDE THE SIMPLE NAMESPACE OBJECT
 # ===================================================
@@ -259,6 +260,14 @@ shutil.move(original, target)
 # FIGURE 5 
 original = r'I:\PythonTesiConversion\initialization\figure5.pdf'
 target = r'I:\PythonTesiConversion\initialization\Output\Schrenk\figure5.pdf'
+shutil.move(original, target)
+# FIGURE 6 
+original = r'I:\PythonTesiConversion\initialization\figure6.pdf'
+target = r'I:\PythonTesiConversion\initialization\Output\Schrenk\figure6.pdf'
+shutil.move(original, target)
+# FIGURE 7 
+original = r'I:\PythonTesiConversion\initialization\figure7.pdf'
+target = r'I:\PythonTesiConversion\initialization\Output\Schrenk\figure7.pdf'
 shutil.move(original, target)
 # =============================================================================
 #            +++++++++++++++++++++++++++++++++++++++++++++++++
