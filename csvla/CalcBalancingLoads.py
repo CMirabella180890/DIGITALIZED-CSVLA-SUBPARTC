@@ -277,7 +277,7 @@ flag2 = "deg"
 # ---------------------------------------------------------------------------------- #
 for j in range(0, n_Mass):
     V_unit_load_factor[0,j] = VS[j]
-    for i in range(1, n_Mass):
+    for i in range(1, N):
         V_unit_load_factor[i,j] = V_unit_load_factor[i-1, j] + ( VD[j] - VS[j] ) * ( 1 / len(V_unit_load_factor[:,j]) );
 #####################################################################################
 ################################# CALCULATIONS ######################################
